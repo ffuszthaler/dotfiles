@@ -36,7 +36,7 @@ call vundle#end()
 filetype plugin indent on
 
 set term=screen-256color
-colorscheme PaperColor
+colorscheme molokai
 
 
 let python_highlight_all=1
