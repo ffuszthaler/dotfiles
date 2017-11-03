@@ -28,6 +28,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'airblade/vim-gitgutter'
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
