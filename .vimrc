@@ -143,6 +143,7 @@ let python_highlight_all=1
 	"CtrlP
 	let g:ctrlp_map = '<c-p>'
 
+        "
 	nnoremap <C-j> <C-w>j
 	nnoremap <C-k> <C-w>k
 	nnoremap <C-h> <C-w>h
@@ -155,7 +156,7 @@ let python_highlight_all=1
 	nnoremap th :tabfirst<cr>
 	nnoremap tl :tablast<cr>
 
-	" Remove all trailing whitespace by pressing F4
+	"Removes all trailing whitespace by pressing F4
 	noremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 
