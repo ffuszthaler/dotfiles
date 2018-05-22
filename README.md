@@ -1,2 +1,3 @@
-# dotfiles
-Just my Dotfiles
+# .dotfiles
+
+If you want you can use them.
