@@ -2,6 +2,7 @@
 " Maintainer: 
 "       Florian Fußthaler — @ffuszthaler
 "
+"
 " Note: Most of this .vimrc is from amix's GitHub Repo.
 "
 "
@@ -48,9 +49,6 @@ set history=500
 
 " Enable filetype plugins
 filetype plugin on
-
-" Hide Status printed by vim and only show the pretty one
-"set noshowmode
 
 " Set to auto read when a file is changed from the outside
 set autoread
