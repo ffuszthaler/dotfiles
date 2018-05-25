@@ -29,10 +29,8 @@
 " => Pathogen Requirements
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 execute pathogen#infect()
-
-" These settings are also required, but already set elsewhere.
-"syntax on
-"filetype plugin indent on
+syntax on
+filetype plugin indent on
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -50,7 +48,6 @@ set history=500
 
 " Enable filetype plugins
 filetype plugin on
-filetype indent on
 
 " Hide Status printed by vim and only show the pretty one
 "set noshowmode
@@ -140,9 +137,6 @@ set foldcolumn=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax enable 
-
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
@@ -217,7 +211,7 @@ map <c-space> ?
 map <silent> <leader><cr> :noh<cr>
 
 " To Create Splits
-" 
+ 
 " Vertical Split
 " :vsp -path-to-file-
 " Horizontal Split
