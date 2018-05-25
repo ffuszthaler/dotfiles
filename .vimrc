@@ -1,7 +1,46 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: 
 "       Florian Fußthaler — @ffuszthaler
+"
+" Note: Most of this .vimrc is from amix's GitHub Repo.
+"
+"
+" Sections:
+"       -> Pathogen Requirements
+"       -> Plugins
+"       -> General
+"       -> VIM user interface
+"       -> Colors and Fonts
+"       -> Files and backups
+"       -> Text, tab and indent related
+"       -> Visual mode related
+"       -> Moving around, tabs and buffers
+"       -> Status line
+"       -> Editing mappings
+"       -> vimgrep searching and cope displaying
+"       -> Spell checking
+"       -> Misc
+"       -> Helper functions
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pathogen Requirements
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+execute pathogen#infect()
+
+" These settings are also required, but already set elsewhere.
+"syntax on
+"filetype plugin indent on
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins - Configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -18,6 +57,10 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
+
+" Activate Mouse
+set mouse=a
+set ttymouse=xterm2
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -105,11 +148,7 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-try
-    colorscheme desert
-catch
-endtry
-
+colorscheme desert
 set background=dark
 
 " Set extra options when running in GUI mode
@@ -177,7 +216,15 @@ map <c-space> ?
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
+" To Create Splits
+" 
+" Vertical Split
+" :vsp -path-to-file-
+" Horizontal Split
+" :sp -path-to-file-
+
 " Smart way to move between windows
+" So instead of CTRL-W the j, it's just CTRL-j
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
