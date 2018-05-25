@@ -142,8 +142,9 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-colorscheme desert
+"desert is default
 set background=dark
+colorscheme jellybeans
 
 " Set extra options when running in GUI mode
 if has("gui_running")
