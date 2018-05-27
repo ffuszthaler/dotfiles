@@ -27,27 +27,13 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Pathogen Requirements
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"execute pathogen#infect()
-syntax on
-filetype plugin indent on
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugins - Configurations
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
 set history=500
 
 " Enable filetype plugins
+filetype plugin indent on
 filetype plugin on
 
 " Set to auto read when a file is changed from the outside
@@ -55,7 +41,6 @@ set autoread
 
 " Activate Mouse
 set mouse=a
-"set ttymouse=xterm2
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -74,6 +59,9 @@ command W w !sudo tee % > /dev/null
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
+
+" Syntax
+syntax on
 
 " Line Numbers
 set number
