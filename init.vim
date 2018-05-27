@@ -130,7 +130,11 @@ endif
 
 "desert is default
 set background=dark
-colorscheme desert
+try
+  colorscheme jellybeans
+catch
+  colorscheme desert
+endtry
 
 " Set extra options when running in GUI mode
 if has("gui_running")
