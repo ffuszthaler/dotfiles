@@ -16,8 +16,6 @@
 "       -> Moving around, tabs and buffers
 "       -> Status line
 "       -> Editing mappings
-"       -> vimgrep searching and cope displaying
-"       -> Spell checking
 "       -> Misc
 "       -> Helper functions
 "
@@ -32,23 +30,20 @@ set history=500
 
 " Enable filetype plugins
 filetype plugin indent on
-filetype plugin on
 
 " Set to auto read when a file is changed from the outside
 set autoread
 
-" Activate Mouse
+" Activate mouse in all modes for scrolling and resizing
 set mouse=a
 
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
+" Set the leader
 let mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" :W sudo saves the file 
-" (useful for handling the permission-denied error)
+" :W sudo saves the file
 command W w !sudo tee % > /dev/null
 
 
@@ -70,27 +65,12 @@ set wildmenu
 "Always show current position
 set ruler
 
-" Height of the command bar
-"set cmdheight=2
-
 " A buffer becomes hidden when it is abandoned
 set hid
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-
-" Ignore case when searching
-set ignorecase
-
-" When searching try to be smart about cases 
-set smartcase
-
-" Highlight search results
-set hlsearch
-
-" Makes search act like search in modern browsers
-set incsearch 
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw 
@@ -118,6 +98,22 @@ endif
 set foldcolumn=1
 
 
+""""""""""""""""""""""""""""""
+" => Case & Search related
+""""""""""""""""""""""""""""""
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases 
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch 
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -126,13 +122,9 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-"desert is default
+"Set colorscheme to desert
 set background=dark
-try
-  colorscheme jellybeans
-catch
-  colorscheme desert
-endtry
+colorscheme desert
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -142,7 +134,7 @@ if has("gui_running")
     set guitablabel=%M\ %t
 endif
 
-" Set utf8 as standard encoding and en_US as the standard language
+" Set utf8 as standard encoding
 set encoding=utf8
 
 " Use Unix as the standard file type
@@ -196,31 +188,18 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 map <space> /
 map <c-space> ?
 
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
-
-" To Create Splits
- 
-" Vertical Split
+""HOW TO CREATE SPLITS
+""VERTICAL
 " :vsp -path-to-file-
-" Horizontal Split
+""HORIZONTAL
 " :sp -path-to-file-
 
 " Smart way to move between windows
-" So instead of CTRL-W the j, it's just CTRL-j
+" Instead of CTRL-W then j, it's just CTRL-j
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-
-" Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
-
-" Close all the buffers
-map <leader>ba :bufdo bd<cr>
-
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
 
 " Useful mappings for managing tabs
 nnoremap tg :tabnew<Space>
@@ -229,11 +208,6 @@ nnoremap tp :tabprev<cr>
 nnoremap tf :tabfirst<cr>
 nnoremap tl :tablast<cr>
 nnoremap tc :tabclose<cr> 
-
-" Let 'tl' toggle between this and the last accessed tab
-let g:lasttab = 1
-nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lasttab = tabpagenr()
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -294,19 +268,6 @@ endfun
 if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
 endif
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spell checking
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
-
-" Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
