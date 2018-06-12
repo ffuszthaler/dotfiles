@@ -12,6 +12,7 @@ syntax on		                " syntax highlighting
 set number		              " line numbers
 set relativenumber	        " all lines show their relative number, exept for current line
 set laststatus=2	          " always show statusbar
+set ruler                   " always show position
 set wildmenu		            " enable enhanced command-like completion
 set background=dark	        " set background dark
 colorscheme desert	        " colorscheme desert
