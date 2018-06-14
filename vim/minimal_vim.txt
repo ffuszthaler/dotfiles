@@ -1,0 +1,11 @@
+#############
+
+set number
+syntax on
+set autoindent
+
+#############
+
+This is it
+
+Note that once a personal .vimrc exists, Vim automatically turn on 'no compatiple' mode, so this usually is nothing to worry about.
