@@ -10,6 +10,7 @@ Plug 'luochen1990/rainbow'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'crater2150/vim-theme-chroma'
 
 call plug#end()
 
@@ -46,7 +47,7 @@ set number
 set relativenumber
 set wildmode=list:longest,full
 set wildmenu
-colorscheme wombat256i "desert
+colorscheme chroma "desert
 
 "" SEARCH
 set ignorecase
