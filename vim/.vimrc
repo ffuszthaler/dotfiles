@@ -12,11 +12,12 @@ Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'crater2150/vim-theme-chroma'
 
+
 call plug#end()
 
 "" PLUGIN SETTINGS
 " Airline
-let g:airline_theme='wombat'
+let g:airline_theme='minimalist'
 
 " Airline fix for tmux on WSL
 call airline#parts#define_accent('mode', 'none')
