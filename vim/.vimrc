@@ -5,9 +5,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'townk/vim-autoclose'
-Plug 'ap/vim-css-color' 
+Plug 'ap/vim-css-color'
 Plug 'luochen1990/rainbow'
-Plug 'edkolev/tmuxline.vim'
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'crater2150/vim-theme-chroma'
@@ -29,9 +28,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Rainbow Parentheses
 let g:rainbow_active = 1
-
-" Tmuxline
-let g:tmuxline_powerline_separators = 0
 
 "" BASIC
 filetype plugin indent on
