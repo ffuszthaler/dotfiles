@@ -6,7 +6,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'townk/vim-autoclose'
 Plug 'ap/vim-css-color'
-Plug 'luochen1990/rainbow'
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'crater2150/vim-theme-chroma'
@@ -25,9 +24,6 @@ let g:airline_theme='minimalist'
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
-" Rainbow Parentheses
-let g:rainbow_active = 1
-
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -38,7 +34,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " NERD Commenter (important shortcuts)
-" <leader>cc - Comment aout current line or text selected in visual mode.
+" <leader>cc - Comment out current line or text selected in visual mode.
 " <leader>cu - Uncomment the selected line(s).
 
 " Surround.vim (", ' , ... are just used for example)
