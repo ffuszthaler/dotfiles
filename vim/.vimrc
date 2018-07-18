@@ -30,6 +30,7 @@ map <C-n> :NERDTreeToggle<CR>
 let g:rainbow_active = 1
 
 "" BASIC
+set nocompatible
 filetype plugin indent on
 set autoread
 set nobackup
