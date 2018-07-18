@@ -22,11 +22,6 @@ call plug#end()
 " Airline
 let g:airline_theme='minimalist'
 
-" Airline fix for tmux on WSL
-call airline#parts#define_accent('mode', 'none')
-call airline#parts#define_accent('linenr', 'none')
-call airline#parts#define_accent('maxlinenr', 'none')
-
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
