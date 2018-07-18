@@ -10,7 +10,11 @@ Plug 'luochen1990/rainbow'
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'crater2150/vim-theme-chroma'
-
+Plug 'scrooloose/syntastic'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -29,6 +33,25 @@ map <C-n> :NERDTreeToggle<CR>
 " Rainbow Parentheses
 let g:rainbow_active = 1
 
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" NERD Commenter (important shortcuts)
+" <leader>cc - Comment aout current line or text selected in visual mode.
+" <leader>cu - Uncomment the selected line(s).
+
+" Surround.vim (", ' , ... are just used for example)
+" cs"' - to change "Hello" to 'Hello'
+" cs'<tagname> - to change 'Hello' to <tagname>Hello</tagname>
+" cst" - to get "Hello" again
+" ds" - to remove delimiters entirely
+
 "" BASIC
 set nocompatible
 filetype plugin indent on
@@ -36,6 +59,7 @@ set autoread
 set nobackup
 set encoding=utf-8
 let mapleader=","
+set updatetime=100
 
 "" LOOK
 syntax on
