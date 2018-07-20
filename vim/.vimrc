@@ -2,8 +2,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'dsolstad/vim-wombat256i'
 Plug 'scrooloose/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'townk/vim-autoclose'
 Plug 'ap/vim-css-color'
 Plug 'ervandew/supertab'
@@ -14,15 +12,18 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
 "" PLUGIN SETTINGS
-" Airline
-let g:airline_theme='minimalist'
+" Lightline
+let g:lightline = {
+      \'colorscheme': 'seoul256',
+      \}
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<cr>
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -56,11 +57,12 @@ set updatetime=100
 syntax on
 set background=dark
 set t_Co=256
+set laststatus=2
 set number
 set relativenumber
 set wildmode=list:longest,full
 set wildmenu
-colorscheme chroma "desert
+colorscheme chroma
 
 "" SEARCH
 set ignorecase
@@ -80,14 +82,21 @@ map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
+map <leader>v :vsp<space>
+map <leader>h :sp<space>
 
 " Tabs
-nnoremap <C-t> :tabnew<Space>
-nnoremap tn :tabnext<Space>
-nnoremap tp :tabprev<Space>
-nnoremap tf :tabfirst<Space>
-nnoremap tl :tablast<Space>
-nnoremap tc :tabclose<Space>
+noremap <C-t> :tabnew<space>
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
 
 " Fast saving
 map <leader>w :w!<cr>
@@ -96,10 +105,10 @@ map <leader>w :w!<cr>
 map <space> /
 
 " Deactivate Arrow Keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
 
 inoremap <left> <nop>
 inoremap <right> <nop>
