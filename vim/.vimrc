@@ -12,12 +12,13 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
+Plug 'rakr/vim-one'
 call plug#end()
 
 "" PLUGIN SETTINGS
 " Lightline
 let g:lightline = {
-      \'colorscheme': 'seoul256',
+      \'colorscheme': 'one',
       \}
 
 " NERDTree
@@ -60,7 +61,7 @@ set number
 set relativenumber
 set wildmode=list:longest,full
 set wildmenu
-colorscheme chroma
+colorscheme one 
 
 "" SEARCH
 set ignorecase
@@ -80,6 +81,8 @@ if has("gui_running")
   set guioptions-=T
   set guioptions-=r
   set guioptions-=L
+  set guioptions-=e
+  set guioptions-=c
   set guifont=Consolas:h10 " default font of cmd
   set columns=100 lines=25
 endif
