@@ -74,6 +74,16 @@ set shiftwidth=2
 set tabstop=2
 set autoindent
 
+"" GVIM (vim-plug needs to be in ~/vimfiles/autoload instead ~/.vim/autoload for windows) 
+if has("gui_running")
+  set guioptions-=m
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=L
+  set guifont=Consolas:h10 " default font of cmd
+  set columns=100 lines=25
+endif
+
 "" MAPPING
 " Splits
 map <C-h> <C-W>h
@@ -112,4 +122,3 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
-
