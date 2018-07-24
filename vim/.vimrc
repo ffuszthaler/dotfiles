@@ -1,6 +1,5 @@
 "" VIM-PLUG
 call plug#begin('~/.vim/plugged')
-Plug 'dsolstad/vim-wombat256i'
 Plug 'scrooloose/nerdtree'
 Plug 'townk/vim-autoclose'
 Plug 'ap/vim-css-color'
@@ -13,7 +12,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
-
 call plug#end()
 
 "" PLUGIN SETTINGS
