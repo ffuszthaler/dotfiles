@@ -51,6 +51,7 @@ set nobackup
 set encoding=utf-8
 let mapleader=","
 set updatetime=100
+set backspace=indent,eol,start
 
 "" LOOK
 syntax on
