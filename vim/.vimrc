@@ -62,7 +62,10 @@ set number
 set relativenumber
 set wildmode=list:longest,full
 set wildmenu
-colorscheme one 
+colorscheme one
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 "" SEARCH
 set ignorecase
