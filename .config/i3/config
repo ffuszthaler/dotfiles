@@ -128,6 +128,9 @@ bar {
 exec_always --no-startup-id feh --bg-scale /home/ffuszthaler/Downloads/daft-punk-minimalism-2-image.jpg
 #exec_always --no-startup-id nitrogen --restore
 
+# Set Color Theme
+exec_always --no-startup-id wal -R
+
 # Disable Titlebar
 for_window [class="^.*"] border pixel 1
 
