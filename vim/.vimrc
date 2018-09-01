@@ -1,7 +1,6 @@
 "" VIM-PLUG
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'townk/vim-autoclose'
 Plug 'ap/vim-css-color'
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -13,6 +12,11 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
 Plug 'rakr/vim-one'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'raimondi/delimitmate'
+Plug 'yggdroot/indentline'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "" PLUGIN SETTINGS
