@@ -125,11 +125,15 @@ bar {
 }
 
 # Set Wallpaper
-exec_always --no-startup-id feh --bg-scale /home/flo/Bilder/wallhaven-656798r.jpg
+exec_always --no-startup-id feh --bg-scale /home/ffuszthaler/Downloads/daft-punk-minimalism-2-image.jpg
 #exec_always --no-startup-id nitrogen --restore
 
 # Disable Titlebar
 for_window [class="^.*"] border pixel 1
+
+# Needed for i3-gaps
+gaps inner 10
+gaps outer 10
 
 # Important Applications
 bindsym $mod+F2 exec --no-startup-id google-chrome
