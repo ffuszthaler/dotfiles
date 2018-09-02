@@ -10,7 +10,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
 Plug 'rakr/vim-one'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -61,15 +61,15 @@ set backspace=indent,eol,start
 syntax on
 set background=dark
 set t_Co=256
-set laststatus=2
+"set laststatus=2
 set number
 set relativenumber
 set wildmode=list:longest,full
 set wildmenu
-colorscheme one
-if (has("termguicolors"))
-  set termguicolors
-endif
+"colorscheme one
+"if (has("termguicolors"))
+"  set termguicolors
+"endif
 
 "" SEARCH
 set ignorecase
@@ -122,6 +122,10 @@ map <leader>w :w!<cr>
 
 " Better search
 map <space> /
+
+" Copy/Paste from/to System Clipboard
+vnoremap <C-c> "+y
+map <C-v> "+p
 
 " Deactivate Arrow Keys
 noremap <Up> <nop>
