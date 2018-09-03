@@ -27,6 +27,7 @@ let g:lightline = {
 
 " NERDTree
 map <C-n> :NERDTreeToggle<cr>
+let NERDTreeQuitOnOpen = 1
 
 " Syntastic
 set statusline+=%#warningmsg#
