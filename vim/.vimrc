@@ -18,6 +18,7 @@ Plug 'mxw/vim-jsx'
 Plug 'raimondi/delimitmate'
 Plug 'yggdroot/indentline'
 Plug 'ryanoasis/vim-devicons'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 "" PLUGIN SETTINGS
@@ -42,6 +43,9 @@ let g:syntastic_check_on_wq = 0
 " NERD Commenter (important shortcuts)
 " <leader>cc - Comment out current line or text selected in visual mode.
 " <leader>cu - Uncomment the selected line(s).
+
+" Emmet-vim
+" how to use: type html:5 and press <c-y>, (CTRL+y+,)
 
 " Surround.vim (", ' , ... are just used for example)
 " cs"' - to change "Hello" to 'Hello'
