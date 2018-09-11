@@ -19,6 +19,7 @@ Plug 'raimondi/delimitmate'
 Plug 'yggdroot/indentline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mattn/emmet-vim'
+Plug 'whatyouhide/vim-gotham'
 call plug#end()
 
 "" PLUGIN SETTINGS
@@ -40,19 +41,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" NERD Commenter (important shortcuts)
-" <leader>cc - Comment out current line or text selected in visual mode.
-" <leader>cu - Uncomment the selected line(s).
-
-" Emmet-vim
-" how to use: type html:5 and press <c-y>, (CTRL+y+,)
-
-" Surround.vim (", ' , ... are just used for example)
-" cs"' - to change "Hello" to 'Hello'
-" cs'<tagname> - to change 'Hello' to <tagname>Hello</tagname>
-" cst" - to get "Hello" again
-" ds" - to remove delimiters entirely
-
 "" BASIC
 set nocompatible
 filetype plugin indent on
@@ -73,9 +61,7 @@ set relativenumber
 set wildmode=list:longest,full
 set wildmenu
 "colorscheme one
-"if (has("termguicolors"))
-"  set termguicolors
-"endif
+"set termguicolors
 
 "" SEARCH
 set ignorecase
@@ -133,13 +119,3 @@ map <space> /
 vnoremap <C-c> "+y
 map <C-v> "+p
 
-" Deactivate Arrow Keys
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
-
-inoremap <left> <nop>
-inoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
