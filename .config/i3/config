@@ -10,8 +10,9 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec --no-startup-id st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -94,38 +95,38 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Shift+x mode "$mode_system"
 set $mode_system System (l) lock, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec bash ~/.config/i3/lock.sh, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+  # These bindings trigger as soon as you enter the powermenu mode
+  bindsym l exec bash ~/.config/i3/lock.sh, mode "default"
+  bindsym r exec --no-startup-id systemctl reboot, mode "default"
+  bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
-    # These bindings trigger as soon as you enter the resize mode
-    bindsym Left resize shrink width 10 px or 10 ppt
-    bindsym Down resize grow height 10 px or 10 ppt
-    bindsym Up resize shrink height 10 px or 10 ppt
-    bindsym Right resize grow width 10 px or 10 ppt
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
 bindsym $mod+r mode "resize"
+mode "resize" {
+  # These bindings trigger as soon as you enter the resize mode
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Down resize grow height 10 px or 10 ppt
+  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
+
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
 
 # Start i3blocks
 bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        position top
+  status_command i3blocks -c ~/.config/i3/i3blocks.conf
+  position top
 }
 
 # Set Wallpaper
-exec_always --no-startup-id feh --bg-scale /home/ffuszthaler/Downloads/daft-punk-minimalism-2-image.jpg
+#exec_always --no-startup-id feh --bg-scale /home/ffuszthaler/Downloads/daft-punk-minimalism-2-image.jpg
 #exec_always --no-startup-id nitrogen --restore
 
 # Set Color Theme
@@ -140,7 +141,8 @@ gaps outer 10
 
 # Important Applications
 bindsym $mod+F2 exec --no-startup-id google-chrome
-bindsym $mod+F3 exec --no-startup-id urxvt -e ranger
+#bindsym $mod+F3 exec --no-startup-id urxvt -e ranger
+bindsym $mod+F3 exec --no-startup-id st -e ranger
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
