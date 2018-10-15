@@ -4,33 +4,20 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'ap/vim-css-color'
 Plug 'ervandew/supertab'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'crater2150/vim-theme-chroma'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
-"Plug 'itchyny/lightline.vim'
-Plug 'rakr/vim-one'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'raimondi/delimitmate'
 Plug 'yggdroot/indentline'
-Plug 'ryanoasis/vim-devicons'
 Plug 'mattn/emmet-vim'
-Plug 'whatyouhide/vim-gotham'
 call plug#end()
 
 "" PLUGIN SETTINGS
-" Lightline
-let g:lightline = {
-      \'colorscheme': 'one',
-      \}
-
-" NERDTree
+" NERDTree (For help type ?)
 map <C-n> :NERDTreeToggle<cr>
 let NERDTreeQuitOnOpen = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -55,13 +42,20 @@ set backspace=indent,eol,start
 syntax on
 set background=dark
 set t_Co=256
+set ruler
 "set laststatus=2
+set statusline=%F%m%r%h%w%=\ [%{&ff}]\ [%l,%v]\ [%p%%]\ [%L]
 set number
 set relativenumber
-set wildmode=list:longest,full
 set wildmenu
+set wildmode=list:longest,full
 "colorscheme one
 "set termguicolors
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
 
 "" SEARCH
 set ignorecase
@@ -75,7 +69,7 @@ set shiftwidth=2
 set tabstop=2
 set autoindent
 
-"" GVIM (vim-plug needs to be in ~/vimfiles/autoload instead ~/.vim/autoload for windows) 
+"" GVIM
 if has("gui_running")
   set guioptions-=m
   set guioptions-=T
@@ -83,7 +77,7 @@ if has("gui_running")
   set guioptions-=L
   set guioptions-=e
   set guioptions-=c
-  set guifont=Consolas:h10 " default font of cmd
+  set guifont=Consolas:h10
   set columns=100 lines=25
 endif
 
