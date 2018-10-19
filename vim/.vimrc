@@ -77,8 +77,9 @@ if has("gui_running")
   set guioptions-=L
   set guioptions-=e
   set guioptions-=c
-  set guifont=Consolas:h10
+  "set guifont=furacode\ nerd\ font\ mono
   set columns=100 lines=25
+  colorscheme koehler
 endif
 
 "" MAPPING
