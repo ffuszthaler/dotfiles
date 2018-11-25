@@ -1,36 +1,48 @@
 ;; ffuszthaler's config.el file
 
+;; Start Emacs Server
 (server-start)
 
+;; No startup screen
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
 
 (setq user-full-name "Florian Fußthaler")
 
+;; Clean up UI
 (setq ring-bell-function 'ignore)
-(menu-bar-mode -1)
-(toggle-scroll-bar -1)
 (tool-bar-mode -1)
-(tooltip-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(toggle-scroll-bar -1)
+(horizontal-scroll-bar-mode -1)
 
+;; Syntax highlighting
 (global-font-lock-mode t)
 
+;; No backup files
 (setq make-backup-files nil)
 
+;; Word wrapping
 (global-visual-line-mode t)
 
+;; Line numbers
 (global-linum-mode t)
 
+;; Set tabs to spaces and 2
 (setq-default tab-width 2)
 (setq evil-shift-width 2)
 (setq-default indent-tabs-mode nil)
 (setq-default tabs-always-indent nil)
-    
+
+;; Matching parentheses
 (setq show-paren-delay 0)
 (show-paren-mode 1)
 
+;; Enable Clipboard
 (setq x-select-enable-clipboard t)
 
+;; Ido mode
 (ido-mode t)
 (ido-everywhere t)
 (setq ido-enable-flex-matching t)
