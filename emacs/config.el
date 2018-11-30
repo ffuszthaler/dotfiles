@@ -7,8 +7,6 @@
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
 
-(setq user-full-name "Florian Fußthaler")
-
 ;; Clean up UI
 (setq ring-bell-function 'ignore)
 (tool-bar-mode -1)
@@ -34,6 +32,7 @@
 (setq evil-shift-width 2)
 (setq-default indent-tabs-mode nil)
 (setq-default tabs-always-indent nil)
+(setq js-indent-level 2)
 
 ;; Matching parentheses
 (setq show-paren-delay 0)
@@ -51,7 +50,6 @@
 (use-package evil
   :ensure t
   :config
-  (evil-set-initial-state 'neotree-mode 'insert)
   (evil-mode 1))
 
 ;; Doom-themes
@@ -60,43 +58,30 @@
 ;; Solarized Theme
 (use-package solarized-theme :ensure t)
 
+;; Gotham Theme
+(use-package gotham-theme :ensure t)
+
 ;; Which Key
 (use-package which-key
   :ensure t
-  :init
-  (setq which-key-separator " ")
-  (setq which-key-prefix-prefix "+")
-  (which-key-setup-side-window-right-bottom)
   :config
   (which-key-mode 1))
 
 ;; Projectile
 (use-package projectile
   :ensure t
-  :init
-  (setq projectile-require-project-root nil)
   :config
   (projectile-mode 1))
 
-;; All The Icons
-(use-package all-the-icons :ensure t)
-
-;; NeoTree
-(use-package neotree
+;; Dired-Sidebar
+(use-package dired-sidebar
+  :bind ((" C-x d" . dired-sidebar-toggle-sidebar))
   :ensure t
-  :init
-  (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
-(global-set-key [f8] 'neotree-toggle)
+  :commands (dired-sidebar-toggle-sidebar))
 
 ;; Show matching parens
 (setq show-paren-delay 0)
 (show-paren-mode 1)
-
-;; Indent with 2
-(setq-default tab-width 2)
-(setq evil-shift-width 2)
-(setq-default indent-tabs-mode nil)
-(setq-default tab-always-indent nil)
 
 ;; Wind Move
 (when (fboundp 'windmove-default-keybindings)
@@ -129,4 +114,29 @@
   :ensure t
   :config
   (add-hook 'prog-mode-hook 'rainbow-mode))
+
+;; Web Mode
+(use-package web-mode
+  :ensure t
+  :mode (("\\.html$" . web-mode)
+         ("\\.phtml\\'" . web-mode)
+         ("\\.tpl\\.php\\'" . web-mode)
+         ("\\.[agj]sp\\'" . web-mode)
+         ("\\.as[cp]x\\'" . web-mode)
+         ("\\.erb\\'" . web-mode)
+         ("\\.mustache\\'" . web-mode)
+         ("\\.djhtml\\'" . web-mode))
+  :init
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+
+  (setq web-mode-enable-auto-pairing t)
+  (setq web-mode-enable-auto-expanding t)
+  (setq web-mode-enable-css-colorization t))
+
+;; Minions
+(use-package minions
+  :ensure t
+  :init (minions-mode))
 
