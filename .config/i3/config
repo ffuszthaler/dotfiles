@@ -21,22 +21,37 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 
 # change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively you can use the arrow keys
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# alternatively you can use the arrow keys
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h;exec notify-send 'tile horizontally'
+#bindsym $mod+h split h;exec notify-send 'tile horizontally'
 
 # split in vertical orientation
-bindsym $mod+v split v;exec notify-send 'tile vertically'
+#bindsym $mod+v split v;exec notify-send 'tile vertically'
+
+# toggle splitting orientation
+bindsym $mod+t split toggle; exec notify-send 'toggled splitting orientation'
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -95,34 +110,79 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Shift+x mode "$mode_system"
 set $mode_system System (l) lock, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-  # These bindings trigger as soon as you enter the powermenu mode
-  bindsym l exec bash ~/.config/i3/lock.sh, mode "default"
-  bindsym r exec --no-startup-id systemctl reboot, mode "default"
-  bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+    bindsym l exec bash ~/.config/i3/lock.sh, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
-  # back to normal: Enter or Escape
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 # resize window (you can also use the mouse for that)
-bindsym $mod+r mode "resize"
 mode "resize" {
-  # These bindings trigger as soon as you enter the resize mode
-  bindsym Left resize shrink width 10 px or 10 ppt
-  bindsym Down resize grow height 10 px or 10 ppt
-  bindsym Up resize shrink height 10 px or 10 ppt
-  bindsym Right resize grow width 10 px or 10 ppt
+    # These bindings trigger as soon as you enter the resize mode
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
+    
+    # alternatively you can use the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-  # back to normal: Enter or Escape
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
+
+bindsym $mod+r mode "resize"
+
+# Set Xresources colors:
+set_from_resource $darkblack	  i3wm.color0  #000000
+set_from_resource $black	      i3wm.color8  #000000
+set_from_resource $darkred	    i3wm.color1  #000000
+set_from_resource $red		      i3wm.color9  #000000
+set_from_resource $darkgreen	  i3wm.color2  #000000
+set_from_resource $green	      i3wm.color10 #000000
+set_from_resource $darkyellow	  i3wm.color3  #000000
+set_from_resource $yellow	      i3wm.color11 #000000
+set_from_resource $darkblue	    i3wm.color4  #000000
+set_from_resource $blue		      i3wm.color12 #000000
+set_from_resource $darkmagenta	i3wm.color5  #000000
+set_from_resource $magenta	    i3wm.color13 #000000
+set_from_resource $darkcyan	    i3wm.color6  #000000
+set_from_resource $cyan		      i3wm.color14 #000000
+set_from_resource $darkwhite	  i3wm.color7  #000000
+set_from_resource $white	      i3wm.color15 #000000
+set $transparent		#00000000
+
+#                         BORDER        BACKGROUND	TEXT		  INDICATOR     CHILD_BORDER
+client.focused		        $blue	        $blue		    $white  	$magenta    	$blue
+client.unfocused	        $transparent	$red		    $white		$blue   		  $transparent
+client.focused_inactive	  $transparent	$red		    $white		$blue   		  $transparent
+client.urgent		          #900000	      #900000	    $white	  $magenta		  #900000
+client.background         $darkblack
 
 # Start i3blocks
 bar {
-  status_command i3blocks -c ~/.config/i3/i3blocks.conf
-  position top
+    #font pango:envypn 9
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    position top
+
+    colors {
+      background $darkblack
+      statusline #FFFFFF
+      separator  #666666
+                          #border     #bg         #text
+      focused_workspace   $darkblue   $darkblue   $darkblack
+      active_workspace    $darkblue   $darkblack  $darkblue
+      inactive_workspace  $darkblue   $darkblack  $darkblue
+      urgent_workspace    #900000     #000000     #FFFFFF
+      binding_mode        #900000     #000000     #FFFFFF
+    }
 }
 
 # Set Wallpaper
@@ -131,6 +191,9 @@ bar {
 
 # Set Color Theme
 exec_always --no-startup-id wal -R
+
+# start Composite manager
+exec_always --no-startup-id xcompmgr
 
 # Disable Titlebar
 for_window [class="^.*"] border pixel 1
