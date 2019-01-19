@@ -18,10 +18,10 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 ;;(load-theme 'tron t)
 ;;(load-theme 'solarized-dark t)
-(load-theme 'doom-molokai t)
+;;(load-theme 'doom-molokai t)
 
 ;; Font
-(set-default-font "fura code nerd font mono 9")
+(set-frame-font "envypn")
 
 ;; Load custom set faces and variables
 (setq custom-file "~/.emacs.d/custom.el")

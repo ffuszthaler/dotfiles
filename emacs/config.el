@@ -31,7 +31,7 @@
 (setq-default tab-width 2)
 (setq evil-shift-width 2)
 (setq-default indent-tabs-mode nil)
-(setq-default tabs-always-indent nil)
+(setq-default tabs-always-indent 'complete)
 (setq js-indent-level 2)
 
 ;; Matching parentheses
@@ -41,7 +41,7 @@
 ;; Enable Clipboard
 (setq x-select-enable-clipboard t)
 
-;; Ido mode
+;; Ido mode (for auto completion in find-file, ...)
 (ido-mode t)
 (ido-everywhere t)
 (setq ido-enable-flex-matching t)
@@ -67,27 +67,23 @@
   :config
   (which-key-mode 1))
 
-;; Projectile
-(use-package projectile
-  :ensure t
-  :config
-  (projectile-mode 1))
-
-;; Dired-Sidebar
-(use-package dired-sidebar
-  :bind ((" C-x d" . dired-sidebar-toggle-sidebar))
-  :ensure t
-  :commands (dired-sidebar-toggle-sidebar))
-
 ;; Show matching parens
 (setq show-paren-delay 0)
 (show-paren-mode 1)
 
-;; Wind Move
+;; Change Yes or No to Y or N
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; Windmove (easier split movement)
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
+;; "fix" for terminal
+(define-key input-decode-map "\e[1;2A" [S-up])
+(define-key input-decode-map "\e[1;2B" [S-down])
+(define-key input-decode-map "\e[1;2C" [S-right])
+(define-key input-decode-map "\e[1;2D" [S-left])
 
-;; Winner Mode
+;; Winner Mode (undo and redo window configurations easily)
 (when (fboundp 'winner-mode)
   (winner-mode 1))
 
@@ -100,20 +96,11 @@
   (add-hook 'js-mode-hook 'emmet-mode)
   (add-hook 'js-jsx-mode-hook 'emmet-mode))
 
-;; Smex
+;; Smex (better M-x)
 (use-package smex
   :ensure t
   :init (smex-initialize)
   :bind("M-x" . smex))
-
-;; Impatient Mode
-(use-package impatient-mode :ensure t)
-
-;; Rainbow Mode
-(use-package rainbow-mode
-  :ensure t
-  :config
-  (add-hook 'prog-mode-hook 'rainbow-mode))
 
 ;; Web Mode
 (use-package web-mode
@@ -135,7 +122,7 @@
   (setq web-mode-enable-auto-expanding t)
   (setq web-mode-enable-css-colorization t))
 
-;; Minions
+;; Minions (prettier mode-line)
 (use-package minions
   :ensure t
   :init (minions-mode))

@@ -8,8 +8,8 @@ Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'yggdroot/indentline'
 Plug 'mattn/emmet-vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
 call plug#end()
 
 "" PLUGIN SETTINGS
@@ -34,28 +34,27 @@ filetype plugin indent on
 set autoread
 set nobackup
 set encoding=utf-8
-let mapleader=","
+let mapleader=" "
 set updatetime=100
 set backspace=indent,eol,start
+set splitbelow splitright
 
 "" LOOK
 syntax on
 set background=dark
 set t_Co=256
 set ruler
-"set laststatus=2
 set statusline=%F%m%r%h%w%=\ [%{&ff}]\ [%l,%v]\ [%p%%]\ [%L]
 set number
 set relativenumber
 set wildmenu
 set wildmode=list:longest,full
-"colorscheme one
-"set termguicolors
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
+set colorcolumn=80
 
 "" SEARCH
 set ignorecase
@@ -77,20 +76,11 @@ if has("gui_running")
   set guioptions-=L
   set guioptions-=e
   set guioptions-=c
-  "set guifont=furacode\ nerd\ font\ mono
   set columns=100 lines=25
   colorscheme koehler
 endif
 
 "" MAPPING
-" Splits
-map <C-h> <C-W>h
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-l> <C-W>l
-map <leader>v :vsp<space>
-map <leader>h :sp<space>
-
 " Tabs
 noremap <C-t> :tabnew<space>
 noremap <leader>1 1gt
@@ -104,13 +94,6 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
-" Fast saving
-map <leader>w :w!<cr>
-
-" Better search
-map <space> /
-
 " Copy/Paste from/to System Clipboard
 vnoremap <C-c> "+y
 map <C-v> "+p
-
