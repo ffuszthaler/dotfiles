@@ -2,7 +2,6 @@
 "call plug#begin('~/.config/nvim/plugged')
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'ap/vim-css-color'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
@@ -81,19 +80,6 @@ if has("gui_running")
 endif
 
 "" MAPPING
-" Tabs
-noremap <C-t> :tabnew<space>
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>8 8gt
-noremap <leader>9 9gt
-noremap <leader>0 :tablast<cr>
-
 " Copy/Paste from/to System Clipboard
 vnoremap <C-c> "+y
 map <C-v> "+p

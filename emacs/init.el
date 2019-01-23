@@ -4,8 +4,8 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (setq package-archives '(("melpa" . "http://melpa.org/packages/")
-			                   ("gnu"   . "http://elpa.gnu.org/packages/")
-			                   ("org"   . "http://orgmode.org/elpa/")))
+                         ("gnu"   . "http://elpa.gnu.org/packages/")
+                         ("org"   . "http://orgmode.org/elpa/")))
 (package-initialize)
 
 ;; Bootstrap "use-packages"
@@ -16,9 +16,7 @@
 
 ;; Theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-;;(load-theme 'tron t)
-;;(load-theme 'solarized-dark t)
-;;(load-theme 'doom-molokai t)
+;;(load-theme 'gotham t)
 
 ;; Font
 (set-frame-font "envypn")
@@ -31,4 +29,3 @@
 (load "~/.emacs.d/config.el")
 
 (provide 'init)
-
