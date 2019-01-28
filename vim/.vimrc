@@ -1,14 +1,14 @@
 "" VIM-PLUG
-"call plug#begin('~/.config/nvim/plugged')
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
-Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'w0rp/ale'
+Plug 'mhinz/vim-signify'
+Plug 'dylanaraps/wal.vim'
 call plug#end()
 
 "" PLUGIN SETTINGS
@@ -40,6 +40,7 @@ set wildmenu
 set wildmode=list:longest,full
 set colorcolumn=80
 set cursorline
+colorscheme wal
 
 "" SEARCH
 set ignorecase
