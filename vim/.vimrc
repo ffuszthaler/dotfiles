@@ -3,12 +3,12 @@
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
-Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'w0rp/ale'
 call plug#end()
 
 "" PLUGIN SETTINGS
@@ -18,15 +18,6 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 "" BASIC
 set nocompatible
 filetype plugin indent on
@@ -34,7 +25,6 @@ set autoread
 set nobackup
 set encoding=utf-8
 let mapleader=" "
-set updatetime=100
 set backspace=indent,eol,start
 set splitbelow splitright
 
@@ -48,12 +38,8 @@ set number
 set relativenumber
 set wildmenu
 set wildmode=list:longest,full
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
 set colorcolumn=80
+set cursorline
 
 "" SEARCH
 set ignorecase
