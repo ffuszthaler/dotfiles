@@ -12,13 +12,13 @@ Plug 'dylanaraps/wal.vim'
 call plug#end()
 
 "" PLUGIN SETTINGS
-" NERDTree (For help type ?)
+" NERDTree
 map <C-n> :NERDTreeToggle<cr>
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-"" BASIC
+"" GENERAL
 set nocompatible
 filetype plugin indent on
 set autoread
@@ -27,6 +27,8 @@ set encoding=utf-8
 let mapleader=" "
 set backspace=indent,eol,start
 set splitbelow splitright
+set wildmenu
+set wildmode=list:longest,full
 
 "" LOOK
 syntax on
@@ -36,17 +38,16 @@ set ruler
 set statusline=%F%m%r%h%w%=\ [%{&ff}]\ [%l,%v]\ [%p%%]\ [%L]
 set number
 set relativenumber
-set wildmenu
-set wildmode=list:longest,full
 set colorcolumn=80
 set cursorline
+set showmatch
 colorscheme wal
 
 "" SEARCH
 set ignorecase
 set smartcase
+set incsearch
 set hlsearch
-set showmatch
 
 "" INDENTING
 set expandtab
@@ -62,7 +63,7 @@ if has("gui_running")
   set guioptions-=L
   set guioptions-=e
   set guioptions-=c
-  set columns=100 lines=25
+  set columns=100 lines=50
   colorscheme koehler
 endif
 
