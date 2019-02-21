@@ -3,6 +3,10 @@
 # Set Windows/Super key is Mod
 set $mod Mod4
 
+# Variables
+set $TERMINAL st
+set $BROWSER google-chrome-stable
+
 # Font for window titles
 font pango:monospace 8
 
@@ -10,15 +14,13 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec i3-sensible-terminal
-#bindsym $mod+Return exec --no-startup-id urxvt
-bindsym $mod+Return exec --no-startup-id st
+bindsym $mod+Return exec --no-startup-id $TERMINAL
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -fn 'mono'
 
 # change focus
 bindsym $mod+h focus left
@@ -43,12 +45,6 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
-# split in horizontal orientation
-#bindsym $mod+h split h;exec notify-send 'tile horizontally'
-
-# split in vertical orientation
-#bindsym $mod+v split v;exec notify-send 'tile vertically'
 
 # toggle splitting orientation
 bindsym $mod+t split toggle; exec notify-send 'toggled splitting orientation'
@@ -107,9 +103,9 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Shutdown, restart, lock
-bindsym $mod+Shift+x mode "$mode_system"
-set $mode_system System (l) lock, (r) reboot, (Shift+s) shutdown
-mode "$mode_system" {
+bindsym $mod+Shift+x mode "$power"
+set $power System (l) lock, (r) reboot, (Shift+s) shutdown
+mode "$power" {
     bindsym l exec bash ~/.config/i3/lock.sh, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
@@ -167,33 +163,42 @@ client.urgent		          #900000	      #900000	    $white	  $magenta		  #900000
 client.background         $darkblack
 
 # Start i3blocks
-bar {
-    #font pango:envypn 9
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf
-    position top
-
-    colors {
-      background $darkblack
-      statusline #FFFFFF
-      separator  #666666
-                          #border     #bg         #text
-      focused_workspace   $darkblue   $darkblue   $darkblack
-      active_workspace    $darkblue   $darkblack  $darkblue
-      inactive_workspace  $darkblue   $darkblack  $darkblue
-      urgent_workspace    #900000     #000000     #FFFFFF
-      binding_mode        #900000     #000000     #FFFFFF
-    }
-}
+#bar {
+#    font pango:mono 11
+#    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#    position top
+#
+#    colors {
+#      background $darkblack
+#      statusline #FFFFFF
+#      separator  #666666
+#                          #border     #bg         #text
+#      focused_workspace   $darkblue   $darkblue   $darkblack
+#      active_workspace    $darkblue   $darkblack  $darkblue
+#      inactive_workspace  $darkblue   $darkblack  $darkblue
+#      urgent_workspace    #900000     #000000     #FFFFFF
+#      binding_mode        #900000     #000000     #FFFFFF
+#    }
+#}
 
 # Set Wallpaper
 #exec_always --no-startup-id feh --bg-scale /home/ffuszthaler/Downloads/daft-punk-minimalism-2-image.jpg
 #exec_always --no-startup-id nitrogen --restore
 
+# Polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+# Compton
+exec_always --no-startup-id "killall -q compton;compton --config ~/.config/compton/compton.conf"
+
+# Dunst
+exec_always --no-startup-id "killall -q dunst;dunst --config ~/.config/dunst/dunstrc"
+
 # Set Color Theme
 exec_always --no-startup-id wal -R
 
 # start Composite manager
-exec_always --no-startup-id xcompmgr
+#exec_always --no-startup-id xcompmgr
 
 # Disable Titlebar
 for_window [class="^.*"] border pixel 1
@@ -203,9 +208,8 @@ gaps inner 10
 gaps outer 10
 
 # Important Applications
-bindsym $mod+F2 exec --no-startup-id google-chrome
-#bindsym $mod+F3 exec --no-startup-id urxvt -e ranger
-bindsym $mod+F3 exec --no-startup-id st -e ranger
+bindsym $mod+F2 exec --no-startup-id $BROWSER
+bindsym $mod+F3 exec --no-startup-id $TERMINAL -e ranger
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
