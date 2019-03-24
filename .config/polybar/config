@@ -18,14 +18,49 @@
 
 [colors]
 background = ${xrdb:color0:#222}
-;background = #222
-background-alt = #444
+; background = #222
+
+background-alt = ${xrdb:color0:#222}
+; background-alt = #444
+
 foreground = ${xrdb:color7:#222}
-;foreground = #dfdfdf
+; foreground = #dfdfdf
+
+; foreground-alt = ${xrdb:color7:#222}
 foreground-alt = #555
+
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
+
+; Nord theme ============
+; background = #1D2330
+; foreground = #c0c5ce
+; alert = #bd2c40
+; volume-min = #a3be8c
+; volume-med = #ebcb8b
+; volume-max = #bf616a
+; =======================
+
+; Gotham theme ==========
+; background = #0a0f14
+; foreground = #99d1ce
+; alert = #d26937
+; volume-min = #2aa889
+; volume-med = #edb443
+; volume-max = #c23127
+; =======================
+
+; INTRCPTR theme ============
+;background = ${xrdb:color0:#222}
+;background = #aa000000
+;background-alt = #444
+;foreground = ${xrdb:color7:#222}
+;foreground = #fff
+;foreground-alt = #555
+;primary = #ffb52a
+;secondary = #e60053
+;alert = #bd2c40
 
 [bar/i3-one]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -56,8 +91,9 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
-modules-center = 
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-center =
+; modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth battery temperature date
 
 tray-position = right
 tray-padding = 2
@@ -208,7 +244,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
-label = %percentage:2%%
+label = CPU %percentage:2%%
 
 [module/memory]
 type = internal/memory
@@ -216,7 +252,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label = %percentage_used%%
+label = MEM %percentage_used%%
 
 [module/wlan]
 type = internal/network

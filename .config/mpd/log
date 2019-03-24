@@ -1,0 +1,585 @@
+Feb 24 11:55 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 24 11:55 : exception: Failed to open '/home/flo/.config/mpd/state': No such file or directory
+Feb 24 11:55 : update: added /XXXTENTACION - Moonlight (Gaullin Remix)-qCHTWVmp-SQ.mp3
+Feb 24 11:55 : client: [0] opened from [::1]:32922
+Feb 24 11:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 24 11:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 24 11:56 : player: played "XXXTENTACION - Moonlight (Gaullin Remix)-qCHTWVmp-SQ.mp3"
+Feb 24 11:58 : player: played "XXXTENTACION - Moonlight (Gaullin Remix)-qCHTWVmp-SQ.mp3"
+Feb 24 12:09 : client: [0] closed
+Feb 24 12:18 : client: [1] opened from [::1]:33094
+Feb 24 12:18 : update: added /Wonders [AGST Remix] by Ten Towers - [Beats Music]-50nGu7zvylE.mp3
+Feb 24 12:18 : update: added /Halogen - U Got That _ EXTREME BASS BOOSTED -lLYopDk3FJw.mp3
+Feb 24 12:18 : update: added /UNSECRET - REVOLUTION (FT. RUELLE) [OFFICIAL AUDIO]-f0ZWgtUvVy4.mp3
+Feb 24 12:18 : update: added /Jake Hill - JohnInTheMorning (Fitz rap)-l-RbC2CBNIQ.mp3
+Feb 24 12:19 : client: [1] closed
+Feb 24 12:19 : client: [2] opened from [::1]:33106
+Feb 24 12:19 : client: [2] closed
+Feb 24 12:34 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 24 12:34 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 24 12:35 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 24 12:35 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 24 12:41 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 24 12:41 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 24 12:41 : client: [3] opened from [::1]:33852
+Feb 24 12:41 : update: added /SLUMBERJACK & QUIX - Vision (feat. josh pan)-YCxqKP4CXeI.mp3
+Feb 24 12:41 : update: added /Crystal (DJ AG Original)-zP1r0bHyCpw.mp3
+Feb 24 12:41 : update: added /Khamsin - Second Guess (feat. Anuka)-dhYXnoPxmEc.mp3
+Feb 24 12:41 : update: added /Nine Lives - Heaven-CLC91I0Z3GE.mp3
+Feb 24 12:41 : update: added /Taylor Swift - Look What You Made Me Do-3tmd-ClpJxA.mp3
+Feb 24 12:41 : update: added /Selena Gomez, Marshmello - Wolves (Audiovista Remix)-jjr68pehq6A.mp3
+Feb 24 12:41 : update: added /it's different & Forever M.C. - No Hands (feat. blackbear & MAX) [Official Lyric Video]-ZxqCTq-1q_c.mp3
+Feb 24 12:41 : update: added /MagnusTheMagnus - Area (iPhone 8)-nvHyII4Dq-A.mp3
+Feb 24 12:41 : update: added /K-391 - Flux-ERu6jh_1gR0.mp3
+Feb 24 12:41 : update: added /WiDE AWAKE & UNKWN - All I Need (feat. Cuchara)-XU_qUKSnXJU.mp3
+Feb 24 12:41 : update: added /M3RC - The Haze EP-M7RF3zH1fvA.mp3
+Feb 24 12:41 : update: added /The Immature Kids - Sins (feat. Alexandra Panayotova)-vazV7P2zTlk.mp3
+Feb 24 12:41 : update: added /Lemay - Say You Do (feat. Belle Jewel)-0D8vSjBUFPg.mp3
+Feb 24 12:41 : update: added /Caravan Palace - Lone Digger-UbQgXeY_zi4.mp3
+Feb 24 12:41 : update: added /Lensko - Cetus [NCS Release]-i3vrV-WNmsc.mp3
+Feb 24 12:41 : update: added /Star Wars - Cantina Band (DJ AG Remix)-SXCH09mYZTg.mp3
+Feb 24 12:41 : update: added /Lensko - Let's Go! [NCS Release]-mSLuJYtl89Y.mp3
+Feb 24 12:41 : update: added /Tiësto & Sevenn - BOOM (Official Video)-tSJSVmfaMCs.mp3
+Feb 24 12:41 : update: added /This is a Revolution - Ruelle _ The Darkest Minds Trailer Music Song-uhG4cAZv8cY.mp3
+Feb 24 12:41 : update: added /Unlike Pluto - Let It Bleed (feat. Cristina Gatti)-zk3arBpy0eg.mp3
+Feb 24 12:41 : update: added /Element - Augustine-3aliik9qxYY.mp3
+Feb 24 12:41 : update: added /Sinner's Heist - Broken (feat. Heather Sommer)-FPAgf5If0mU.mp3
+Feb 24 12:41 : update: added /Rick and Morty _ Gravity falls [MASHUP INTRO THEME]-W0hAYciWWag.mp3
+Feb 24 12:41 : update: added /Stranger Things X Ariana Grande _ Launchpad Mashup-IcftmFsVMRY.mp3
+Feb 24 12:41 : update: added /Ameria & YungSnapLorde - Yesterday-wkq-iUorIAo.mp3
+Feb 24 12:41 : update: added /Steve Void & Syence - We Won't Leave You--_kbygQVs2s.mp3
+Feb 24 12:41 : update: added /Joey Rumble - Anywhere-qKktdA2e7No.mp3
+Feb 24 12:41 : update: added /TULE - Fearless [Music Video]-NLsFqThsKzs.mp3
+Feb 24 12:41 : update: added /Nephaim & Tyler Ocean - With Me-aVkSTOo1dCI.mp3
+Feb 24 12:41 : update: added /UPRIZE - Let U Go-tGexqHeu05U.mp3
+Feb 24 12:41 : update: added /Imagine Dragons - Believer (Romy Wave Cover) [Not So Good Remix]-ML6aBSwJk08.mp3
+Feb 24 12:41 : update: added /Gnarls Barkley - Crazy-Qe500eIK1oA.mp3
+Feb 24 12:41 : update: added /Outr3ach & J-Marin - Worth It (feat. Kaitlin Grace)-Ko3nS6aLlcM.mp3
+Feb 24 12:41 : update: added /ZAYDE WOLF - SAVE TONIGHT - KRYPTON - SYFY SUPERMAN TRAILER-SorxwQnuvDc.mp3
+Feb 24 12:41 : update: added /Alison Wonderland - Cry (Rynx Remix)-IcdqKcyqrCw.mp3
+Feb 24 12:41 : update: added /Le Malls - Call Me (feat. Lilianna Wilde)-ON5XT3TNbFE.mp3
+Feb 24 12:41 : update: added /GMV - This Is My World-GKZRAyPHYxQ.mp3
+Feb 24 12:41 : update: added /You Spin Me Round (Feat. Silver Letomi)-b4JfmlpAdRM.mp3
+Feb 24 12:41 : update: added /Rynx - Want You (feat. Miranda Glory)-ogRCYa6-WSA.mp3
+Feb 24 12:41 : update: added /Neo Noir - When I Was Young (feat. Brooke Williams)-S5pX-qlQbh0.mp3
+Feb 24 12:41 : update: added /Noah Cyrus - Again ft. XXXTENTACION (Galactic Marvl Remix)-GbI7QLCpO70.mp3
+Feb 24 12:41 : update: added /SCOTTY SIRE - MISTER GLASSMAN (Official Lyric Video)-cMtHByGJ8Ao.mp3
+Feb 24 12:41 : update: added /It - TV Spot Music _ Theta Sound Music _ Trailer-jS69NThHY9s.mp3
+Feb 24 12:41 : update: added /San Holo & James Vincent McMorrow - The Future (Fytch Remix)-0DIoQndgHgg.mp3
+Feb 24 12:41 : update: added /Will Smith  - Caution in the Wild [BRAND NEW SONG 2016]-fME2MwLSoRQ.mp3
+Feb 24 12:41 : update: added /Star Wars - The Force Theme (Far Out Remix)--nk5ig_1BIA.mp3
+Feb 24 12:41 : update: added /Domastic - Tonight (feat. Chris Linton)-rCXBd_zz3UE.mp3
+Feb 24 12:41 : update: added /Unlike Pluto - Let It Bleed (feat. Cristina Gatti) [Official Lyric Video]-MjtwTDYJVgw.mp3
+Feb 24 12:41 : update: added /Elephante - Come Back For You (feat. Matluck)-zyfiwK6wvIg.mp3
+Feb 24 12:41 : update: added /'IT'S NOT A MOON' — A Bad Lip Reading of Star Wars-eT4shwU4Yc4.mp3
+Feb 24 12:41 : update: added /THEY. - U-RITE (Rynx Remix)-HuqtOIORPxo.mp3
+Feb 24 12:41 : update: added /Justin Caruso - Caving ft. James Droll (King Kavalier Remix)-HIfriX8NGzY.mp3
+Feb 24 12:41 : update: added /Purity Ring - Sea Castle-Xd0LRsEj_4E.mp3
+Feb 24 12:41 : update: added /blackbear - do re mi (Tarro Remix)-JdBp1qouHRQ.mp3
+Feb 24 12:41 : update: added /5 & A Dime - Flying High (feat. Yashar Gasanov)-s9VsdPg1Nbg.mp3
+Feb 24 12:41 : update: added /The Delta Mode - Lonesome Rider-Tvbyfj3yFfQ.mp3
+Feb 24 12:41 : update: added /Unlike Pluto - Look At Me-O7Q6pYWnL-Y.mp3
+Feb 24 12:41 : update: added /Noah Cyrus - Again ft. XXXTENTACION (Renzyx Remix)-2hcWKLJI6VA.mp3
+Feb 24 12:41 : update: added /Lil Uzi Vert - XO Tour Llif3 (B-Sides Remix)-28P1SKazHPI.mp3
+Feb 24 12:41 : update: added /Prismo - Smile-kTXRgAxQxF0.mp3
+Feb 24 12:41 : update: added /Swedish House Mafia - Don't You Worry Child (Emdi & Coorby Remix)-INVaKb86a_Q.mp3
+Feb 24 12:41 : update: added /Aaron Wilde - Heroes Collide (Epic Dramatic Powerful Heroic Action)-7lwLusldtmA.mp3
+Feb 24 12:41 : update: added /Taska Black - Nothing Lasts (feat. Pauline Herr) (Lyric Video)-kmz3KU7aEug.mp3
+Feb 24 12:41 : update: added /Blackbear - 4U (Renzyx Remix)-AsOhTFMDGk8.mp3
+Feb 24 12:41 : update: added /Merk & Kremont - Sad Story (Out Of Luck) [Official Music Video]-8GotXeCwUnc.mp3
+Feb 24 12:41 : update: added /Fabian Mazur - Don't Talk About It (feat. Neon Hitch)-AKU36R8lD-g.mp3
+Feb 24 12:41 : update: added /Calvin Harris - Feels (Official Video) ft. Pharrell Williams, Katy Perry, Big Sean-ozv4q2ov3Mk.mp3
+Feb 24 12:41 : update: added /[Electro Swing] Odd Chap - Sound 102-lUtZ_MFvWYk.mp3
+Feb 24 12:41 : update: added /Rick and Morty - Pickle Rick (Trap Remix)-xWpmZz28ZOg.mp3
+Feb 24 12:41 : update: added /Kaskade - Winter Wonderland-HtOuP-j7WYk.mp3
+Feb 24 12:41 : update: added /K-391 - Escape--10EgjPV-JM.mp3
+Feb 24 12:41 : update: added /Lions Head - True Love (Lyric Video Clip by Mi-Zo for True Love)-y6yqo3F2QRU.mp3
+Feb 24 12:41 : update: added /Tre Sera - Holding On-WQpxYMb3lQE.mp3
+Feb 24 12:41 : update: added /Outr3ach & J-Marin - Worth It (feat. Kaitlin Grace)-bh4C0ENNvcU.mp3
+Feb 24 12:41 : update: added /Night Lights - Mad Blade _ Synthwave_Retrowave Instrumental -O-uKZicfHws.mp3
+Feb 24 12:41 : update: added /MagnusTheMagnus - Area [Bass Boosted]-8ZE37rgnuto.mp3
+Feb 24 12:41 : update: added /Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3
+Feb 24 12:41 : update: added /Renzyx - Prey-FEDsnDDvn2I.mp3
+Feb 24 12:42 : client: [3] closed
+Feb 24 12:42 : client: [4] opened from [::1]:33880
+Feb 24 12:42 : client: [4] closed
+Feb 24 12:45 : client: [5] opened from [::1]:33974
+Feb 24 12:45 : player: played "Halogen - U Got That _ EXTREME BASS BOOSTED -lLYopDk3FJw.mp3"
+Feb 24 12:45 : player: played "Noah Cyrus - Again ft. XXXTENTACION (Renzyx Remix)-2hcWKLJI6VA.mp3"
+Feb 24 12:45 : client: [5] closed
+Feb 24 12:46 : client: [6] opened from [::1]:34018
+Feb 24 12:46 : update: added /The Power of Balance - An Avatar Orchestration-bmlg1HkjUjA.webm
+Feb 24 12:46 : update: added /The Power of Balance - An Avatar Orchestration-bmlg1HkjUjA.mp3
+Feb 24 12:46 : update: added /Rick And Morty - Season 3 Trailer Song (Dizzee Rascal & Armand Van Helden - Bonkers)-dHMTvVYBEpU.mp3
+Feb 24 12:46 : update: added /Last Agni Kai - The Phoenix King-q48atkrvZs0.mp3
+Feb 24 12:46 : update: added /Majik - 27-5meFZp2nxWo.mp3
+Feb 24 12:46 : update: added /Party Thieves & JayKode - Poppy Seeds (feat. Neon Hitch)-tgFUJgAPqGs.mp3
+Feb 24 12:46 : update: added /New City - Dirty Secrets (Price & Takis Remix)-XjqRS56z-ao.mp3
+Feb 24 12:46 : update: added /Mashup - The Weeknd - Starboy x Survive - Stranger Things Theme (C418 Remix) - Stranger Boy-zD0M7rVDG6g.mp3
+Feb 24 12:46 : update: added /JANEE - Go Ahead Boy (feat. Kevon)-ZazF2-A7tGA.mp3
+Feb 24 12:46 : update: added /Zack Hemsey - 'The Way (Instrumental)'-oN2Xs-MvxLw.mp3
+Feb 24 12:46 : update: added /►SWAG◄ BLACK WIDOW-2W_FoeBSpWg.mp3
+Feb 24 12:46 : update: added /Beatrex - Mr. Meeseeks-Qh5ZpjBB4UM.mp3
+Feb 24 12:46 : update: added /blackbear - fashion week (it's different remix)-JmSIQd6_dpg.mp3
+Feb 24 12:46 : update: added /Matstubs - Kings And Queens Of Summer (Not Your Dope Remix)-bQ9TOO268Vk.mp3
+Feb 24 12:46 : update: added /The Avatar's Love [Full HQ]-53rCO8BsKwU.mp3
+Feb 24 12:46 : update: added /Zomboy - Nuclear (Dillon Francis Remix)-8qL_mZwVLWo.mp3
+Feb 24 12:46 : update: added /Lost Frequencies & Netsky - Here With You-2eRlLskMKxQ.mp3
+Feb 24 12:46 : update: added /Spooky Scary Skeletons Remix   Extended Mix-tWsEupl8S0o.mp3
+Feb 24 12:46 : client: [6] closed
+Feb 24 12:58 : client: [7] opened from [::1]:34282
+Feb 24 12:58 : update: removing The Power of Balance - An Avatar Orchestration-bmlg1HkjUjA.webm
+Feb 24 12:58 : update: added /Joakim Karud - Boost [TINY CARBON FIBER HIGH POWERED ELECTRIC SKATEBOARD]-dQXs3HX2rAw.mp3
+Feb 24 12:58 : update: added /blackbear - Do Re Mi (Dark Heart Remix)-opXUzxWMRG8.mp3
+Feb 24 12:58 : update: updating /The Power of Balance - An Avatar Orchestration-bmlg1HkjUjA.mp3
+Feb 24 12:58 : update: added /Le Malls - R&G-_qMMcwNXUjs.mp3
+Feb 24 12:58 : update: added /Galantis - Rich Boy (Zack Martino Remix)-F8oK8XT6el0.mp3
+Feb 24 12:58 : update: added /AWOLNATION - Run (Audio)-mw2kKyJu9gY.mp3
+Feb 24 12:58 : update: added /Imagine Dragons - Whatever It Takes (Audio)-rGlEZpOVjGo.mp3
+Feb 24 12:58 : update: added /Charlie Puth - Attention [Official Video]-nfs8NYg7yQM.mp3
+Feb 24 12:58 : update: added /Prismo - Neverland-6Z9J5cbtZzs.mp3
+Feb 24 12:58 : update: added /The Chainsmokers & Coldplay - Something Just Like This (BOXINBOX & Lionsize & Vyel Cover Remix)-SGqNwQoESDk.mp3
+Feb 24 12:58 : update: added /Illenium & Kerli - Sound Of Walking Away-nW--BbY6Z5E.mp3
+Feb 24 12:58 : update: added /Kap Slap - Gone (feat. Ezi)-NrchHYnXB3w.mp3
+Feb 24 12:58 : update: added /Peace (full)-2ftScS4fLbQ.mp3
+Feb 24 12:58 : update: added /Cash Cash & ROZES - Matches (ye. Remix)-UZ0wXtfrUsI.mp3
+Feb 24 12:58 : update: added /Kygo x Romy Wave - Raging (SGNFCNTS Remix)-U7kP-t6uU5k.mp3
+Feb 24 12:58 : update: added /JayKode - Know Better (feat. Mister Blonde)-3TRgY_hrExM.mp3
+Feb 24 12:58 : update: added /Alan Walker - Faded (Osias Trap Remix)-dLdIx0epx3U.mp3
+Feb 24 12:58 : update: added /3LAU & Said The Sky - Fire (LZRD Remix)-ywPQqRWjhOs.mp3
+Feb 24 12:58 : update: added /Prismo - In My Mind-3f7vylUl3Qo.mp3
+Feb 24 12:58 : update: added /Paris Blohm - Let Me Go (feat. KARRA)-gaQYDVd5Ka8.mp3
+Feb 24 12:58 : update: added /Heavy (Official Video) - Linkin Park (feat. Kiiara)-5dmQ3QWpy1Q.mp3
+Feb 24 12:58 : update: added /Price & Takis - Hands-qBAEkMXTJx8.mp3
+Feb 24 12:58 : update: added /2WEI - Gangsta's Paradise ('Valerian And The City Of A Thousand Planets' Final Trailer Music)-EEL2VomvzkI.mp3
+Feb 24 12:58 : update: added /Mickey Valen - Wildcard (feat. Feli Ferraro)-YfRLJQlpMNw.mp3
+Feb 24 12:58 : update: added /Maria Lynn & Maazel - Elastic-rxH7IUioi0M.mp3
+Feb 24 12:58 : update: added /FLETCHER - Wasted Youth (Michael Brun Remix)-34WHRrEwUws.mp3
+Feb 24 12:58 : update: added /Galantis - Hunter (Official Audio)-VO8qCRVj8dI.mp3
+Feb 24 12:58 : update: added /Gorillaz - Saturnz Barz (Spirit House)-5qJp6xlKEug.mp3
+Feb 24 12:58 : update: added /Gorillaz - The Apprentice (Official Audio)-LdPyYze2NIA.mp3
+Feb 24 12:58 : client: [7] closed
+Feb 24 13:30 : client: [8] opened from [::1]:34438
+Feb 24 13:30 : client: [8] closed
+Feb 24 13:30 : client: [9] opened from [::1]:34442
+Feb 24 13:31 : update: added /Best of Casey Neistat Music _ Mixtape-0Vy-x6YRFGw.mp3
+Feb 24 13:31 : update: added /Casey Neistat Music - The Final Mixtape-Oq2fVZgG69E.mp3
+Feb 24 13:31 : update: added /Casey Neistat Music - Mixtape #1-gYwo-sOwfNU.mp3
+Feb 24 13:31 : update: added /Casey Neistat's Vlog Music - 5H MIXTAPE (111 MUSICS) [non-stop]-MAYYRrzAydI.mp3
+Feb 24 13:31 : update: added /Cage the Elephant - Shake Me Down (Opvs & ye. Remix)--uiv4zMtkxI.mp3
+Feb 24 13:31 : client: [9] closed
+Feb 24 13:44 : client: [10] opened from [::1]:34622
+Feb 24 13:44 : update: added /STAR WARS - Rogue One Final Trailer (Orchestral_Piano Cover)-oXHwIlOy0JU.mp3
+Feb 24 13:44 : update: added /Felmax - Chapel-jnoxsqW9uPk.mp3
+Feb 24 13:44 : update: added /Melvv - Not Me (feat. Two Feet)-4eWOxxkHHyM.mp3
+Feb 24 13:44 : update: added /Unlike Pluto - No Scrubs ft. Joanna Jones (Cover)-G2WEogDFByk.mp3
+Feb 24 13:44 : update: added /blackbear - Wanderlust (WILDLYF Remix)-nO2Bf9nqGdk.mp3
+Feb 24 13:44 : update: added /Crywolf - Windswept-AOBPZ5Wuy3A.mp3
+Feb 24 13:44 : update: added /Clean Bandit - Rockabye ft. Sean Paul & Anne-Marie (SHAKED Remix)-mIUKGKwBRk8.mp3
+Feb 24 13:44 : update: added /Neptunica - Alive (feat. Matt Defreitas)-uMDLxWkph8c.mp3
+Feb 24 13:44 : update: added /Unlike Pluto - Worst In Me (Official Lyric Video)-waIBbsVoTkA.mp3
+Feb 24 13:44 : update: added /KSHMR & Marnik - Mandala (Magnace Remix)-GCyZdGeaEd4.mp3
+Feb 24 13:44 : update: added /Jack Hylton - Breakaway (Shemian Remix)-JsWFgxChnJA.mp3
+Feb 24 13:44 : update: added /smle - Overflow (feat. Helen Tess) [Official Lyric Video]-YSD_vTf_fPc.mp3
+Feb 24 13:44 : update: added /Kygo & Selena Gomez - It Ain't Me (Audio)-D5drYkLiLI8.mp3
+Feb 24 13:44 : update: added /Star Wars - The Imperial March (DJ AG Remix)-WU9jdjuDA8w.mp3
+Feb 24 13:44 : update: added /Jinco & WE ARE FURY - Far Sight (feat. Holly Jade)-3CROBfyyXFk.mp3
+Feb 24 13:44 : update: added /Creaky Jackals ft. WILD - High Tide (Nurko Remix)-UzA8CXK0KY4.mp3
+Feb 24 13:44 : update: added /Trap Nation x Bass Nation Weekend Livestream-ysGzllU9zVg.mp3
+Feb 24 13:44 : update: added /Pirates of the Caribbean - He's a Pirate (DJ AG Remix)-oLUv0tm9fWk.mp3
+Feb 24 13:44 : client: [10] closed
+Feb 24 14:13 : client: [11] opened from [::1]:35102
+Feb 24 14:13 : update: added /Louis The Child & Icona Pop - Weekend (Lexxmatiq Remix)-0R8Lt4PY7Kc.mp3
+Feb 24 14:13 : update: added /Illenium - Fortress (feat. Joni Fatora) (Just A Gent Remix)-9xy7zwcsLkM.mp3
+Feb 24 14:13 : update: added /Star Wars - The Force Theme (DJ AG Remix)-JeMgZPrIj3s.mp3
+Feb 24 14:13 : update: added /Not Your Dope - 5 A.M-ZuOna_Xtu2A.mp3
+Feb 24 14:13 : update: added /Conner Youngblood - The Warpath-IEOFPvlNEFM.mp3
+Feb 24 14:13 : update: added /WOLFE - Under the Covers (feat. Emma Sameth)-4mmb1kK30WA.mp3
+Feb 24 14:13 : update: added /Big Wild - Invincible (feat. iDA HAWK) [Manila Killa Remix]-3ehpdaGVlKo.mp3
+Feb 24 14:13 : update: added /TWENTY ØNE PILØTS MASHUP!! - ACAPELLA ft. VoicePlay-AK4LmhMHU8o.mp3
+Feb 24 14:13 : update: added /JRND & VMK - Make Dem (feat. Kédo Rebelle)-w9jrC_oJQNM.mp3
+Feb 24 14:13 : update: added /Spaces - Undone (feat. Sarah De Warren)-A5T2KeW4zcc.mp3
+Feb 24 14:13 : update: added /JANEE - Lake-8qppDAIiP3k.mp3
+Feb 24 14:13 : update: added /Papa Ya - Sunny-VPbg7l9pL90.mp3
+Feb 24 14:13 : update: added /Flume - The Greatest View [ Instrumental ] - AC Unity TV Spot OST-ZzxaUS0QVrA.mp3
+Feb 24 14:13 : update: added /Beauvois - Little Lights-barmbS0SfQs.mp3
+Feb 24 14:13 : update: added /Dark Lord Funk - Harry Potter Parody of 'Uptown Funk'-zbdvogFyZZM.mp3
+Feb 24 14:13 : update: added /Virtual Riot - In My Head (feat. PRXZM)-VmiTyhrR9bk.mp3
+Feb 24 14:13 : update: added /Prismo - Heathens (Twenty One Pilots Cover)-zA8RGZXWQHA.mp3
+Feb 24 14:13 : update: added /Stalgia - BDY-MizSkQFw-yM.mp3
+Feb 24 14:13 : update: added /Kehlani - Gangsta (BOXINBOX & Lionsize Remix)-6-GzCLT6Wf4.mp3
+Feb 24 14:13 : update: added /Do You Realize By Ursine Vulpine (Transformers The Last Knight Trailer Music)--rAv5zgtsmM.mp3
+Feb 24 14:13 : update: added /Avae - Daydream (feat. Paniz)-6SDloNzDrFg.mp3
+Feb 24 14:13 : update: added /Annabel Jones x Nebbra - Stay-wLhqIG2Vw9M.mp3
+Feb 24 14:13 : update: added /Jordan Comolli - Contrast-HTZQZa_PKDo.mp3
+Feb 24 14:13 : update: added /R3HAB & Skytech - Everything (VIP)-xEkuJFEtRrY.mp3
+Feb 24 14:13 : update: added /Vicetone - End of the Year Mix 2016 [EDM]-7JqUfZ1LwI8.mp3
+Feb 24 14:13 : update: added /HYDDE & HAWKES - Ghost-_ti45faewW4.mp3
+Feb 24 14:13 : update: added /Trap Nation 10M Subscriber Mix (feat. NGHTMRE, Illenium, Krewella, Lookas)-pxqIlGzBXXE.mp3
+Feb 24 14:13 : update: added /Skott - Porcelain (AWAY Remix)-FGsguCyjsXM.mp3
+Feb 24 14:13 : update: added /Molly Moore - Don't Believe It-eGq1BifpN2Y.mp3
+Feb 24 14:13 : update: added /Módl & Holly - Coming Home-EKVK-pPH_aM.mp3
+Feb 24 14:13 : update: added /Airplane Man - Take Me All The Way Home-PP2fPJXIc8s.mp3
+Feb 24 14:13 : update: added /Mickey Valen - Meet Me (feat. Noé)-OMM0R_PHyYA.mp3
+Feb 24 14:13 : update: added /Martin Garrix & Bebe Rexha - In The Name Of Love (Official Video)-RnBT9uUYb1w.mp3
+Feb 24 14:13 : update: added /Revoke - Don't Leave the Light On (feat. Tom Cantillon) (Official Music Video)-_DHOqsHEN98.mp3
+Feb 24 14:13 : update: added /The Chainsmokers ft. XYLØ - Setting Fires (VANIC Remix)-DEJAd7Zp87U.mp3
+Feb 24 14:13 : update: added /Mike Perry - The Ocean ft. Shy Martin (Official Video)-5JxgDJvqGmM.mp3
+Feb 24 14:13 : update: added /twenty one pilots - Heathens (BOXINBOX & Lionsize Remix)-M2hW6jgomwo.mp3
+Feb 24 14:13 : update: added /Pluto x ye. - Feel The Fire-AUgZqxlKpDE.mp3
+Feb 24 14:13 : update: added /Flume - Say It feat. Tove Lo (Illenium Remix)-HRRruUdE-9o.mp3
+Feb 24 14:13 : update: added /Simon Skylar - Arsenic-VFrhRnXhYTE.mp3
+Feb 24 14:13 : update: added /Cosmos & Creature - Young--OaBinYLHc4.mp3
+Feb 24 14:13 : update: added /AVE & EFX & Varun - Paint the Sky (feat. LA James)-MwhVsOKxoko.mp3
+Feb 24 14:13 : update: added /Billie Eilish - Six Feet Under (Hazey Eyes Remix)-KRt5WWnVCoA.mp3
+Feb 24 14:13 : update: added /Antics - Your Love ft. Fabian James (INZO Remix)-WKTUJQAZlv0.mp3
+Feb 24 14:13 : update: added /Zara Larsson - Uncover (Afterfab Remix)-iH4eRWDfcN8.mp3
+Feb 24 14:13 : update: added /James Mercy - In The Sky--UEx3pvYErk.mp3
+Feb 24 14:13 : update: added /FRND - Friend-35fBK7kCTgU.mp3
+Feb 24 14:13 : update: added /The Chainsmokers ft. XYLØ - Setting Fires (BOXINBOX & Lionsize Remix)-shqcdIZFhWk.mp3
+Feb 24 14:13 : update: added /Sia - The Greatest (Official Music Video)-GKSRyLdjsPA.mp3
+Feb 24 14:13 : client: [11] closed
+Feb 24 14:31 : client: [12] opened from [::1]:35346
+Feb 24 14:31 : update: added /Alan Walker - Sing Me To Sleep (marshmello Remix)-EZt6mZ-Te1U.mp3
+Feb 24 14:31 : update: added /Arman Cekin - Sever The Ties (ft. Esther Sparkes)-jhdhD2RXvd0.mp3
+Feb 24 14:31 : update: added /Michl - Broken Roots-Gulxh-mLs_Q.mp3
+Feb 24 14:31 : update: added /Pluto x ye. - Breath-DXcTlvECIHU.mp3
+Feb 24 14:31 : update: added /Charlie Puth - We Don't Talk Anymore (feat. Selena Gomez) [Official Video]-3AtDnEC4zak.mp3
+Feb 24 14:31 : update: added /5 Million Subscriber Gaming Mix (by TheFatRat)-atY2Z0J6zX8.mp3
+Feb 24 14:31 : update: added /Imany - Don't Be so Shy (Filatov & Karas Remix) _ OFFICIAL-artkCpjfdiQ.mp3
+Feb 24 14:31 : update: added /Ford - Alive-97M1kDcoyzQ.mp3
+Feb 24 14:31 : update: added /Calvin Harris -Summer (Lyrics Video)-yAn_gqHAGkA.mp3
+Feb 24 14:31 : update: added /Shawn Mendes - Treat You Better-lY2yjAdbvdQ.mp3
+Feb 24 14:31 : update: added /Miley Cyrus - Wrecking Ball (CAKED UP Remix)-GHC8Hwq9Eag.mp3
+Feb 24 14:31 : update: added /JAEGER & Meric - After Dawn-bEQOu3C8FME.mp3
+Feb 24 14:31 : update: added /Flux Pavilion - I Can't Stop (Ekali Tribute)-uZ4D2V2xO5U.mp3
+Feb 24 14:31 : update: added /Devault - Nothing New-s0GHp90kYkw.mp3
+Feb 24 14:31 : update: added /Harley Quinn & The Joker - Gangsta-FioILtcBcLE.mp3
+Feb 24 14:31 : update: added /JAEGER - Until Dawn-U8T6wocw4so.mp3
+Feb 24 14:31 : update: added /Danrell - White Noise (feat. Ryder)-U9P-BA91giY.mp3
+Feb 24 14:31 : update: added /twenty one pilots - Ride (Jaydon Lewis Remix)-PMUt0lShZfs.mp3
+Feb 24 14:31 : update: added /Cash Cash - How To Love (feat. Sofia Reyes) (Boombox Cartel Remix)-EmI6b8xFSX4.mp3
+Feb 24 14:31 : client: [12] closed
+Feb 24 14:49 : client: [13] opened from [::1]:35878
+Feb 24 14:49 : update: added /Dan Dakota - We Let Em Go-t5jMqwVOKiY.mp3
+Feb 24 14:49 : update: added /Kung Fu Panda 3 Soundtrack 16 The Battle of Legends, Hans Zimmer-XXmLXh7rfn4.mp3
+Feb 24 14:49 : update: added /Creaky Jackals - High Tide (feat. WILD)-sWT8eOjxkck.mp3
+Feb 24 14:49 : update: added /Jane XØ - Lies-6Yr_gDLcX7Q.mp3
+Feb 24 14:49 : update: added /The White Stripes - Seven Nation Army (The Glitch Mob Remix)-f0SrZh32GcQ.mp3
+Feb 24 14:49 : update: added /Selena Gomez - Good For You (Official Music Video)-1TsVjvEkc4s.mp3
+Feb 24 14:49 : update: added /Arman Cekin - California Dreaming (feat. Paul Rey)-14zIhlfeUjE.mp3
+Feb 24 14:49 : update: added /OneRepublic - Wherever I Go (Official Video)-OXWrjWDQh7Q.mp3
+Feb 24 14:49 : update: added /Ship Wrek & Zookeepers - Stranded-LNcicU_A55Q.mp3
+Feb 24 14:49 : update: added /Kung Fu Panda AMV - Larger Than Life-gyI7WGFvkh4.mp3
+Feb 24 14:49 : update: added /The Weeknd - The Hills-yzTuBuRdAyA.mp3
+Feb 24 14:49 : update: added /Janelle Kroll - Sunny Days (BKAYE Remix)-csrvGcdqrvg.mp3
+Feb 24 14:49 : update: added /Wolfsnare & M.H.G ft. Junior Paes - Out Of My Mind (Silence Remix)-d5lN0N_t4RU.mp3
+Feb 24 14:49 : update: added /The Chainsmokers - Don't Let Me Down ft. Daya (Audio)-qMH0Xglh7GA.mp3
+Feb 24 14:49 : update: added /Krewella - Broken Record-vGyYJabYRLU.mp3
+Feb 24 14:49 : update: added /Rain Man - Bring Back The Summer ft. Oly (Popsikl Remix)-Nen9BKsn650.mp3
+Feb 24 14:49 : update: added /Kali Uchis - Ridin Round ft. Tory Lanez (Oshi Redo)-iLhhLLxPh_8.mp3
+Feb 24 14:49 : update: added /Jacob Banks - Monster (feat. Avelino)-t9Le57GzYA8.mp3
+Feb 24 14:49 : update: added /Neptunica - Poseidon-5zARzHddnWc.mp3
+Feb 24 14:49 : update: added /Melanie Martinez - Dollhouse (Official Music Video)-HcVv9R1ZR84.mp3
+Feb 24 14:49 : update: added /OCD - Moosh & Twist - Don't Think About It (Prod. Louis Bell)-ycnhcEhoxHo.mp3
+Feb 24 14:49 : update: added /Kygo - Stay ft. Maty Noyes (Empia Remix)-2g1lTI44amU.mp3
+Feb 24 14:49 : update: added /Kygo - Stay (Lyric Video) ft. Maty Noyes-WUG2guLUtuo.mp3
+Feb 24 14:49 : update: added /Jacob Tillberg - A Dream-C1pQxz5wzjQ.mp3
+Feb 24 14:49 : update: added /ZAYN - PILLOWTALK (Bearson & Whethan Remix)-bxEUSBhWO8M.mp3
+Feb 24 14:49 : update: added /Atlantic Haze - Osiris (feat. Anuka)-80q9E5266hg.mp3
+Feb 24 14:49 : update: added /Daft Punk - The Son of Flynn (TRON LEGACY)-YKEZoOjc6to.mp3
+Feb 24 14:49 : update: added /Greg Hvnsen - What Would You Have Me Do-ra-BuCCPtVw.mp3
+Feb 24 14:49 : update: added /The Chainsmokers - Don't Let Me Down (Illenium Remix)-s8XIgR5OGJc.mp3
+Feb 24 14:49 : update: added /Coldplay - Hymn For The Weekend (Official Video)-YykjpeuMNEk.mp3
+Feb 24 14:49 : update: added /Yall - Hundred Miles (Official Video) ft. Gabriela Richardson-9hmd7of42DM.mp3
+Feb 24 14:49 : update: added /Ariana Grande - Dangerous Woman (Audio)-TFrMDGfW_Sg.mp3
+Feb 24 14:49 : update: added /IZECOLD - Swiggity-WbksTnQVqyI.mp3
+Feb 24 14:49 : update: added /Snavs & Fabian Mazur - Exhale-LJXxkPsNrVM.mp3
+Feb 24 14:49 : update: added /Alan Walker - Sing Me To Sleep-2i2khp_npdE.mp3
+Feb 24 14:49 : update: added /Calvin Harris & Alesso - Under Control (Official Video) ft. Hurts-yZqmarGShxg.mp3
+Feb 24 14:49 : update: added /Daft Punk - Fall (Dj DLG Lazor TRON - Legacy Music Video Remix)[Full 1080 HD]-o-ltM_ystRg.mp3
+Feb 24 14:49 : update: added /Illenium - It's All On U (feat. Liam O'Donnell)-0qHC_AUQYRA.mp3
+Feb 24 14:49 : update: added /G-Eazy & Bebe Rexha - Me, Myself & I (No Sleep Remix)-Z7CTnA3dTU0.mp3
+Feb 24 14:49 : update: added /DNCE - Cake By The Ocean-PAzH-YAlFYc.mp3
+Feb 24 14:49 : update: added /Tomsize & Simeon - Loud Strings-_cV6JrUpD98.mp3
+Feb 24 14:49 : update: added /Pegboard Nerds - Just Like That ft. Johnny Graves (WOLFE Remix)-ppv-0Csa5uo.mp3
+Feb 24 14:49 : update: added /Arman Cekin & Ellusive - Show You Off (feat. Xuitcasecity)-BVHlxD1pgz4.mp3
+Feb 24 14:49 : update: added /Selena Gomez - Kill Em With Kindness (Official Music Video)-HHP5MKgK0o8.mp3
+Feb 24 14:49 : update: added /Halsey - Castle (Official Audio)-1rfSHisyHdc.mp3
+Feb 24 14:49 : update: added /Kamau - JusFaYu (feat. No Wyld) (Gill Chang Remix)-UrC0YXA5Mp0.mp3
+Feb 24 14:49 : update: added /Lil Wayne, Wiz Khalifa & Imagine Dragons w_ Logic & Ty Dolla $ign ft X Ambassadors - Sucker for Pain--59jGD4WrmE.mp3
+Feb 24 14:49 : update: added /Matbow - Trap King-0kC7nsz38rI.mp3
+Feb 24 14:49 : update: added /twenty one pilots - Heathens (from Suicide Squad - The Album) [OFFICIAL VIDEO]-UprcpdwuwCg.mp3
+Feb 24 14:49 : update: added /Palastic - The Outset ft. Conor Byrne-tIn2SRJIfDo.mp3
+Feb 24 14:49 : update: added /Ariana Grande - Into You-1ekZEVeXwek.mp3
+Feb 24 14:49 : update: added /Melanie Martinez - Cry Baby (Official Video)-O87lzhoexyA.mp3
+Feb 24 14:49 : update: added /Sikdope - Let It Go-_uBJflCBuME.mp3
+Feb 24 14:49 : update: added /Alan Walker - Faded-60ItHLz5WEA.mp3
+Feb 24 14:49 : update: added /Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3
+Feb 24 14:49 : update: added /Twenty One Pilots - Stressed Out (Tomsize Remix)-0t2tjNqGyJI.mp3
+Feb 24 14:49 : update: added /WE ARE FURY - Fade Away (feat. Tallyn)-tyrUaI4KBRk.mp3
+Feb 24 14:49 : update: added /Autograf - Slow Burn-0guABiTAbBk.mp3
+Feb 24 14:49 : update: added /Krewella - Ammunition-L6r36e7GTC8.mp3
+Feb 24 14:49 : update: added /DNCE - Toothbrush (Official Video)-UrUJyKsLQeU.mp3
+Feb 24 14:49 : update: added /Panic! At The Disco - Emperor's New Clothes [OFFICIAL VIDEO]-7qFF2v8VsaA.mp3
+Feb 24 14:49 : client: [13] closed
+Feb 24 14:54 : client: [14] opened from [::1]:36016
+Feb 24 14:54 : update: added /Veorra - Sinner-bp-SswlOKIE.mp3
+Feb 24 14:54 : update: added /Calvin Harris & Disciples - How Deep Is Your Love (T-Mass & Ellusive Remix)-lCQVGr-W7wY.mp3
+Feb 24 14:54 : update: added /Melanie Martinez - Carousel (KXA Remix)-9gZfHu3sdGY.mp3
+Feb 24 14:54 : update: added /Veorra - Color-ukBrCNmPAcg.mp3
+Feb 24 14:54 : update: added /Veorra - Home-pi2gmyzS8kY.mp3
+Feb 24 14:54 : update: added /Veorra - Late Nights-SlIdXKqma3o.mp3
+Feb 24 14:54 : update: added /Veorra - Secrets-32mJCG64jJQ.mp3
+Feb 24 14:54 : update: added /Veorra - Lay Here-Y59vIAr8rAI.mp3
+Feb 24 14:54 : update: added /B.o.B - So Good [Official Video]-IoBP24I2lwA.mp3
+Feb 24 14:54 : update: added /Martin Jensen - Miracles--rSJSMbSzv8.mp3
+Feb 24 14:54 : update: added /Veorra - Gone-vggNhNiFo5Q.mp3
+Feb 24 14:54 : update: added /Imagined Herbal Flows - Evolve-gDXCgKnNtvw.mp3
+Feb 24 14:54 : client: [14] closed
+Feb 24 15:10 : client: [15] opened from [::1]:36250
+Feb 24 15:11 : update: added /KSHMR & Marnik - Bazaar (Magnace Remix)-i-tf9yGb6b4.mp3
+Feb 24 15:11 : update: added /Arman Cekin - Run (feat. Jessica Main)-xea6bKhYf1o.mp3
+Feb 24 15:11 : update: added /Steve Jablonsky - Transformers 2007-2014 (Epic Music Collection) [Interactive]-1M0wAIUyRwA.mp3
+Feb 24 15:11 : update: added /Hans Zimmer - Davy Jones Theme Suite-8m4bCj8WgCw.mp3
+Feb 24 15:11 : update: added /Veorra & The Tech Thieves - Ghost Town-eUesDQxGLXA.mp3
+Feb 24 15:11 : update: added /R. City - Locked Away ft. Adam Levine-6GUm5g8SG4o.mp3
+Feb 24 15:11 : update: added /Tapferer Seemann hold - Meerjungfrauen aus Fluch der Karibik - (HD) - My Jolly Sailor Bold - German-8gxJhs-LnVE.mp3
+Feb 24 15:11 : update: added /The Best of Transformers Soundtrack Mix-i2LjGrMxKz8.mp3
+Feb 24 15:11 : update: added /Panama Wedding - Infinite High (Bee's Knees Remix)-oXgtYKNtjeo.mp3
+Feb 24 15:11 : update: added /Shawn Mendes - Stitches (Official Video)-VbfpW0pbvaU.mp3
+Feb 24 15:11 : update: added /Ricky Remedy - Bound-Tl2XL_3o2Co.mp3
+Feb 24 15:11 : update: added /K-391 - Earth-D92tgxVvWd0.mp3
+Feb 24 15:11 : update: added /Maestro Harrell - Olympus (Gaius Trap Edit)-xU9xyNg8SMs.mp3
+Feb 24 15:11 : update: added /Davy Jones Playing the Organ-L0JbaZtoKAs.mp3
+Feb 24 15:11 : update: added /Badflite - Lonesome Things-Xi14f4g2nW0.mp3
+Feb 24 15:11 : update: added /William Bolton - Fading (prod. by 20syl)-T44y1hg-3SE.mp3
+Feb 24 15:11 : update: added /Elephante - Age of Innocence (Jenaux Remix)-5a5u4AyIqu8.mp3
+Feb 24 15:11 : update: added /MORTEN - Beautiful Heartbeat (Deorro Remix)-GJD-im_4xNI.mp3
+Feb 24 15:11 : update: added /Lauv - Reforget-AsqDPqII6-Q.mp3
+Feb 24 15:11 : update: added /✔️Transformers 3  - It's our fight (The Score - Soundtrack)-mRdwKq4meVY.mp3
+Feb 24 15:11 : client: [15] closed
+Feb 24 15:11 : client: [16] opened from [::1]:36268
+Feb 24 15:11 : update: added /Pierce Fulton - No More-sQU23sS8s10.mp3
+Feb 24 15:11 : update: added /TheFatRat - Monody (feat. Laura Brehm)-nw5Mc5bpq-A.mp3
+Feb 24 15:11 : client: [16] closed
+Feb 24 15:11 : client: [17] opened from [::1]:36270
+Feb 24 15:11 : client: [17] closed
+Feb 24 15:25 : client: [18] opened from [::1]:36682
+Feb 24 15:25 : update: added /Blackbear - Idfc (Tarro Remix)-gxE4ngu78Ro.mp3
+Feb 24 15:25 : update: added /Lemaitre - Closer (feat. Jennie A.)-dSYu8FLVr_Y.mp3
+Feb 24 15:25 : update: added /Veorra - Silk-9RTi3uGhUnc.mp3
+Feb 24 15:25 : update: added /Hollow Coves - Heatwave (filous Remix)-Pe7ZzNx-FTE.mp3
+Feb 24 15:25 : update: added /Stephen - Remembering Myself-yRlvb4fFVGQ.mp3
+Feb 24 15:25 : update: added /Prismo - Senses-7j4oBbN38x4.mp3
+Feb 24 15:25 : update: added /Veorra - Set Free-1rf9rGqqKuw.mp3
+Feb 24 15:25 : update: added /Porter Robinson - Natural Light (San Holo Remix)-S1GwvsyLals.mp3
+Feb 24 15:25 : update: added /Veorra - Run-NLmqqimN_6M.mp3
+Feb 24 15:25 : update: added /Veorra - The City-tHDmgS0ViaQ.mp3
+Feb 24 15:25 : update: added /Andrew Luce - When To Love You (feat. Chelsea Cutler)-_kwri-i6qWI.mp3
+Feb 24 15:25 : update: added /Koda - Angel--ES7-GATxDA.mp3
+Feb 24 15:25 : update: added /Avicii - Pure Grinding-hzdIoghbFzg.mp3
+Feb 24 15:25 : update: added /Veorra - Strangers-ljYD5Xz_Epg.mp3
+Feb 24 15:25 : update: added /Benjamin Francis Leftwich - Atlas Hands (Thomas Jack Remix)-2VIofckGV70.mp3
+Feb 24 15:25 : update: added /TheUnder - Fire-Kh1YtMER_QI.mp3
+Feb 24 15:25 : update: added /Galantis - Water (Official Audio)-5Zapw4WhNug.mp3
+Feb 24 15:25 : update: added /Strange Talk - Painted In Gold (feat. Bertie Blackman)-ck8PW1v8pis.mp3
+Feb 24 15:25 : update: added /Veorra - Standby-vVtLTxwBTkM.mp3
+Feb 24 15:25 : update: added /Koda - The Warmth-cElu1JcNqfg.mp3
+Feb 24 15:25 : update: added /Flux Pavilion & Matthew Koma - Emotional-s0ZKcB2c928.mp3
+Feb 24 15:25 : update: added /Cape Cub - Keep Me In Mind-zHa3JTEJmOU.mp3
+Feb 24 15:25 : update: added /KSHMR & BASSJACKERS feat. SIRAH - Memories (SickStrophe Remix)-nom8o2EBHYk.mp3
+Feb 24 15:25 : update: added /Dillistone - Sad & High-KEVEFgmuBFQ.mp3
+Feb 24 15:25 : update: added /Arman Cekin - Worth (feat. Y.A.S)-ViL9I09AKuw.mp3
+Feb 24 15:25 : update: added /SIDO - Astronaut (feat. Andreas Bourani) OFFICIAL VIDEO-WPFLAjmWCtk.mp3
+Feb 24 15:25 : update: added /La Tartine x SEA - Hangover Part 2-SZYhLr9Vk6A.mp3
+Feb 24 15:25 : update: added /The Weeknd - High For This-sX9DgavXiN4.mp3
+Feb 24 15:25 : update: added /Calvin Harris - Outside ft. Ellie Goulding (Savagez Remix)-_SGIUrPVWOM.mp3
+Feb 24 15:25 : update: added /Combustibles - In Da Mood-PpocxtjYk38.mp3
+Feb 24 15:25 : update: added /Veorra - Change-oEc_7qjaSFg.mp3
+Feb 24 15:25 : update: added /Virtu - Blunt Force-qAt4Pafk6z0.mp3
+Feb 24 15:25 : update: added /Sam Bruno - Search Party (JayKode Remix)-j7SZ3Qsa-mM.mp3
+Feb 24 15:25 : update: added /Skrux - Essence-bO_419XpJ1E.mp3
+Feb 24 15:25 : update: added /Veorra - Someday-4oQ3H805dm8.mp3
+Feb 24 15:25 : update: added /Blackbear - IDFC (Acoustic Version)-NR7-n-D2HhA.mp3
+Feb 24 15:25 : update: added /Mssingno - XE3 (Whethan Turn)-gephoCyOAXU.mp3
+Feb 24 15:25 : update: added /Selena Gomez - Same Old Love (Official Music Video)-9h30Bx4Klxg.mp3
+Feb 24 15:25 : update: added /Hoverboots - Bells-Jq2T5n24kEo.mp3
+Feb 24 15:25 : update: added /The Chainsmokers - Let You Go ft. Great Good Fine Ok (A-Trak Remix)-uL9WytYcPgU.mp3
+Feb 24 15:25 : update: added /GTA - Red Lips (NGHTMRE & SLANDER Remix)-Ht2uDxgZss4.mp3
+Feb 24 15:25 : update: added /San Holo & Father Dude - IMISSU-As1ndMG0byA.mp3
+Feb 24 15:26 : update: added /K Theory - In A Minute (VIP Mix)-aDeWdtJIHEA.mp3
+Feb 24 15:26 : update: added /Wave Racer - Flash Drive (feat. B▲by)-PmE_81l44oc.mp3
+Feb 24 15:26 : client: [18] closed
+Feb 24 15:29 : client: [19] opened from [::1]:36766
+Feb 24 15:29 : update: added /Keys N Krates - Dum Dee Dum (NGHTMRE Remix)-fBSz7Dvw4Zw.mp3
+Feb 24 15:29 : update: added /Jamie Berry - Out of My Mind-_KpN2VjtPxY.mp3
+Feb 24 15:29 : update: added /Jordan Comolli - Darkness (feat. JAEGER)-qO8D_DWvd0A.mp3
+Feb 24 15:29 : mpg123: mpg123_getformat() failed: Message: I am done with this track.
+Feb 24 15:29 : ffmpeg/mp3: Format mp3 detected only with low score of 1, misdetection possible!
+Feb 24 15:29 : ffmpeg/mp3: Failed to read frame size: Could not seek to 1026.
+Feb 24 15:29 : update: added /Veorra - Blind Talk-Enu_sZqjs8c.mp3
+Feb 24 15:29 : update: added /Alpine Universe   A Song of Ice and Fire (official audio)-RJUJzpqQIDI.webm
+Feb 24 15:29 : update: added /TroyBoi - On My Own (feat. Nefera)-NHffhGkpgFA.mp3
+Feb 24 15:29 : update: added /Carnage feat. Timmy Trumpet & KSHMR -Toca (Fransis Derelle & Sharps Edit)-hE4p_mW3xn4.mp3
+Feb 24 15:29 : update: added /Tarro - Wave Board-JVRgq_Bu8Wk.mp3
+Feb 24 15:29 : update: added /K Theory - Never Known (ft. Terry Mak) (VIP Mix)-XkM5lAOEVZg.mp3
+Feb 24 15:29 : client: [19] closed
+Feb 24 15:37 : client: [20] opened from [::1]:36986
+Feb 24 15:37 : update: removing Alpine Universe   A Song of Ice and Fire (official audio)-RJUJzpqQIDI.webm
+Feb 24 15:37 : update: added /FEVER - Rogue Wave (feat. ZADA)-2UXYYrLifIc.mp3
+Feb 24 15:37 : update: added /Maroon 5 - Animals (Gryffin Remix)-nedAfpJV53w.mp3
+Feb 24 15:37 : update: added /Will Smith - Gettin' Jiggy Wit It (San Holo Remix)-GWz0GWww_R0.mp3
+Feb 24 15:37 : update: added /Eiffel 65 - Blue (KNY Factory Remix)-pVLmZMjxfjw.mp3
+Feb 24 15:37 : update: added /Hopsteady - LOUD-1FKrwGE96fM.mp3
+Feb 24 15:37 : update: added /Overwerk - Exist-X2bU_fyqVG0.mp3
+Feb 24 15:37 : update: added /Alpine Universe   A Song of Ice and Fire (official audio)-RJUJzpqQIDI.mp3
+Feb 24 15:37 : update: added /Hopsteady - Hold Up!-EXLj3X-uw1I.mp3
+Feb 24 15:37 : update: added /Keys n Krates - Dum Dee Dum-P-uFZVsgwZc.mp3
+Feb 24 15:37 : update: added /Wiz Khalifa - See You Again (ft. Charlie Puth) (Absence Remix)-m55CRLLp2Gs.mp3
+Feb 24 15:37 : update: added /Goshfather & Jinco - Mama-oCt34SYoXOc.mp3
+Feb 24 15:37 : update: added /Icona Pop - Ready For The Weekend (Lexxmatiq Remix)-5q-uOqSCzkM.mp3
+Feb 24 15:37 : update: added /GTA - Red Lips feat. Sam Bruno (Official Music Video)-dIDekdv8Sio.mp3
+Feb 24 15:37 : update: added /Crywolf & Skrux - Tides-0dxNxYElpdY.mp3
+Feb 24 15:37 : update: added /Oliver Heldens & Shaun Frank - Shades Of Grey feat. Delaney Jane (Jakoban X ASAN Remix)-ejVdEU49H0U.mp3
+Feb 24 15:37 : update: added /Nihils - Help Our Souls (Urban Contact Remix)-phn2JZ2xTz4.mp3
+Feb 24 15:37 : update: added /Empia - Take It-b4f3Ou98T90.mp3
+Feb 24 15:37 : update: added /Veorra - Nasty Freestyle (Cover)-QGu04m6q6tM.mp3
+Feb 24 15:37 : update: added /Avicii - Waiting For Love (Lyric Video)--ncIVUXZla8.mp3
+Feb 24 15:37 : update: added /Hellberg - The Girl (feat. Cozi Zuehlsdorff) (Mr FijiWiji Remix)-8BMisJL2RLs.mp3
+Feb 24 15:37 : update: added /[Trap] - Razihel & Aero Chord - Titans [Monstercat Release]-dcyYFKeOT0o.mp3
+Feb 24 15:37 : update: added /JayKode - Release (Feat. Tima Dee)-eLRJgnZlaWs.mp3
+Feb 24 15:37 : update: added /Vindata - Wide Awake (feat. Kenzie May)-Xi4cK6_Lmx4.mp3
+Feb 24 15:37 : update: added /I'm An Albatraoz - AronChupa (E.Y. Beats Trap Remix) [Bass Boosted]-PAqE1yfeFyA.mp3
+Feb 24 15:37 : update: added /Mt. Eden - Stronger (Instrumental)-7KggUKQ7MoI.mp3
+Feb 24 15:37 : client: [20] closed
+Feb 24 15:38 : client: [21] opened from [::1]:36990
+Feb 24 16:26 : player: played "Koda - The Warmth-cElu1JcNqfg.mp3"
+Feb 24 16:28 : client: [21] closed
+Feb 24 17:53 : client: [22] opened from [::1]:37130
+Feb 24 17:53 : client: [22] closed
+Feb 25 00:38 : player: played "Halogen - U Got That _ EXTREME BASS BOOSTED -lLYopDk3FJw.mp3"
+Feb 25 00:38 : player: played "Halogen - U Got That _ EXTREME BASS BOOSTED -lLYopDk3FJw.mp3"
+Feb 25 00:38 : player: played "Koda - Angel--ES7-GATxDA.mp3"
+Feb 25 00:38 : player: played "Halogen - U Got That _ EXTREME BASS BOOSTED -lLYopDk3FJw.mp3"
+Feb 25 10:28 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 25 10:28 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 25 10:29 : player: played "Halogen - U Got That _ EXTREME BASS BOOSTED -lLYopDk3FJw.mp3"
+Feb 25 10:30 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 25 10:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 25 10:43 : client: [0] opened from [::1]:45468
+Feb 25 10:44 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 25 15:44 : player: played "Galantis - Rich Boy (Zack Martino Remix)-F8oK8XT6el0.mp3"
+Feb 25 15:46 : player: played "Flux Pavilion - I Can't Stop (Ekali Tribute)-uZ4D2V2xO5U.mp3"
+Feb 25 15:46 : player: played "FEVER - Rogue Wave (feat. ZADA)-2UXYYrLifIc.mp3"
+Feb 25 21:54 : client: [0] closed
+Feb 25 21:54 : player: played "Daft Punk - The Son of Flynn (TRON LEGACY)-YKEZoOjc6to.mp3"
+Feb 26 14:03 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 26 14:03 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 26 15:38 : client: [0] opened from [::1]:34452
+Feb 26 15:39 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 26 19:34 : client: [0] closed
+Feb 26 21:33 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Feb 27 14:13 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 27 14:13 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 27 21:53 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Feb 28 16:17 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 28 16:17 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 28 16:22 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 28 16:22 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 28 16:29 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 28 16:29 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 01 00:15 : exception: Failed to commit /home/flo/.config/mpd/state: File exists
+Mar 01 00:15 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 01 00:15 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 01 00:15 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 01 09:06 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 01 09:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 01 10:06 : client: [0] opened from [::1]:33220
+Mar 01 10:06 : client: [0] closed
+Mar 01 19:45 : client: [1] opened from [::1]:34328
+Mar 01 19:45 : client: [1] closed
+Mar 02 00:15 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 02 09:40 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 02 09:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 03 01:34 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 03 10:45 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 03 10:45 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 03 23:44 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 03 23:45 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 03 23:45 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 04 00:32 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 04 10:32 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 04 10:32 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 04 22:35 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 04 22:37 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 04 22:37 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 04 23:04 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 05 15:23 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 05 15:23 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 05 22:47 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 06 15:06 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 06 15:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 06 23:18 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 07 15:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 07 15:00 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 07 23:59 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 08 09:23 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 08 09:23 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 09 00:11 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 09 20:25 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 09 20:25 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 09 23:30 : player: played "Daft Punk - Harder, Better, Faster, Stronger (Far Out Remix)-9sjWU5dGcGI.mp3"
+Mar 10 09:52 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 10 09:52 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 10 10:18 : client: [0] opened from [::1]:58144
+Mar 10 10:18 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 10 21:30 : client: [0] closed
+Mar 11 01:49 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 11 10:23 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 11 10:23 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 11 23:24 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 12 15:01 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 12 15:01 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 12 22:16 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 13 15:15 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 13 15:15 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 13 22:35 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 14 16:38 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 14 16:38 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 15 00:46 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 15 10:46 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 15 10:46 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 01:38 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 16 13:20 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 13:20 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 17 02:30 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 17 09:58 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 17 09:58 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 17 14:33 : client: [0] opened from [::1]:54682
+Mar 17 14:33 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 17 14:40 : client: [0] closed
+Mar 17 22:14 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 17 22:15 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 17 22:15 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 18 00:00 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 18 13:41 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 18 13:41 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 18 22:20 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 19 09:28 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 19 09:28 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 19 22:04 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 20 17:31 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 20 17:31 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 20 21:22 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 21 17:03 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 21 17:03 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 21 23:11 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 22 09:31 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 22 09:31 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 22 21:06 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 23 19:05 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 23 19:05 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 24 00:24 : player: played "Calvin Harris - Feel So Close (Official Video)-dGghkjpNCQ8.mp3"
+Mar 24 11:54 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 24 11:54 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted

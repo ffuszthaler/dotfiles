@@ -108,7 +108,7 @@ set $power System (l) lock, (r) reboot, (Shift+s) shutdown
 mode "$power" {
     bindsym l exec bash ~/.config/i3/lock.sh, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -122,7 +122,7 @@ mode "resize" {
     bindsym j resize grow height 10 px or 10 ppt
     bindsym k resize shrink height 10 px or 10 ppt
     bindsym l resize grow width 10 px or 10 ppt
-    
+
     # alternatively you can use the arrow keys
     bindsym Left resize shrink width 10 px or 10 ppt
     bindsym Down resize grow height 10 px or 10 ppt
@@ -155,31 +155,32 @@ set_from_resource $darkwhite	  i3wm.color7  #000000
 set_from_resource $white	      i3wm.color15 #000000
 set $transparent		#00000000
 
-#                         BORDER        BACKGROUND	TEXT		  INDICATOR     CHILD_BORDER
-client.focused		        $blue	        $blue		    $white  	$magenta    	$blue
-client.unfocused	        $transparent	$red		    $white		$blue   		  $transparent
-client.focused_inactive	  $transparent	$red		    $white		$blue   		  $transparent
-client.urgent		          #900000	      #900000	    $white	  $magenta		  #900000
-client.background         $darkblack
+#                        BORDER        BACKGROUND  TEXT    INDICATOR  CHILD_BORDER
+client.focused           $blue         $blue       $white  $magenta   $blue
+client.unfocused         $transparent  $red        $white  $blue      $transparent
+client.focused_inactive  $transparent  $red        $white  $blue      $transparent
+client.urgent            #900000       #900000     $white  $magenta   #900000
+client.background        $darkblack
 
 # Start i3blocks
-#bar {
-#    font pango:mono 11
-#    status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#    position top
-#
-#    colors {
-#      background $darkblack
-#      statusline #FFFFFF
-#      separator  #666666
-#                          #border     #bg         #text
-#      focused_workspace   $darkblue   $darkblue   $darkblack
-#      active_workspace    $darkblue   $darkblack  $darkblue
-#      inactive_workspace  $darkblue   $darkblack  $darkblue
-#      urgent_workspace    #900000     #000000     #FFFFFF
-#      binding_mode        #900000     #000000     #FFFFFF
-#    }
-#}
+bar {
+   font pango:mono 11
+   # font pango:iosevka nerd font mono 9
+   status_command i3blocks -c ~/.config/i3blocks/config
+   position top
+
+   colors {
+     background $darkblack
+     statusline #FFFFFF
+     separator  #666666
+                         #border     #bg         #text
+     focused_workspace   $darkblue   $darkblue   $darkblack
+     active_workspace    $darkblue   $darkblack  $darkblue
+     inactive_workspace  $darkblue   $darkblack  $darkblue
+     urgent_workspace    #900000     #000000     #FFFFFF
+     binding_mode        #900000     #000000     #FFFFFF
+   }
+}
 
 # Set Wallpaper
 #exec_always --no-startup-id feh --bg-scale /home/ffuszthaler/Downloads/daft-punk-minimalism-2-image.jpg
@@ -193,6 +194,9 @@ exec_always --no-startup-id "killall -q compton;compton --config ~/.config/compt
 
 # Dunst
 exec_always --no-startup-id "killall -q dunst;dunst --config ~/.config/dunst/dunstrc"
+
+# MPD
+exec --no-startup-id mpd
 
 # Set Color Theme
 exec_always --no-startup-id wal -R
@@ -208,6 +212,7 @@ gaps inner 10
 gaps outer 10
 
 # Important Applications
+bindsym $mod+F1 exec --no-startup-id $TERMINAL -e ncmpcpp
 bindsym $mod+F2 exec --no-startup-id $BROWSER
 bindsym $mod+F3 exec --no-startup-id $TERMINAL -e ranger
 
@@ -217,7 +222,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec --nostartup-id xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
 
 # Media player controls
