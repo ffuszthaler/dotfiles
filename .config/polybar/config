@@ -11,6 +11,7 @@
 ; margin-top =
 ; margin-bottom = 2
 
+
 [colors]
 ; fg = ${xrdb:color0}
 ; fg = ${xrdb:color21}
@@ -18,6 +19,7 @@ fg = #ffffffff
 ; bg = #001b2b34
 bg = #000000
 ; bg = ${xrdb:color0}
+
 
 [bar/top]
 width = 100%
@@ -32,7 +34,7 @@ foreground = ${colors.fg}
 
 font-0 = curie:pixelsize=12;1
 
-modules-left = ewmh
+modules-left = i3
 modules-center =
 modules-right =  time date pulseaudio battery
 
@@ -48,6 +50,7 @@ padding-left = 1
 padding-right = 1
 module-margin-left = 2
 module-margin-right = 2
+
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -76,14 +79,17 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.fg}
 
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
 format-prefix = " "
-format-prefix-foreground = ${xrdb:color6}
+; format-prefix-foreground = ${xrdb:color6}
+format-prefix-foreground = ${colors.fg}
 module-margin-left = 2
 format-padding = 2
 format-background = ${colors.bg}
+
 
 [module/ewmh]
 type = internal/xworkspaces
@@ -93,7 +99,7 @@ enable-scroll = true
 format = <label-state>
 
 label-active = ×
-label-active-foreground = ${xrdb:color6}
+label-active-foreground = ${colors.fg}
 label-active-background = ${colors.bg}
 label-active-padding = 1
 
@@ -107,6 +113,31 @@ label-urgent-foreground = #EC5f67
 label-urgent-background = ${colors.bg}
 label-urgent-padding = 1
 
+
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+enable-scroll = true
+
+format = <label-state> <label-mode>
+
+; focused = Active workspace on focused monitor
+label-focused = ×
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = •
+label-unfocused-padding = 1
+
+; visible = Active workspace on unfocused monitor
+label-visible = ×
+label-visible-padding = 1
+
+; urgent = Workspace with urgency hint set
+label-urgent = !
+label-urgent-padding = 1
+
+
 [module/date]
 type = internal/date
 interval = 5
@@ -115,6 +146,7 @@ date = "%a, %d %b"
 
 label = date: %date%
 
+
 [module/time]
 type = internal/date
 interval = 5
@@ -122,6 +154,7 @@ interval = 5
 time = %H:%M
 
 label = time: %time%
+
 
 [module/battery]
 type = internal/battery
