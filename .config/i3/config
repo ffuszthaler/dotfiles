@@ -106,85 +106,89 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Shift+x mode "$power"
 set $power System (l) lock, (r) reboot, (Shift+s) shutdown
 mode "$power" {
-    bindsym l exec bash ~/.config/i3/lock.sh, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+  bindsym l exec bash ~/.config/i3/lock.sh, mode "default"
+  bindsym r exec --no-startup-id systemctl reboot, mode "default"
+  bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
-    # These bindings trigger as soon as you enter the resize mode
-    bindsym h resize shrink width 10 px or 10 ppt
-    bindsym j resize grow height 10 px or 10 ppt
-    bindsym k resize shrink height 10 px or 10 ppt
-    bindsym l resize grow width 10 px or 10 ppt
-
-    # alternatively you can use the arrow keys
-    bindsym Left resize shrink width 10 px or 10 ppt
-    bindsym Down resize grow height 10 px or 10 ppt
-    bindsym Up resize shrink height 10 px or 10 ppt
-    bindsym Right resize grow width 10 px or 10 ppt
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
 bindsym $mod+r mode "resize"
+mode "resize" {
+  # These bindings trigger as soon as you enter the resize mode
+  bindsym h resize shrink width 10 px or 10 ppt
+  bindsym j resize grow height 10 px or 10 ppt
+  bindsym k resize shrink height 10 px or 10 ppt
+  bindsym l resize grow width 10 px or 10 ppt
+
+  # alternatively you can use the arrow keys
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Down resize grow height 10 px or 10 ppt
+  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
+
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
 
 # Set Xresources colors:
-set_from_resource $darkblack	  i3wm.color0  #000000
-set_from_resource $black	      i3wm.color8  #000000
-set_from_resource $darkred	    i3wm.color1  #000000
-set_from_resource $red		      i3wm.color9  #000000
-set_from_resource $darkgreen	  i3wm.color2  #000000
-set_from_resource $green	      i3wm.color10 #000000
-set_from_resource $darkyellow	  i3wm.color3  #000000
-set_from_resource $yellow	      i3wm.color11 #000000
-set_from_resource $darkblue	    i3wm.color4  #000000
-set_from_resource $blue		      i3wm.color12 #000000
-set_from_resource $darkmagenta	i3wm.color5  #000000
-set_from_resource $magenta	    i3wm.color13 #000000
-set_from_resource $darkcyan	    i3wm.color6  #000000
-set_from_resource $cyan		      i3wm.color14 #000000
-set_from_resource $darkwhite	  i3wm.color7  #000000
-set_from_resource $white	      i3wm.color15 #000000
-set $transparent		#00000000
+set_from_resource $darkblack    i3wm.color0  #000000
+set_from_resource $black        i3wm.color8  #000000
+set_from_resource $darkred      i3wm.color1  #000000
+set_from_resource $red          i3wm.color9  #000000
+set_from_resource $darkgreen    i3wm.color2  #000000
+set_from_resource $green        i3wm.color10 #000000
+set_from_resource $darkyellow   i3wm.color3  #000000
+set_from_resource $yellow       i3wm.color11 #000000
+set_from_resource $darkblue     i3wm.color4  #000000
+set_from_resource $blue         i3wm.color12 #000000
+set_from_resource $darkmagenta  i3wm.color5  #000000
+set_from_resource $magenta      i3wm.color13 #000000
+set_from_resource $darkcyan     i3wm.color6  #000000
+set_from_resource $cyan         i3wm.color14 #000000
+set_from_resource $darkwhite    i3wm.color7  #000000
+set_from_resource $white        i3wm.color15 #000000
+set $transparent  #00000000
 
-#                        BORDER        BACKGROUND  TEXT    INDICATOR  CHILD_BORDER
-client.focused           $blue         $blue       $white  $magenta   $blue
-client.unfocused         $transparent  $red        $white  $blue      $transparent
-client.focused_inactive  $transparent  $red        $white  $blue      $transparent
-client.urgent            #900000       #900000     $white  $magenta   #900000
-client.background        $darkblack
+# 1 - Title-Border
+# 2 - Background
+# 3 - Text
+# 4 - Indicator
+# 5 - Window-Border
+#                         1        2        3        4        5
+client.focused            #ffffff  #ffffff  #000000  #000000  #ffffff
+client.unfocused          #000000  #000000  #ffffff  #ffffff  #000000
+client.focused_inactive   #000000  #000000  #ffffff  #ffffff  #000000
+client.urgent             #900000  #900000  #ffffff  #000000  #900000
+client.background         #000000
 
 # Start i3blocks
-bar {
-   font pango:mono 11
-   # font pango:iosevka nerd font mono 9
-   status_command i3blocks -c ~/.config/i3blocks/config
-   position top
+# bar {
+#    font pango:mono 11
+#    # font pango:iosevka nerd font mono 9
+#    status_command i3blocks -c ~/.config/i3blocks/config
+#    position top
 
-   colors {
-     background $darkblack
-     statusline #FFFFFF
-     separator  #666666
-                         #border     #bg         #text
-     focused_workspace   $darkblue   $darkblue   $darkblack
-     active_workspace    $darkblue   $darkblack  $darkblue
-     inactive_workspace  $darkblue   $darkblack  $darkblue
-     urgent_workspace    #900000     #000000     #FFFFFF
-     binding_mode        #900000     #000000     #FFFFFF
-   }
-}
+#    colors {
+#      background $darkblack
+#      statusline #FFFFFF
+#      separator  #666666
+#                          #border     #bg         #text
+#      focused_workspace   $darkblue   $darkblue   $darkblack
+#      active_workspace    $darkblue   $darkblack  $darkblue
+#      inactive_workspace  $darkblue   $darkblack  $darkblue
+#      urgent_workspace    #900000     #000000     #FFFFFF
+#      binding_mode        #900000     #000000     #FFFFFF
+#    }
+# }
 
 # Set Wallpaper
-#exec_always --no-startup-id feh --bg-scale /home/ffuszthaler/Downloads/daft-punk-minimalism-2-image.jpg
-#exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id feh --bg-scale /home/flo/Bilder/wallhaven-0j7xl5.jpg
+# exec_always --no-startup-id nitrogen --restore
 
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -198,14 +202,17 @@ exec_always --no-startup-id "killall -q dunst;dunst --config ~/.config/dunst/dun
 # MPD
 exec --no-startup-id mpd
 
-# Set Color Theme
-exec_always --no-startup-id wal -R
+# Redshift
+exec_always --no-startup-id redshift
 
-# start Composite manager
+# Set Color Theme
+# exec_always --no-startup-id wal -R
+
+# Start Composite manager
 #exec_always --no-startup-id xcompmgr
 
 # Disable Titlebar
-for_window [class="^.*"] border pixel 1
+# for_window [class="^.*"] border pixel 1
 
 # Needed for i3-gaps
 gaps inner 10
@@ -215,6 +222,7 @@ gaps outer 10
 bindsym $mod+F1 exec --no-startup-id $TERMINAL -e ncmpcpp
 bindsym $mod+F2 exec --no-startup-id $BROWSER
 bindsym $mod+F3 exec --no-startup-id $TERMINAL -e ranger
+bindsym $mod+F4 exec --no-startup-id xfce4-terminal
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
