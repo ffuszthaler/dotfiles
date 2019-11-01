@@ -25,9 +25,9 @@
 (horizontal-scroll-bar-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (column-number-mode +1)
-(global-linum-mode t)
+;;(global-linum-mode t)
 (global-font-lock-mode t)
-(set-frame-font "Iosevka")
+(set-frame-font "Iosevka") ;; curie
 
 ;; Preferences
 (setq ring-bell-function 'ignore
@@ -41,12 +41,6 @@
   :ensure t
   :init (smex-initialize)
   :bind ("M-x" . smex))
-
-;; Syntax checking
-(use-package flycheck
-  :ensure t
-  :init
-  (global-flycheck-mode t))
 
 ;; Extensible vi layer for emacs (disable by pressing C-z)
 (use-package evil
@@ -67,7 +61,10 @@
 ;; Nyan-Mode
 (use-package nyan-mode
   :ensure t
-  :config (nyan-mode) (nyan-start-animation) (nyan-toggle-wavy-trail))
+  :config
+  (nyan-mode)
+  (nyan-start-animation)
+  (nyan-toggle-wavy-trail))
 
 ;; Centaur-Tabs
 (use-package centaur-tabs :ensure t
@@ -105,11 +102,55 @@
               (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
   :bind ("<f8>" . neotree-toggle))
 
+;; Projectile
+(use-package projectile
+  :ensure t
+  :bind (:map projectile-mode-map
+              ("C-c p" . 'projectile-command-map))
+
+  :config
+  (projectile-mode +1))
+
+;; Syntax checking
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode t))
+
+;; Git
+(use-package magit
+  :ensure t
+  :init
+  (progn
+    (bind-key "C-x g" 'magit-status)))
+
+;; Snippets
+(use-package yasnippet
+  :ensure t
+  :init
+    (yas-global-mode 1))
+(use-package yasnippet-snippets :ensure t)
+(use-package yasnippet-classic-snippets :ensure t)
+
+;; LSP
+(use-package lsp-mode
+  :ensure t
+  :commands lsp
+  :custom
+  (lsp-auto-guess-root nil)
+  (lsp-prefer-flymake nil) ; Use flycheck instead of flymake
+  :bind (:map lsp-mode-map ("C-c C-f" . lsp-format-buffer))
+  :hook ((c-mode c++-mode) . lsp))
+
 ;; Company-Mode
 (use-package company
   :ensure t
   :diminish company-mode ;; Hide or abbreviate name in mode-line
   :hook (prog-mode . company-mode))
+(use-package company-lsp
+  :ensure t
+  :config
+  (push 'company-lsp company-backends))
 
 ;; Auto-Package-Update
 (use-package auto-package-update
