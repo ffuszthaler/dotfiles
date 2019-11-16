@@ -4,30 +4,36 @@ Plug 'Yggdroot/indentLine'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
-Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-fugitive'
+Plug 'liuchengxu/vista.vim'
+Plug 'junegunn/goyo.vim'
 
-" File icons
-Plug 'ryanoasis/vim-devicons'
-
-" File management
-Plug 'majutsushi/tagbar'
+" File Management
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 
-" Statusline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Statusline & Icons
+" Plug 'vim-airline/vim-airline'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'edkolev/tmuxline.vim'
+" TESTING - might use this over airline
+Plug 'itchyny/lightline.vim'
+Plug 'maximbaz/lightline-ale'
+" TESTING
 
 " Completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim'
+Plug 'scrooloose/nerdcommenter'
 Plug 'w0rp/ale'
 
-" Themes
+" Color Themes
 Plug 'ayu-theme/ayu-vim'
 Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
@@ -35,15 +41,27 @@ Plug 'fenetikm/falcon'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'KabbAmine/yowish.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'flazz/vim-colorschemes'
 Plug 'rakr/vim-one'
 Plug 'arcticicestudio/nord-vim'
+Plug 'xero/blaquemagick.vim'
+Plug 'xero/sourcerer.vim'
+Plug 'tomasr/molokai'
+Plug 'sjl/badwolf'
+Plug 'Rigellute/rigel'
+Plug 'andreypopp/vim-colors-plain'
+Plug 'tek256/simple-dark'
+Plug 'flazz/vim-colorschemes'
+Plug 'chriskempson/base16-vim'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'mhartington/oceanic-next'
+Plug 'flrnd/plastic.vim'
+Plug 'rainglow/vim', { 'as': 'rainglow' }
 call plug#end()
 
 " General
 syntax on
 filetype plugin indent on
-set number relativenumber
+" set number
 set laststatus=2
 set autoindent
 set hlsearch
@@ -58,37 +76,81 @@ set autoread
 set list
 set splitbelow splitright
 set background=dark
-colorscheme falcon
+colorscheme solarized8_dark
+set t_Co=256
 set termguicolors
 set scrolloff=10
-set colorcolumn=80
+
+" Coc
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-prettier',
+  \ 'coc-json',
+  \ 'coc-eslint',
+  \ 'coc-css',
+  \ 'coc-rls',
+  \]
 
 " Airline
-" other cool characters: '░'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_left_sep="\ue0b8"
-let g:airline_right_sep="\ue0ba"
-" let g:airline_theme='minimalist'
+" let g:airline#extensions#tabline#enabled=1
+let g:airline_powerline_fonts=1
+" let g:airline_left_sep="\ue0bc"
+" let g:airline_right_sep="\ue0ba"
+" let g:airline_left_alt_sep="\ue0bd"
+" let g:airline_right_alt_sep="\ue0bb"
+let g:airline_left_sep="▓▒░"
+let g:airline_right_sep="░▒▓"
+
+" Lightline
+function! FiletypeIcon()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! FileformatIcon()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
+
+let g:lightline = {
+  \ 'colorscheme': 'solarized',
+  \ 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
+  \ 'subseparator': { 'left': '|', 'right': '|' },
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+  \   'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
+  \              [ 'lineinfo' ],
+  \              [ 'percent' ],
+  \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'fugitive#head',
+  \   'filetype': 'FiletypeIcon',
+  \   'fileformat': 'FileformatIcon',
+  \ },
+  \ 'component_expand': {
+  \   'linter_checking': 'lightline#ale#checking',
+  \   'linter_warnings': 'lightline#ale#warnings',
+  \   'linter_errors': 'lightline#ale#errors',
+  \   'linter_ok': 'lightline#ale#ok',
+  \ },
+  \ 'component_type': {
+  \   'linter_checking': 'left',
+  \   'linter_warnings': 'warning',
+  \   'linter_errors': 'error',
+  \   'linter_ok': 'left',
+  \ }
+  \ }
 
 " ALE
-" other cool characters:
-" '⚡' '✗' '➽' '⚑' '⚐'
-" '♒' '⛢' '❕' '❗'
-let g:ale_sign_error='✗'
-let g:ale_sign_warning='⚠'
 let g:ale_fixers = {
-\ 'javascript': ['eslint']
-\ }
-" let g:ale_fix_on_save = 1
-
-" Deoplete
-let g:deoplete#enable_at_startup=1
+  \ 'javascript': ['eslint']
+  \ }
 
 " NERDTree
 let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeShowHidden=1
+let g:NERDTreeIgnore=['\.o$', '.ccls-cache']
 
 " Ultisnips
 let g:UltisnipsExpandTrigger="<tab>"
@@ -98,22 +160,32 @@ let g:UltisnipsEditSplit="vertical"
 let g:NERDSpaceDelims=1
 let g:NERDDefaultAlign='left'
 
-au VimEnter * RainbowParentheses
+" RainbowParentheses
+autocmd VimEnter * RainbowParentheses
 
 " Mappings
-"inoremap jk <Esc>
-tnoremap <Esc> <C-\><C-n>:q<CR>
-"nnoremap <F1> <CR>
-nnoremap <F2> :NERDTreeToggle<CR>
-nnoremap <F3> :ALEDetail<CR>
-nnoremap <F4> :Colors<CR>
-nnoremap <F5> :Files<CR>
-nnoremap <F6> :Buffers<CR>
-nnoremap <F7> :GFiles?<CR>
-nnoremap <F8> :Commits<CR>
-nnoremap <F9> :TagbarToggle<CR>
-nnoremap <F10> :Tags<CR>
-nnoremap <F11> :%s/\s\+$//e<CR>
-nnoremap <F12> :10split term://bash<CR>
+" 1st Row
+nnoremap <leader>q :Buffers<CR>
 nnoremap <leader>w :w !sudo tee %<CR>
-nnoremap <leader>f :ALEFix<CR>
+nnoremap <leader>e :CocList<CR>
+nnoremap <leader>r :%s/\s\+$//e<CR>
+
+" 2nd Row
+nnoremap <leader>a :NERDTreeToggle<CR>
+nnoremap <leader>s :ALEDetail<CR>
+nnoremap <leader>d :ALEFix<CR>
+nnoremap <leader>f :Files<CR>
+
+" 3rd Row
+nnoremap <leader>y :Vista<CR>
+nnoremap <leader>x :10split term://bash<CR>
+nnoremap <leader>c :GFiles?<CR>
+nnoremap <leader>v :Colors<CR>
+
+" List and switch buffer
+nnoremap <leader>l :ls<CR>:b<space>
+
+" Coc
+nmap <silent> <leader>dd <Plug>(coc-definition)
+nmap <silent> <leader>dr <Plug>(coc-references)
+nmap <silent> <leader>dj <Plug>(coc-implementation)

@@ -4,7 +4,8 @@
 set $mod Mod4
 
 # Variables
-set $TERMINAL st
+# set $TERMINAL st
+set $TERMINAL xfce4-terminal
 set $BROWSER google-chrome-stable
 
 # Font for window titles
@@ -187,7 +188,9 @@ client.background         #000000
 # }
 
 # Set Wallpaper
-exec_always --no-startup-id feh --bg-scale /home/flo/Bilder/wallhaven-0j7xl5.jpg
+# exec_always --no-startup-id feh --bg-scale /home/flo/Bilder/wallhaven-0j7xl5.jpg
+# exec_always --no-startup-id feh --bg-scale /home/flo/Bilder/wallhaven-0je31y.jpg
+exec_always --no-startup-id feh --bg-scale /home/flo/Bilder/wallhaven-96kdzx.png
 # exec_always --no-startup-id nitrogen --restore
 
 # Polybar
@@ -203,7 +206,7 @@ exec_always --no-startup-id "killall -q dunst;dunst --config ~/.config/dunst/dun
 exec --no-startup-id mpd
 
 # Redshift
-exec_always --no-startup-id redshift
+exec --no-startup-id redshift
 
 # Set Color Theme
 # exec_always --no-startup-id wal -R
@@ -212,7 +215,7 @@ exec_always --no-startup-id redshift
 #exec_always --no-startup-id xcompmgr
 
 # Disable Titlebar
-# for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 1
 
 # Needed for i3-gaps
 gaps inner 10
@@ -222,7 +225,7 @@ gaps outer 10
 bindsym $mod+F1 exec --no-startup-id $TERMINAL -e ncmpcpp
 bindsym $mod+F2 exec --no-startup-id $BROWSER
 bindsym $mod+F3 exec --no-startup-id $TERMINAL -e ranger
-bindsym $mod+F4 exec --no-startup-id xfce4-terminal
+bindsym $mod+F4 exec --no-startup-id kitty
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
