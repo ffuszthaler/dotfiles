@@ -55,7 +55,7 @@ interval=30
 # interval=1
 
 [time]
-label=📅
+# label=📅
 command=date '+%A %e %b // %H:%M:%S'
 interval=1
 

@@ -9,11 +9,15 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'liuchengxu/vista.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'liuchengxu/vim-clap' " :Clap colors
+Plug 'kassio/neoterm'
 
 " File Management
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Statusline & Icons
 " Plug 'vim-airline/vim-airline'
@@ -56,6 +60,8 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'flrnd/plastic.vim'
 Plug 'rainglow/vim', { 'as': 'rainglow' }
+Plug 'joshdick/onedark.vim'
+Plug 'liuchengxu/space-vim-theme'
 call plug#end()
 
 " General
@@ -63,6 +69,7 @@ syntax on
 filetype plugin indent on
 " set number
 set laststatus=2
+set showtabline=2
 set autoindent
 set hlsearch
 set ruler
@@ -76,10 +83,16 @@ set autoread
 set list
 set splitbelow splitright
 set background=dark
-colorscheme solarized8_dark
+colorscheme peacocks-in-space-contrast
 set t_Co=256
 set termguicolors
 set scrolloff=10
+" set colorcolumn=80
+set cursorline
+" set cursorcolumn
+
+" Clear SignColumn for signify and else
+highlight clear SignColumn
 
 " Coc
 let g:coc_global_extensions = [
@@ -89,6 +102,7 @@ let g:coc_global_extensions = [
   \ 'coc-eslint',
   \ 'coc-css',
   \ 'coc-rls',
+  \ 'coc-python',
   \]
 
 " Airline
@@ -110,13 +124,19 @@ function! FileformatIcon()
   return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 
+function! NearestMethodOrFunction() abort
+  return get(b:, 'vista_nearest_method_or_function', '')
+endfunction
+
+  " 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
+  " 'subseparator': { 'left': '|', 'right': '|' },
 let g:lightline = {
-  \ 'colorscheme': 'solarized',
-  \ 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
-  \ 'subseparator': { 'left': '|', 'right': '|' },
+  \ 'colorscheme': 'ayu',
+  \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+  \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'method' ] ],
   \   'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
   \              [ 'lineinfo' ],
   \              [ 'percent' ],
@@ -126,6 +146,8 @@ let g:lightline = {
   \   'gitbranch': 'fugitive#head',
   \   'filetype': 'FiletypeIcon',
   \   'fileformat': 'FileformatIcon',
+  \   'cocstatus': 'coc#status',
+  \   'method': 'NearestMethodOrFunction',
   \ },
   \ 'component_expand': {
   \   'linter_checking': 'lightline#ale#checking',
@@ -138,12 +160,50 @@ let g:lightline = {
   \   'linter_warnings': 'warning',
   \   'linter_errors': 'error',
   \   'linter_ok': 'left',
-  \ }
+  \ },
+  \ 'tabline': {
+  \   'left': [ [ 'tabs' ] ],
+  \   'right': [ [ 'close' ] ]
+  \ },
+  \ 'tab': {
+  \   'active': [ 'filename', 'modified' ],
+  \   'inactive': [ 'filename', 'modified' ],
+  \ },
+  \ 'mode_map': {
+  \   'n'      : 'N',
+  \   'no'     : 'N·Operator Pending',
+  \   'v'      : 'V',
+  \   'V'      : 'V·Line',
+  \   "\<C-V>" : 'V·Block',
+  \   's'      : 'Select',
+  \   'S'      : 'S·Line',
+  \   "\<C-S>" : 'S·Block',
+  \   'i'      : "\uf0e7",
+  \   'R'      : 'R',
+  \   'Rv'     : 'V·Replace',
+  \   'c'      : 'C',
+  \   'cv'     : 'Vim Ex',
+  \   'ce'     : 'Ex',
+  \   'r'      : 'Prompt',
+  \   'rm'     : 'More',
+  \   'r?'     : 'Confirm',
+  \   '!'      : 'Shell',
+  \   't'      : 'Terminal'
+  \ },
   \ }
 
+let g:lightline#ale#indicator_checking = "\uf110"
+let g:lightline#ale#indicator_warnings = "\uf071"
+let g:lightline#ale#indicator_errors = "\uf05e"
+let g:lightline#ale#indicator_ok = "\uf00c"
+
 " ALE
+let g:ale_sign_error="\uf05e"
+let g:ale_sign_warning="\uf071"
 let g:ale_fixers = {
-  \ 'javascript': ['eslint']
+  \ 'javascript': ['eslint'],
+  \ 'cpp': ['clang-format'],
+  \ 'c': ['clang-format'],
   \ }
 
 " NERDTree
@@ -151,6 +211,19 @@ let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeShowHidden=1
 let g:NERDTreeIgnore=['\.o$', '.ccls-cache']
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeIndicatorMapCustom = {
+  \ "Modified"  : "✹",
+  \ "Staged"    : "✚",
+  \ "Untracked" : "✭",
+  \ "Renamed"   : "➜",
+  \ "Unmerged"  : "═",
+  \ "Deleted"   : "✖",
+  \ "Dirty"     : "✗",
+  \ "Clean"     : "✔︎",
+  \ "Ignored"   : "☒",
+  \ "Unknown"   : "?"
+  \ }
 
 " Ultisnips
 let g:UltisnipsExpandTrigger="<tab>"
@@ -162,6 +235,14 @@ let g:NERDDefaultAlign='left'
 
 " RainbowParentheses
 autocmd VimEnter * RainbowParentheses
+
+" indentLine
+let g:indentLine_enabled='1'
+" | ¦ ┆ │
+" let g:indentLine_char='│'
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_leadingSpaceChar='▸'
+" let g:indentLine_leadingSpaceEnabled='1'
 
 " Mappings
 " 1st Row
@@ -177,7 +258,7 @@ nnoremap <leader>d :ALEFix<CR>
 nnoremap <leader>f :Files<CR>
 
 " 3rd Row
-nnoremap <leader>y :Vista<CR>
+nnoremap <leader>y :Vista!!<CR>
 nnoremap <leader>x :10split term://bash<CR>
 nnoremap <leader>c :GFiles?<CR>
 nnoremap <leader>v :Colors<CR>
@@ -185,7 +266,31 @@ nnoremap <leader>v :Colors<CR>
 " List and switch buffer
 nnoremap <leader>l :ls<CR>:b<space>
 
+" Toggle line numbers
+nnoremap <silent> <C-l> :set number!<CR>
+
+" Toggle background
+map <silent> <leader>bg :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
+
+" Terminal
+" escape terminal
+tnoremap <C-space> <C-\><C-n><esc><CR>
+" Neoterm
+" toggle terminal
+nnoremap <silent> <C-o> :vertical botright Ttoggle<CR><C-w>l
+nnoremap <silent> <C-p> :botright Ttoggle<CR><C-w>j
+" close terminal
+tnoremap <silent> <C-o> <C-\><C-n>:Ttoggle<CR>
+tnoremap <silent> <C-p> <C-\><C-n>:Ttoggle<CR>
+
 " Coc
 nmap <silent> <leader>dd <Plug>(coc-definition)
 nmap <silent> <leader>dr <Plug>(coc-references)
 nmap <silent> <leader>dj <Plug>(coc-implementation)
+nmap <silent> <leader>dh <Plug>(coc-doHover)
+
+" Fugitive
+nmap <silent> <leader>gs :Gstatus<CR>
+nmap <leader>ge :Gedit<CR>
+nmap <silent><leader>gr :Gread<CR>
+nmap <silent><leader>gb :Gblame<CR>

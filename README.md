@@ -1,3 +1,4 @@
 # .dotfiles
 
-If you want you can use them.
+These are my dotfiles.
+You can use them if you want to.
