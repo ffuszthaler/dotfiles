@@ -193,7 +193,14 @@ client.background         #000000
 # }
 
 # Set Wallpaper
-exec_always --no-startup-id feh --bg-scale /home/flo/Bilder/lamp.png
+# exec_always --no-startup-id feh --bg-scale /home/flo/Bilder/lamp.png
+# exec_always hsetroot -add "#c79081" -add "#dfa579" -gradient 0
+# exec_always hsetroot -add "#DAD299" -add "#B0DAB9" -gradient 0
+# exec_always hsetroot -add "#2193B0" -add "#6DD5ED" -gradient 0
+exec_always hsetroot -add "#0F2027" -add "#203A43" -add "#2C5364" -gradient 0
+# exec_always hsetroot -add "#373B44" -add "#4286F4" -gradient 0
+# exec_always hsetroot -solid "#c79081"
+# exec_always hsetroot -solid "#09090D"
 
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
