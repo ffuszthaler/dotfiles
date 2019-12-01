@@ -62,6 +62,7 @@ Plug 'flrnd/plastic.vim'
 Plug 'rainglow/vim', { 'as': 'rainglow' }
 Plug 'joshdick/onedark.vim'
 Plug 'liuchengxu/space-vim-theme'
+Plug 'haishanh/night-owl.vim'
 call plug#end()
 
 " General
@@ -83,7 +84,7 @@ set autoread
 set list
 set splitbelow splitright
 set background=dark
-colorscheme peacocks-in-space-contrast
+colorscheme ayu
 set t_Co=256
 set termguicolors
 set scrolloff=10

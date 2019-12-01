@@ -1,0 +1,383 @@
+;                 __      __
+;    ____  ____  / /_  __/ /_  ____ ______
+;   / __ \/ __ \/ / / / / __ \/ __ `/ ___/
+;  / /_/ / /_/ / / /_/ / /_/ / /_/ / /
+; / .___/\____/_/\__, /_.___/\__,_/_/
+;/_/            /____/
+;
+;
+
+[global/wm]
+; margin-top =
+; margin-bottom = 2
+
+
+[colors]
+; fg = ${xrdb:color0}
+; fg = ${xrdb:color21}
+; fg = #ffffffff
+fg = #2C5364
+; bg = #001b2b34
+bg = #000000
+; bg = ${xrdb:color0}
+
+
+[bar/top]
+width = 100%
+; height = 20
+; For Cascadia + FontAwesome
+height = 25
+; For Cascadia + FontAwesome
+offset-x = 0%
+offset-y= 0%
+fixed-center = false
+override-redirect = false
+bottom = false
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+; font-0 = Iosevka:pixelsize=12;1
+; font-0 = curie:pixelsize=12;1
+font-0 = Cascadia Code:pixelsize=12;1
+font-1 = FontAwesome:pixelsize=12;1
+
+modules-left = i3
+modules-center = xwindow
+modules-right = wireless-network battery pulseaudio date time
+
+tray-position = false
+tray-padding = 0
+tray-background = ${colors.bg}
+tray-detached = false
+
+underline-size = 3
+
+spacing = 1
+padding-left = 1
+padding-right = 1
+module-margin-left = 2
+module-margin-right = 2
+
+
+[bar/bottom]
+width = 100%
+height = ${bar/top.height}
+offset-x = 0%
+offset-y= 0%
+fixed-center = false
+override-redirect = false
+bottom = true
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+font-0 = ${bar/top.font-0}
+font-1 = ${bar/top.font-1}
+
+modules-left =
+modules-center = temperature keyboard memory filesystem cpu backlight
+modules-right =
+
+tray-position = false
+tray-padding = 0
+tray-background = ${colors.bg}
+tray-detached = false
+
+underline-size = 3
+
+spacing = 1
+padding-left = 1
+padding-right = 1
+module-margin-left = 2
+module-margin-right = 2
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume> <bar-volume>
+; label-volume = vol: %percentage%%
+label-volume =  %percentage%%
+label-volume-foreground = ${colors.fg}
+
+label-muted = muted
+label-muted-foreground = #666
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = true
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.fg}
+
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+module-margin-left = 2
+format-padding = 2
+format-background = ${colors.bg}
+
+
+[module/ewmh]
+type = internal/xworkspaces
+pin-workspaces = true
+enable-scroll = true
+
+format = <label-state>
+
+label-active = ×
+label-active-foreground = ${colors.fg}
+label-active-background = ${colors.bg}
+label-active-padding = 1
+
+label-empty = •
+label-empty-foreground = ${colors.fg}
+label-empty-background = ${colors.bg}
+label-empty-padding = 1
+
+label-urgent = !
+label-urgent-foreground = #EC5f67
+label-urgent-background = ${colors.bg}
+label-urgent-padding = 1
+
+
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+enable-scroll = true
+
+format = <label-state> <label-mode>
+
+; focused = Active workspace on focused monitor
+label-focused = ×
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = •
+label-unfocused-padding = 1
+
+; visible = Active workspace on unfocused monitor
+label-visible = ×
+label-visible-padding = 1
+
+; urgent = Workspace with urgency hint set
+label-urgent = !
+label-urgent-padding = 1
+
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = %a, %d %b
+
+; label = date: %date%
+label =  %date%
+
+
+[module/time]
+type = internal/date
+interval = 5
+
+time = %H:%M
+
+; label = time: %time%
+label =  %time%
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+
+format-charging = <animation-charging><label-charging>
+format-discharging = <animation-discharging><label-discharging>
+; format-full-prefix = bat:
+; animation-charging-0 = bat:
+; animation-discharging-0 = bat:
+
+format-full-prefix = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+animation-discharging-framerate = 750
+
+; [module/wired-network]
+; type = internal/network
+; interface = eth1
+
+
+[module/wireless-network]
+type = internal/network
+interface = wls1
+
+format-connected = <ramp-signal> <label-connected>
+format-disconnected = <label-disconnected>
+format-packetloss = <animation-packetloss> <label-connected>
+
+label-connected = %essid% %downspeed:9%
+label-disconnected = not connected
+label-packetloss = %essid%
+
+ramp-signal-0 = 
+; ramp-signal-1 = 😠
+; ramp-signal-2 = 😒
+; ramp-signal-3 = 😊
+; ramp-signal-4 = 😃
+; ramp-signal-5 = 😈
+
+animation-packetloss-0 = ⚠
+animation-packetloss-0-foreground = #ffa64c
+animation-packetloss-1 = 📶
+animation-packetloss-1-foreground = #000000
+animation-packetloss-framerate = 500
+
+
+[module/cpu]
+type = internal/cpu
+
+interval = 0.5
+
+format = <label> <ramp-coreload>
+label =  %percentage%%
+
+ramp-coreload-spacing = 1
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+mount-1 = /home
+
+interval = 10
+fixed-values = true
+spacing = 4
+
+format-mounted = <label-mounted>
+format-unmounted = <label-unmounted>
+label-mounted =  %mountpoint%: %percentage_free%% of %total%
+label-unmounted = %mountpoint%: not mounted
+
+
+[module/memory]
+type = internal/memory
+
+interval = 3
+format = <label> <bar-used>
+label = %gb_used%/%gb_free%
+
+bar-used-indicator =
+bar-used-width = 25
+bar-used-foreground-0 = #55aa55
+bar-used-foreground-1 = #557755
+bar-used-foreground-2 = #f5a70a
+bar-used-foreground-3 = #ff5555
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = #444444
+
+ramp-used-0 = ▁
+ramp-used-1 = ▂
+ramp-used-2 = ▃
+ramp-used-3 = ▄
+ramp-used-4 = ▅
+ramp-used-5 = ▆
+ramp-used-6 = ▇
+ramp-used-7 = █
+
+ramp-free-0 = ▁
+ramp-free-1 = ▂
+ramp-free-2 = ▃
+ramp-free-3 = ▄
+ramp-free-4 = ▅
+ramp-free-5 = ▆
+ramp-free-6 = ▇
+ramp-free-7 = █
+
+
+[module/temperature]
+type = internal/temperature
+
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon4/temp2_input
+base-temperature = 20
+warn-temperature = 60
+units = true
+
+format = <label>
+format-warn = <label-warn>
+label =  %temperature-c%
+label-warn =  %temperature-c%
+label-warn-foreground = #f00
+
+
+[module/backlight]
+type = internal/backlight
+
+; $ ls -1 /sys/class/backlight/
+card = acpi_video0
+format = <label> <bar>
+label =  %percentage%%
+
+bar-width = 10
+bar-indicator = |
+bar-fill = ─
+bar-empty = ─
+
+
+[module/keyboard]
+type = internal/xkeyboard
+
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+format = <label-layout> <label-indicator>
+
+label-layout = %icon%
+layout-icon-default = 
+layout-icon-0 = de;
+
+indicator-icon-default = 
+indicator-icon-0 = caps lock;CL off;CL on
+indicator-icon-1 = scroll lock;SL off;SL on
+indicator-icon-2 = num lock;NL off;NL on
+
+label-indicator-on-capslock = %icon%
+label-indicator-off-capslock = %icon%
+label-indicator-on-numlock = %icon%
+label-indicator-off-numlock = %icon%
+label-indicator-on-scrolllock = %icon%
+label-indicator-off-scrolllock = %icon%
+
+
+; vim:ft=dosini
