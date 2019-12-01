@@ -1,0 +1,18 @@
+# emacs
+emacs/.emacs.d/elpa
+emacs/.emacs.d/snippets
+emacs/.emacs.d/transient
+emacs/.emacs.d/smex-items
+emacs/.emacs.d/projectile-bookmarks.eld
+emacs/.emacs.d/.last-package-update-day
+
+# mpd
+mpd/.config/mpd/log
+mpd/.config/mpd/database
+mpd/.config/mpd/pid
+mpd/.config/mpd/state
+mpd/.config/mpd/sticker.sql
+
+# vim
+vim/.vim/autoload
+vim/.vim/plugged
