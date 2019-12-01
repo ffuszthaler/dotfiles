@@ -2,8 +2,8 @@ sw_volume: 90
 audio_device_state:1:mpd alsamixer-output
 audio_device_state:1:toggle_visualizer
 state: play
-current: 1
-time: 4.131000
+current: 4
+time: 4.235000
 random: 0
 repeat: 0
 single: 0
@@ -14,4 +14,7 @@ mixrampdelay: -1.000000
 playlist_begin
 0:[Electro Swing] Odd Chap - Sound 102-lUtZ_MFvWYk.mp3
 1:Arman Cekin - California Dreaming (feat. Paul Rey)-14zIhlfeUjE.mp3
+2:Avicii - Pure Grinding-hzdIoghbFzg.mp3
+3:Blackbear - Idfc (Tarro Remix)-gxE4ngu78Ro.mp3
+4:Do You Realize By Ursine Vulpine (Transformers The Last Knight Trailer Music)--rAv5zgtsmM.mp3
 playlist_end

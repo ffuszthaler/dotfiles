@@ -399,3 +399,6 @@ Dec 01 16:21 : exception: Failed to open /home/flo/.config/mpd/playlists: No suc
 Dec 01 16:21 : exception: Failed to open /home/flo/.config/mpd/playlists: No such file or directory
 Dec 01 16:21 : exception: Failed to open /home/flo/.config/mpd/playlists: No such file or directory
 Dec 01 16:21 : exception: Failed to open /home/flo/.config/mpd/playlists: No such file or directory
+Dec 01 16:24 : player: played "Arman Cekin - California Dreaming (feat. Paul Rey)-14zIhlfeUjE.mp3"
+Dec 01 16:28 : player: played "Avicii - Pure Grinding-hzdIoghbFzg.mp3"
+Dec 01 16:32 : player: played "Blackbear - Idfc (Tarro Remix)-gxE4ngu78Ro.mp3"
