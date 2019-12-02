@@ -27,11 +27,11 @@
 (column-number-mode +1)
 ;;(global-linum-mode t)
 (global-font-lock-mode t)
-(set-frame-font "Iosevka") ;; curie
+(set-frame-font "Iosevka")
 
 ;; Preferences
 (setq ring-bell-function 'ignore
-      make-backup-files nil) ;; no (~filename)
+      make-backup-files nil)
 (setq-default indent-tabs-mode nil
               tab-width 2)
 (ido-mode 1)
