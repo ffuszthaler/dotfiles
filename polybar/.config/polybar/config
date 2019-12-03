@@ -13,13 +13,12 @@
 
 
 [colors]
-; fg = ${xrdb:color0}
-; fg = ${xrdb:color21}
-; fg = #ffffffff
-fg = #2C5364
-; bg = #001b2b34
-bg = #000000
-; bg = ${xrdb:color0}
+
+; #37598500 <- Last two Digits = Transparency
+; fg = ${xrdb:foreground}
+fg = #aaaaaa
+bg = #12121211
+; bg = ${xrdb:background}
 
 
 [bar/top]
@@ -38,9 +37,11 @@ background = ${colors.bg}
 foreground = ${colors.fg}
 
 ; font-0 = Iosevka:pixelsize=12;1
-; font-0 = curie:pixelsize=12;1
-font-0 = Cascadia Code:pixelsize=12;1
-font-1 = FontAwesome:pixelsize=12;1
+; font-0 = Cascadia Code:pixelsize=12;1
+; font-1 = FontAwesome:pixelsize=12;1
+
+font-0 = curie:pixelsize=12;1
+font-1 = FontAwesome:pixelsize=10;1
 
 modules-left = i3
 modules-center = xwindow

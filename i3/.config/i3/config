@@ -156,20 +156,20 @@ set_from_resource $white        i3wm.color15 #000000
 set $transparent  #00000000
 
 # Color theme (dont't forget colors in polybar, kitty, ...)
-set $wp_color #2C5364
-set $bg_color #191919
+set $term_bg #09090D
+set $term_fg #839496
 
 # 1 - Title-Border
 # 2 - Background
 # 3 - Text
 # 4 - Indicator
 # 5 - Window-Border
-#                         1        2        3        4        5
-client.focused            $wp_color  $wp_color  #000000  #000000  $wp_color
-client.unfocused          #000000  #000000  $wp_color  $wp_color  #000000
-client.focused_inactive   #000000  #000000  $wp_color  $wp_color  #000000
+#                         1          2           3           4           5
+client.focused            $term_bg   $term_bg    $term_fg    $term_fg    $term_bg
+client.unfocused          #000000    #000000     $term_fg    #000000     #000000
+client.focused_inactive   #000000    #000000     $term_fg    $term_fg    #000000
 # Don't modify
-client.urgent             #900000  #900000  #ffffff  #000000  #900000
+client.urgent             #900000    #900000     #ffffff     #000000     #900000
 client.background         #000000
 
 # Start i3blocks
@@ -193,11 +193,11 @@ client.background         #000000
 # }
 
 # Background
-# exec_always --no-startup-id feh --bg-scale /home/flo/Bilder/lamp.png
+exec_always --no-startup-id feh --bg-scale /home/flo/Bilder/re-rendered-this-to-fix-artifacts.-2560×1440.jpg
 # exec_always hsetroot -add "#c79081" -add "#dfa579" -gradient 0
 # exec_always hsetroot -add "#DAD299" -add "#B0DAB9" -gradient 0
 # exec_always hsetroot -add "#2193B0" -add "#6DD5ED" -gradient 0
-exec_always hsetroot -add "#0F2027" -add "#203A43" -add "#2C5364" -gradient 0
+# exec_always hsetroot -add "#0F2027" -add "#203A43" -add "#2C5364" -gradient 0
 # exec_always hsetroot -add "#373B44" -add "#4286F4" -gradient 0
 # exec_always hsetroot -solid "#c79081"
 # exec_always hsetroot -solid "#09090D"
