@@ -1,0 +1,227 @@
+# wm indipendent hotkeys
+# Terminal
+super + Return
+  st
+
+# Program launcher
+super + d
+  dmenu_run -fn 'mono'
+
+# Quickly launch important Applications
+super + F1
+  st -e ncmpcpp
+super + F2
+  firefox
+super + F3
+  st -e ranger
+super + F4
+  xfce4-terminal
+super + F5
+  kitty
+super + F6
+  urxvt
+
+# Volume controls
+XF86AudioRaiseVolume
+  pactl set-sink-volume 0 +5%
+XF86AudioLowerVolume
+  pactl set-sink-volume 0 -5%
+XF86AudioMute
+  pactl set-sink-mute 0 toggle
+
+# Screen brightness controls
+XF86MonBrightnessUp
+  xbacklight -inc 20
+XF86MonBrightnessDown
+  xbacklight -dec 20
+
+# Media player controls
+XF86AudioPlay
+  playerctl play-pause
+XF86AudioPause
+  playerctl play-pause
+XF86AudioNext
+  playerctl next
+XF86AudioPrev
+  playerctl previous
+XF86AudioStop
+  playerctl stop
+
+
+/* # i3wm hotkeys */
+/* # Change focus */
+/* super + k */
+/*   i3-msg focus up || i3-msg focus output up */
+/* super + j */
+/*   i3-msg focus down || i3-msg focus output down */
+/* super + h */
+/*   i3-msg focus left || i3-msg focus output left */
+/* super + l */
+/*   i3-msg focus right || i3-msg focus output right */
+
+/* # Move focused window */
+/* super + shift + k */
+/*   i3-msg move up */
+/* super + shift + j */
+/*   i3-msg move down */
+/* super + shift + h */
+/*   i3-msg move left */
+/* super + shift + l */
+/*   i3-msg move right */
+
+/* # Set splitting area */
+/* super + t */
+/*   i3-msg split toggle */
+
+/* # Switch to workspaces */
+/* super + 1 */
+/*   i3-msg workspace 1 */
+/* super + 2 */
+/*   i3-msg workspace 2 */
+/* super + 3 */
+/*   i3-msg workspace 3 */
+/* super + 4 */
+/*   i3-msg workspace 4 */
+/* super + 5 */
+/*   i3-msg workspace 5 */
+/* super + 6 */
+/*   i3-msg workspace 6 */
+/* super + 7 */
+/*   i3-msg workspace 7 */
+/* super + 8 */
+/*   i3-msg workspace 8 */
+/* super + 9 */
+/*   i3-msg workspace 9 */
+/* super + 10 */
+/*   i3-msg workspace 10 */
+
+/* # Move to workspaces */
+/* super + shift + 1 */
+/*   i3-msg move container to workspace 1 */
+/* super + shift + 2 */
+/*   i3-msg move container to workspace 2 */
+/* super + shift + 3 */
+/*   i3-msg move container to workspace 3 */
+/* super + shift + 4 */
+/*   i3-msg move container to workspace 4 */
+/* super + shift + 5 */
+/*   i3-msg move container to workspace 5 */
+/* super + shift + 6 */
+/*   i3-msg move container to workspace 6 */
+/* super + shift + 7 */
+/*   i3-msg move container to workspace 7 */
+/* super + shift + 8 */
+/*   i3-msg move container to workspace 8 */
+/* super + shift + 9 */
+/*   i3-msg move container to workspace 9 */
+/* super + shift + 10 */
+/*   i3-msg move container to workspace 10 */
+
+/* # Toggle fullscreen */
+/* super + f */
+/*   i3-msg fullscreen */
+
+/* # Toggle floating */
+/* super + shift + space */
+/*   i3-msg floating toggle */
+
+/* # Close current window */
+/* super + shift + q */
+/*   i3-msg kill */
+
+/* # Exit i3 (logs you out of your X session) */
+/* super+ shift + e */
+/*   i3-nagbar -t warning -m 'Exit i3? Ends your X session.' -b 'Yes, exit i3' 'i3-msg exit' */
+
+
+# bspwm hotkeys
+# quit/restart bspwm
+super + alt + {q,r}
+  bspc {quit,wm -r}
+
+# close and kill
+super + {_,shift + }w
+  bspc node -{c,k}
+
+# alternate between the tiled and monocle layout
+super + m
+  bspc desktop -l next
+
+# send the newest marked node to the newest preselected node
+super + y
+  bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest node
+super + g
+  bspc node -s biggest
+
+# state/flags
+# set the window state
+super + {t,shift + t,s,f}
+  bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+  bspc node -g {marked,locked,sticky,private}
+
+# focus/swap
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+  bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+  bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous node in the current desktop
+super + {_,shift + }c
+  bspc node -f {next,prev}.local
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+  bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+  bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+  bspc wm -h off; \
+  bspc node {older,newer} -f; \
+  bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+  bspc {desktop -f,node -d} '^{1-9,10}'
+
+# preselect
+# preselect the direction
+super + ctrl + {h,j,k,l}
+  bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+  bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+  bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+  bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+# move/resize
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+  bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+  bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+  bspc node -v {-20 0,0 20,0 -20,20 0}
+

@@ -43,7 +43,8 @@ foreground = ${colors.fg}
 font-0 = curie:pixelsize=12;1
 font-1 = FontAwesome:pixelsize=10;1
 
-modules-left = i3
+; modules-left = i3
+modules-left = bspwm
 modules-center = xwindow
 modules-right = wireless-network battery pulseaudio date time
 
@@ -92,6 +93,24 @@ padding-left = 1
 padding-right = 1
 module-margin-left = 2
 module-margin-right = 2
+
+
+[module/bspwm]
+type = internal/bspwm
+
+format = <label-state> <label-mode>
+
+label-focused = ×
+label-focused-padding = 1
+
+label-occupied = ×
+label-occupied-padding = 1
+
+label-urgent = !
+label-urgent-padding = 1
+
+label-empty = •
+label-empty-padding = 1
 
 
 [module/pulseaudio]
