@@ -21,6 +21,16 @@ super + F5
 super + F6
   urxvt
 
+# "Power" menu
+super + shift + p
+  systemctl poweroff -i
+super + shift + BackSpace
+  systemctl reboot
+super + shift + l
+  i3lock -e -f -c 1d2021
+super + shift + Escape
+  killall Xorg
+
 # Volume controls
 XF86AudioRaiseVolume
   pactl set-sink-volume 0 +5%
