@@ -6,8 +6,8 @@
 alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
 
-# My Prompt
-PS1='\e[1m\] \033[32m\]\W \033[39m\]\$ \[\e[0m\]'
+# Custom Prompt
+PS1='\[\e[1m\]\033[32m\]\W \033[37m\]\$\[\e[0m\] '
 
 # Aliases
 # alias v='nvim'
