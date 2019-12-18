@@ -7,7 +7,8 @@ xrdb -merge ~/.Xresources
 xsetroot -cursor_name left_ptr
 
 # Wallpaper
-feh --bg-scale /home/flo/Bilder/re-rendered-this-to-fix-artifacts.-2560×1440.jpg
+# feh --bg-scale /home/flo/Bilder/re-rendered-this-to-fix-artifacts.-2560×1440.jpg
+feh --bg-scale /home/flo/Bilder/y_mountain.png
 # hsetroot -add "#c79081" -add "#dfa579" -gradient 0
 # hsetroot -add "#DAD299" -add "#B0DAB9" -gradient 0
 # hsetroot -add "#2193B0" -add "#6DD5ED" -gradient 0
@@ -29,6 +30,9 @@ killall -q dunst;dunst --config ~/.config/dunst/dunstrc &
 
 # Music daemon
 mpd &
+
+# Night mode
+redshift &
 
 # Window manager
 # exec i3

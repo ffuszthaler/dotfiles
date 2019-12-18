@@ -31,7 +31,8 @@ override-redirect = false
 bottom = false
 
 background = ${colors.bg}
-foreground = ${colors.fg}
+; foreground = ${colors.fg}
+foreground = #272727
 
 font-0 = curie:pixelsize=12;1
 font-1 = FontAwesome:pixelsize=10;1
@@ -45,7 +46,6 @@ tray-position = right
 tray-padding = 0
 tray-scale = 1
 tray-maxsize = 16
-tray-background = ${colors.bg}
 tray-detached = false
 
 underline-size = 3
@@ -75,11 +75,6 @@ font-1 = ${bar/top.font-1}
 modules-left =
 modules-center = temperature keyboard memory filesystem cpu backlight
 modules-right =
-
-tray-position = false
-tray-padding = 0
-tray-background = ${colors.bg}
-tray-detached = false
 
 underline-size = 3
 
@@ -114,10 +109,7 @@ type = internal/pulseaudio
 format-volume = <label-volume> <bar-volume>
 ; label-volume = vol: %percentage%%
 label-volume =  %percentage%%
-label-volume-foreground = ${colors.fg}
-
 label-muted = muted
-label-muted-foreground = #666
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -134,7 +126,6 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.fg}
 
 
 [module/xwindow]
@@ -142,7 +133,6 @@ type = internal/xwindow
 label = %title:0:30:...%
 module-margin-left = 2
 format-padding = 2
-format-background = ${colors.bg}
 
 
 [module/ewmh]
@@ -238,6 +228,7 @@ animation-discharging-3 = 
 animation-discharging-4 = 
 animation-discharging-framerate = 750
 
+
 ; [module/wired-network]
 ; type = internal/network
 ; interface = eth1
@@ -319,7 +310,6 @@ bar-used-foreground-2 = #f5a70a
 bar-used-foreground-3 = #ff5555
 bar-used-fill = ▐
 bar-used-empty = ▐
-bar-used-empty-foreground = #444444
 
 ramp-used-0 = ▁
 ramp-used-1 = ▂
