@@ -15,18 +15,15 @@
 [colors]
 
 ; #37598500 <- Last two Digits = Transparency
-; fg = ${xrdb:foreground}
 fg = #aaaaaa
 bg = #12121211
+; fg = ${xrdb:foreground}
 ; bg = ${xrdb:background}
 
 
 [bar/top]
 width = 100%
-; height = 20
-; For Cascadia + FontAwesome
 height = 25
-; For Cascadia + FontAwesome
 offset-x = 0%
 offset-y= 0%
 fixed-center = false
@@ -36,10 +33,6 @@ bottom = false
 background = ${colors.bg}
 foreground = ${colors.fg}
 
-; font-0 = Iosevka:pixelsize=12;1
-; font-0 = Cascadia Code:pixelsize=12;1
-; font-1 = FontAwesome:pixelsize=12;1
-
 font-0 = curie:pixelsize=12;1
 font-1 = FontAwesome:pixelsize=10;1
 
@@ -48,8 +41,10 @@ modules-left = bspwm
 modules-center = xwindow
 modules-right = wireless-network battery pulseaudio date time
 
-tray-position = false
+tray-position = right
 tray-padding = 0
+tray-scale = 1
+tray-maxsize = 16
 tray-background = ${colors.bg}
 tray-detached = false
 
