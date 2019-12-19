@@ -1,17 +1,18 @@
+! #include "/home/flo/.cache/wal/colors.Xresources"
+
 !! urxvt
 URxvt.font: xft:Cascadia Code:size=11
 URxvt.scrollBar: false
 
 !! st
 *.font: Cascadia Code:pixelsize=14:antialias=true:autohint=true;
-! *.background: #000000
 
 !! xterm
 XTerm.termName: xterm-256color
 XTerm*faceName: Cascadia Code
-XTerm*faceSize: 11
+XTerm*faceSize: 10
 XTerm.vt100.locale: true
-XTerm*cursorBlink: true
+XTerm*cursorBlink: false
 XTerm*highlightSelection: true
 XTerm*trimSelection: true
 XTerm*selectToClipboard: true
@@ -24,26 +25,27 @@ XTerm*metaSendsEscape: true
 XTerm.vt100.backarrowKey: false
 XTerm.ttyModes: erase ^?
 
-!! Pywal
-#include "/home/flo/.cache/wal/colors.Xresources"
+!! Custom Background
+*.background: #101010
 
-!! Color theme: Satori
-! *.foreground: #839496
-! *.background: #09090d
-! *.cursor: #839496
-! *.color0: #353540
-! *.color8: #545466
-! *.color1: #8c5760
-! *.color9: #b26f7a
-! *.color2: #7b8c58
-! *.color10: #9db270
-! *.color3: #8c6e43
-! *.color11: #b28c55
-! *.color4: #58698c
-! *.color12: #7086b2
-! *.color5: #7b5e7d
-! *.color13: #9c77b2
-! *.color6: #66808c
-! *.color14: #82a2b2
-! *.color7: #8c8b8b
-! *.color15: #b8b8c8
+!! Gruvbox
+! soft contrast: *background: #32302f
+! medium contrast: *background: #282828
+! hard contrast: *background: #1d2021
+*foreground: #ebdbb2
+*color0:  #282828
+*color8:  #928374
+*color1:  #cc241d
+*color9:  #fb4934
+*color2:  #98971a
+*color10: #b8bb26
+*color3:  #d79921
+*color11: #fabd2f
+*color4:  #458588
+*color12: #83a598
+*color5:  #b16286
+*color13: #d3869b
+*color6:  #689d6a
+*color14: #8ec07c
+*color7:  #a89984
+*color15: #ebdbb2
