@@ -15,13 +15,25 @@ super + F2
 super + F3
   st -e ranger
 super + F4
-  xfce4-terminal
+  pcmanfm
 super + F5
-  kitty
+  st -e htop
 super + F6
-  urxvt
+  st -e alsamixer
+super + F7
+  arandr
+super + F8
+  st -e calcurse
+super + F9
+  st -e tty-clock -c -s
+super + F10
+  emacs
+super + F11
+  st -e gtop
+super + F12
+  st -e cmatrix
 
-# "Power" menu
+# Power menu
 super + shift + p
   systemctl poweroff -i
 super + shift + BackSpace
