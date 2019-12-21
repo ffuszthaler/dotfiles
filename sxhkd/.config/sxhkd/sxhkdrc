@@ -3,9 +3,9 @@
 super + Return
   st
 
-# Program launcher
+# Program launcher (dmenu_run -fn 'mono')
 super + d
-  dmenu_run -fn 'mono'
+  rofi -show run
 
 # Quickly launch important Applications
 super + F1
