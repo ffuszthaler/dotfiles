@@ -63,6 +63,7 @@ Plug 'rainglow/vim', { 'as': 'rainglow' }
 Plug 'joshdick/onedark.vim'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'haishanh/night-owl.vim'
+Plug 'conweller/endarkened.vim'
 call plug#end()
 
 " General
@@ -84,7 +85,7 @@ set autoread
 set list
 set splitbelow splitright
 set background=dark
-colorscheme ayu
+colorscheme endarkened
 set t_Co=256
 set termguicolors
 set scrolloff=10
@@ -132,7 +133,7 @@ endfunction
   " 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
   " 'subseparator': { 'left': '|', 'right': '|' },
 let g:lightline = {
-  \ 'colorscheme': 'ayu',
+      \ 'colorscheme': 'endarkened',
   \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
   \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
   \ 'active': {
