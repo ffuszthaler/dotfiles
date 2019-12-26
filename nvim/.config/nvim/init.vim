@@ -64,6 +64,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'haishanh/night-owl.vim'
 Plug 'conweller/endarkened.vim'
+Plug 'jaredgorski/spacecamp'
 call plug#end()
 
 " General
