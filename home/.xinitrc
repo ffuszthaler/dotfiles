@@ -8,7 +8,7 @@ xsetroot -cursor_name left_ptr
 
 # Wallpaper
 # feh --bg-scale /home/flo/Bilder/re-rendered-this-to-fix-artifacts.-2560×1440.jpg
-feh --bg-scale /home/flo/Bilder/y_mountain.png
+# feh --bg-scale /home/flo/Bilder/y_mountain.png
 feh --bg-scale /home/flo/Bilder/cyber.jpg
 # hsetroot -add "#c79081" -add "#dfa579" -gradient 0
 # hsetroot -add "#DAD299" -add "#B0DAB9" -gradient 0
