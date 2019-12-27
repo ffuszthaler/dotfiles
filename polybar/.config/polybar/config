@@ -211,7 +211,7 @@ adapter = AC0
 
 format-charging = <animation-charging><label-charging>
 format-discharging = <animation-discharging><label-discharging>
-format-full = <animation-charging><label-charging>
+; format-full = <animation-charging><label-charging>
 ; format-full-prefix = bat:
 ; animation-charging-0 = bat:
 ; animation-discharging-0 = bat:
