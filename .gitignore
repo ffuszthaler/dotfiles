@@ -7,6 +7,7 @@ emacs/.emacs.d/projectile-bookmarks.eld
 emacs/.emacs.d/.last-package-update-day
 emacs/.emacs.d/auto-save-list
 emacs/.emacs.d/ido.last
+emacs/.emacs.d/.lsp-session-v1
 
 # mpd
 mpd/.config/mpd/database
