@@ -3,9 +3,9 @@
 super + Return
   st
 
-# Program launcher (dmenu_run -fn 'mono')
+# Program launcher (rofi -show run)
 super + d
-  rofi -show run
+  dmenu_run -fn 'Cascadia Code:pixelsize=13' -nb '#000000' -nf '#FFB01B' -sb '#FFB01B' -sf '#000000'
 
 # Quickly launch important Applications
 super + F1
