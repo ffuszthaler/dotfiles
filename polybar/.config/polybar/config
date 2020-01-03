@@ -17,16 +17,23 @@
 ; fg = #AAAAAA
 ; bg = #101010
 
-fg = #FFB01B
-; bg = #101010
-bg = #000000
+; fg = #688893
+; bg = #34202B
+
+fg = #AAAAAA
+bg = #00000000
+
+; fg = #FFB01B
+; bg = #000000
+
 ; fg = ${xrdb:foreground}
 ; bg = ${xrdb:background}
 
 
 [bar/top]
 width = 100%
-height = 25
+; height = 25
+height = 35
 offset-x = 0%
 offset-y= 0%
 fixed-center = false
@@ -36,7 +43,8 @@ bottom = false
 background = ${colors.bg}
 foreground = ${colors.fg}
 
-font-0 = curie:pixelsize=12;1
+; font-0 = curie:pixelsize=12;1
+font-0 = Cascadia Code:pixelsize=10;1
 font-1 = FontAwesome:pixelsize=10;1
 
 ; modules-left = i3
@@ -209,14 +217,12 @@ type = internal/battery
 battery = BAT0
 adapter = AC0
 
+label-full = 
 format-charging = <animation-charging><label-charging>
 format-discharging = <animation-discharging><label-discharging>
-; format-full = <animation-charging><label-charging>
-; format-full-prefix = bat:
-; animation-charging-0 = bat:
-; animation-discharging-0 = bat:
+format-full = <label-full>
 
-format-full-prefix = 
+; animation-charging-0 = bat:
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
@@ -224,6 +230,7 @@ animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-framerate = 750
 
+; animation-discharging-0 = bat:
 animation-discharging-0 = 
 animation-discharging-1 = 
 animation-discharging-2 = 

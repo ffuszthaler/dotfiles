@@ -4,8 +4,10 @@ super + Return
   st
 
 # Program launcher (rofi -show run)
+# rofi -show run
+# dmenu_run -fn 'Cascadia Code:pixelsize=13' -nb '#000000' -nf '#FFB01B' -sb '#FFB01B' -sf '#000000'
 super + d
-  dmenu_run -fn 'Cascadia Code:pixelsize=13' -nb '#000000' -nf '#FFB01B' -sb '#FFB01B' -sf '#000000'
+  rofi -show run
 
 # Quickly launch important Applications
 super + F1
