@@ -95,39 +95,39 @@ set updatetime=100
 " Clear SignColumn for signify and else
 " highlight clear SignColumn
 
-" Helper
+" Helper functions
 function! CreateCenteredFloatingWindow()
-    let width = float2nr(&columns * 0.6)
-    let height = float2nr(&lines * 0.6)
-    let top = ((&lines - height) / 2) - 1
-    let left = (&columns - width) / 2
-    let opts = {'relative': 'editor', 'row': top, 'col': left, 'width': width, 'height': height, 'style': 'minimal'}
+  let width = float2nr(&columns * 0.6)
+  let height = float2nr(&lines * 0.6)
+  let top = ((&lines - height) / 2) - 1
+  let left = (&columns - width) / 2
+  let opts = {'relative': 'editor', 'row': top, 'col': left, 'width': width, 'height': height, 'style': 'minimal'}
 
-    let top = "╭" . repeat("─", width - 2) . "╮"
-    let mid = "│" . repeat(" ", width - 2) . "│"
-    let bot = "╰" . repeat("─", width - 2) . "╯"
-    let lines = [top] + repeat([mid], height - 2) + [bot]
-    let s:buf = nvim_create_buf(v:false, v:true)
-    call nvim_buf_set_lines(s:buf, 0, -1, v:true, lines)
-    call nvim_open_win(s:buf, v:true, opts)
-    set winhl=Normal:Floating
-    let opts.row += 1
-    let opts.height -= 2
-    let opts.col += 2
-    let opts.width -= 4
-    call nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
-    au BufWipeout <buffer> exe 'bw '.s:buf
+  let top = "╭" . repeat("─", width - 2) . "╮"
+  let mid = "│" . repeat(" ", width - 2) . "│"
+  let bot = "╰" . repeat("─", width - 2) . "╯"
+  let lines = [top] + repeat([mid], height - 2) + [bot]
+  let s:buf = nvim_create_buf(v:false, v:true)
+  call nvim_buf_set_lines(s:buf, 0, -1, v:true, lines)
+  call nvim_open_win(s:buf, v:true, opts)
+  set winhl=Normal:Floating
+  let opts.row += 1
+  let opts.height -= 2
+  let opts.col += 2
+  let opts.width -= 4
+  call nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
+  au BufWipeout <buffer> exe 'bw '.s:buf
 endfunction
 
 function! OpenTerm(cmd)
-    call CreateCenteredFloatingWindow()
-    call termopen(a:cmd, { 'on_exit': function('OnTermExit') })
+  call CreateCenteredFloatingWindow()
+  call termopen(a:cmd, { 'on_exit': function('OnTermExit') })
 endfunction
 
 function! OnTermExit(job_id, code, event) dict
-    if a:code == 0
-        bd!
-    endif
+  if a:code == 0
+    bd!
+  endif
 endfunction
 
 " Coc
@@ -273,7 +273,7 @@ autocmd VimEnter * RainbowParentheses
 autocmd BufEnter * if winnr("$") == 1 && vista#sidebar#IsVisible() | execute "normal! :q!\<CR>" | endif
 
 " signify
-let g:signify_line_highlight = 1
+let g:signify_line_highlight = 0
 let g:signify_sign_show_count = 1
 let g:signify_sign_add               = '+'
 let g:signify_sign_delete            = '_'
