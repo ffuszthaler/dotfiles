@@ -1,3 +1,14 @@
+"                 __
+"  __          __/\ \__               __
+" /\_\    ___ /\_\ \ ,_\      __  __ /\_\    ___ ___
+" \/\ \ /' _ `\/\ \ \ \/     /\ \/\ \\/\ \ /' __` __`\
+"  \ \ \/\ \/\ \ \ \ \ \_  __\ \ \_/ |\ \ \/\ \/\ \/\ \
+"   \ \_\ \_\ \_\ \_\ \__\/\_\\ \___/  \ \_\ \_\ \_\ \_\
+"    \/_/\/_/\/_/\/_/\/__/\/_/ \/__/    \/_/\/_/\/_/\/_/
+
+"""""""""""""""
+""" PLUGINS """
+"""""""""""""""
 call plug#begin('~/.local/share/nvim/plugged')
 " Miscellaneous
 Plug 'Yggdroot/indentLine'
@@ -63,7 +74,9 @@ Plug 'haishanh/night-owl.vim'
 Plug 'conweller/endarkened.vim'
 call plug#end()
 
-" General
+"""""""""""""""
+""" GENERAL """
+"""""""""""""""
 set nocompatible
 syntax on
 filetype plugin indent on
@@ -130,6 +143,9 @@ function! OnTermExit(job_id, code, event) dict
   endif
 endfunction
 
+"""""""""""""""""""""""
+""" PLUGIN SETTINGS """
+"""""""""""""""""""""""
 " Coc
 let g:coc_global_extensions = [
   \ 'coc-snippets',
@@ -219,7 +235,6 @@ let g:lightline = {
   \   't'      : 'Terminal'
   \ },
   \ }
-
 let g:lightline#ale#indicator_checking = "\uf110"
 let g:lightline#ale#indicator_warnings = "\uf071"
 let g:lightline#ale#indicator_errors = "\uf05e"
@@ -290,11 +305,13 @@ let g:indentLine_leadingSpaceChar='▸'
 
 " Lazygit
 function! OpenLazyGit()
-    call OpenTerm('lazygit')
-    startinsert
+  call OpenTerm('lazygit')
+  startinsert
 endfunction
 
-" Mappings
+"""""""""""""""""""""""""
+""" KEYBOARD MAPPINGS """
+"""""""""""""""""""""""""
 " 1st Row
 nnoremap <leader>q :Buffers<CR>
 nnoremap <leader>w :w !sudo tee %<CR>
@@ -323,14 +340,13 @@ nnoremap <silent> <C-l> :set number!<CR>
 " Toggle background
 map <silent> <leader>bg :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
 
-" Terminal
-" escape terminal
+" Terminal / Neoterm
+" Escape
 tnoremap <C-space> <C-\><C-n><esc><CR>
-" Neoterm
-" toggle terminal
+" Toggle on (open)
 nnoremap <silent> <C-o> :vertical botright Ttoggle<CR><C-w>l
 nnoremap <silent> <C-p> :botright Ttoggle<CR><C-w>j
-" close terminal
+" Toggle off (close)
 tnoremap <silent> <C-o> <C-\><C-n>:Ttoggle<CR>
 tnoremap <silent> <C-p> <C-\><C-n>:Ttoggle<CR>
 
