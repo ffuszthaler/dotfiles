@@ -10,7 +10,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'liuchengxu/vista.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'liuchengxu/vim-clap' " :Clap colors
+Plug 'liuchengxu/vim-clap'
 Plug 'kassio/neoterm'
 
 " File Management
@@ -20,14 +20,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Statusline & Icons
-" Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'edkolev/tmuxline.vim'
-" TESTING - might use this over airline
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
-" TESTING
 
 " Completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -64,10 +61,10 @@ Plug 'joshdick/onedark.vim'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'haishanh/night-owl.vim'
 Plug 'conweller/endarkened.vim'
-Plug 'jaredgorski/spacecamp'
 call plug#end()
 
 " General
+set nocompatible
 syntax on
 filetype plugin indent on
 " set number
@@ -86,16 +83,17 @@ set autoread
 set list
 set splitbelow splitright
 set background=dark
-colorscheme endarkened
+colorscheme iceberg
 set t_Co=256
 set termguicolors
 set scrolloff=10
-" set colorcolumn=80
+set colorcolumn=80
 set cursorline
-" set cursorcolumn
+set cursorcolumn
+set updatetime=100
 
 " Clear SignColumn for signify and else
-highlight clear SignColumn
+" highlight clear SignColumn
 
 " Coc
 let g:coc_global_extensions = [
@@ -107,16 +105,6 @@ let g:coc_global_extensions = [
   \ 'coc-rls',
   \ 'coc-python',
   \]
-
-" Airline
-" let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=1
-" let g:airline_left_sep="\ue0bc"
-" let g:airline_right_sep="\ue0ba"
-" let g:airline_left_alt_sep="\ue0bd"
-" let g:airline_right_alt_sep="\ue0bb"
-let g:airline_left_sep="▓▒░"
-let g:airline_right_sep="░▒▓"
 
 " Lightline
 function! FiletypeIcon()
@@ -134,9 +122,11 @@ endfunction
   " 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
   " 'subseparator': { 'left': '|', 'right': '|' },
 let g:lightline = {
-      \ 'colorscheme': 'endarkened',
-  \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-  \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
+  \ 'colorscheme': 'iceberg',
+  \ 'separator': { 'left': "\ue0b8", 'right': "\ue0ba" },
+  \ 'subseparator': { 'left': "\ue0b9", 'right': "\ue0bb" },
+  \ 'tabline_separator': { 'left': "\ue0bc", 'right': "\ue0be" },
+  \ 'tabline_subseparator': { 'left': "\ue0bd", 'right': "\ue0bf" },
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'method' ] ],
@@ -201,8 +191,13 @@ let g:lightline#ale#indicator_errors = "\uf05e"
 let g:lightline#ale#indicator_ok = "\uf00c"
 
 " ALE
-let g:ale_sign_error="\uf05e"
-let g:ale_sign_warning="\uf071"
+let g:ale_open_list = 1
+augroup CloseLoclistWindowGroup
+  autocmd!
+  autocmd QuitPre * if empty(&buftype) | lclose | endif
+augroup END
+let g:ale_sign_error = "\uf05e"
+let g:ale_sign_warning = "\uf071"
 let g:ale_fixers = {
   \ 'javascript': ['eslint'],
   \ 'cpp': ['clang-format'],
@@ -210,9 +205,9 @@ let g:ale_fixers = {
   \ }
 
 " NERDTree
-let g:NERDTreeQuitOnOpen=1
-let g:NERDTreeMinimalUI=1
-let g:NERDTreeShowHidden=1
+let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeShowHidden = 1
 let g:NERDTreeIgnore=['\.o$', '.ccls-cache']
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeIndicatorMapCustom = {
@@ -229,19 +224,30 @@ let g:NERDTreeIndicatorMapCustom = {
   \ }
 
 " Ultisnips
-let g:UltisnipsExpandTrigger="<tab>"
-let g:UltisnipsEditSplit="vertical"
+let g:UltisnipsExpandTrigger = "<tab>"
+let g:UltisnipsEditSplit = "vertical"
 
 " The NERD Commenter
-let g:NERDSpaceDelims=1
-let g:NERDDefaultAlign='left'
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
 
 " RainbowParentheses
 autocmd VimEnter * RainbowParentheses
 
+" Vista
+autocmd BufEnter * if winnr("$") == 1 && vista#sidebar#IsVisible() | execute "normal! :q!\<CR>" | endif
+
+" signify
+let g:signify_line_highlight = 1
+let g:signify_sign_show_count = 1
+let g:signify_sign_add               = '+'
+let g:signify_sign_delete            = '_'
+let g:signify_sign_delete_first_line = '‾'
+let g:signify_sign_change            = '!'
+
 " indentLine
-let g:indentLine_enabled='1'
-" | ¦ ┆ │
+let g:indentLine_enabled = '1'
+" Different line types: | ¦ ┆ │
 " let g:indentLine_char='│'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_leadingSpaceChar='▸'
@@ -264,7 +270,8 @@ nnoremap <leader>f :Files<CR>
 nnoremap <leader>y :Vista!!<CR>
 nnoremap <leader>x :10split term://bash<CR>
 nnoremap <leader>c :GFiles?<CR>
-nnoremap <leader>v :Colors<CR>
+" nnoremap <leader>v :Colors<CR>
+nnoremap <leader>v :Clap colors<CR>
 
 " List and switch buffer
 nnoremap <leader>l :ls<CR>:b<space>
