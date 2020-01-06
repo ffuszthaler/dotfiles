@@ -23,6 +23,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'liuchengxu/vim-clap'
 Plug 'kassio/neoterm'
+Plug 'mhinz/vim-startify'
+Plug 'junegunn/limelight.vim'
+Plug 'voldikss/vim-floaterm'
 
 " File Management
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -72,6 +75,26 @@ Plug 'joshdick/onedark.vim'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'haishanh/night-owl.vim'
 Plug 'conweller/endarkened.vim'
+
+Plug 'tomasiser/vim-code-dark'
+Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'whatyouhide/vim-gotham'
+Plug 'srcery-colors/srcery-vim'
+Plug 'rishikanthc/skyfall-vim'
+Plug 'huyvohcmc/atlas.vim'
+Plug 'jacoborus/tender.vim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'axvr/photon.vim'
+Plug 'owickstrom/vim-colors-paramount'
+Plug 'reedes/vim-colors-pencil'
+Plug 'balanceiskey/vim-framer-syntax'
+Plug 'smallwat3r/vim-simplicity'
+Plug 'w0ng/vim-hybrid'
+Plug 'aonemd/kuroi.vim'
+Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'smallwat3r/vim-efficient'
+Plug 'lifepillar/vim-solarized8'
+Plug 'lifepillar/vim-gruvbox8'
 call plug#end()
 
 """""""""""""""
@@ -156,8 +179,14 @@ let g:coc_global_extensions = [
   \ 'coc-rls',
   \ 'coc-python',
   \]
+let g:coc_status_warning_sign = "\uf071 "
+let g:coc_status_error_sign = "\uf188 "
 
 " Lightline
+function! FileIcon()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
 function! FiletypeIcon()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 endfunction
@@ -188,6 +217,7 @@ let g:lightline = {
   \ },
   \ 'component_function': {
   \   'gitbranch': 'fugitive#head',
+  \   'fileicon': 'FileIcon',
   \   'filetype': 'FiletypeIcon',
   \   'fileformat': 'FileformatIcon',
   \   'cocstatus': 'coc#status',
@@ -236,8 +266,8 @@ let g:lightline = {
   \ },
   \ }
 let g:lightline#ale#indicator_checking = "\uf110"
-let g:lightline#ale#indicator_warnings = "\uf071"
-let g:lightline#ale#indicator_errors = "\uf05e"
+let g:lightline#ale#indicator_warnings = "\uf071 "
+let g:lightline#ale#indicator_errors = "\uf05e "
 let g:lightline#ale#indicator_ok = "\uf00c"
 
 " ALE
@@ -290,24 +320,46 @@ autocmd BufEnter * if winnr("$") == 1 && vista#sidebar#IsVisible() | execute "no
 " signify
 let g:signify_line_highlight = 0
 let g:signify_sign_show_count = 1
-let g:signify_sign_add               = '+'
-let g:signify_sign_delete            = '_'
+let g:signify_sign_add = '+'
+let g:signify_sign_delete = '_'
 let g:signify_sign_delete_first_line = '‾'
-let g:signify_sign_change            = '!'
+let g:signify_sign_change = '!'
 
 " indentLine
 let g:indentLine_enabled = '1'
 " Different line types: | ¦ ┆ │
-" let g:indentLine_char='│'
+" let g:indentLine_char = '│'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-let g:indentLine_leadingSpaceChar='▸'
-" let g:indentLine_leadingSpaceEnabled='1'
+let g:indentLine_leadingSpaceChar = '▸'
+" let g:indentLine_leadingSpaceEnabled = '1'
 
 " Lazygit
 function! OpenLazyGit()
   call OpenTerm('lazygit')
   startinsert
 endfunction
+
+"Startify
+let g:startify_change_to_dir = 1
+let g:startify_files_number = 5
+let g:startify_lists = [
+  \ { 'type': 'dir',       'header': ['   Recent files'] },
+  \ { 'type': 'sessions',  'header': ['   Saved sessions'] },
+  \ ]
+let g:startify_custom_header = [
+  \ '',
+  \ '   ┏┓╻   ╻ ╻   ╻   ┏┳┓',
+  \ '   ┃┃┃   ┃┏┛   ┃   ┃┃┃',
+  \ '   ╹┗┛   ┗┛    ╹   ╹ ╹',
+  \ ''
+  \ ]
+
+" Floaterm
+let g:floaterm_position = 'center'
+let g:floaterm_keymap_new = '<F7>'
+let g:floaterm_keymap_prev = '<F8>'
+let g:floaterm_keymap_next = '<F9>'
+let g:floaterm_keymap_toggle = '<F10>'
 
 """""""""""""""""""""""""
 """ KEYBOARD MAPPINGS """
