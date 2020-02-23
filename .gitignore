@@ -8,6 +8,7 @@ emacs/.emacs.d/.last-package-update-day
 emacs/.emacs.d/auto-save-list
 emacs/.emacs.d/ido.last
 emacs/.emacs.d/.lsp-session-v1
+emacs/.emacs.d/eshell
 
 # mpd
 mpd/.config/mpd/database
