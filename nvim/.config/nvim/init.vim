@@ -95,6 +95,7 @@ Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'smallwat3r/vim-efficient'
 Plug 'lifepillar/vim-solarized8'
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'jaredgorski/fogbell.vim'
 call plug#end()
 
 """""""""""""""
@@ -119,7 +120,7 @@ set autoread
 set list
 set splitbelow splitright
 set background=dark
-colorscheme iceberg
+colorscheme plain
 set t_Co=256
 set termguicolors
 set scrolloff=10
@@ -129,7 +130,7 @@ set cursorcolumn
 set updatetime=100
 
 " Clear SignColumn for signify and else
-" highlight clear SignColumn
+highlight clear SignColumn
 
 " Helper functions
 function! CreateCenteredFloatingWindow()
@@ -164,6 +165,12 @@ function! OnTermExit(job_id, code, event) dict
   if a:code == 0
     bd!
   endif
+endfunction
+
+" Lazygit
+function! OpenLazyGit()
+  call OpenTerm('lazygit')
+  startinsert
 endfunction
 
 """""""""""""""""""""""
@@ -202,7 +209,7 @@ endfunction
   " 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
   " 'subseparator': { 'left': '|', 'right': '|' },
 let g:lightline = {
-  \ 'colorscheme': 'iceberg',
+  \ 'colorscheme': 'simpleblack',
   \ 'separator': { 'left': "\ue0b8", 'right': "\ue0ba" },
   \ 'subseparator': { 'left': "\ue0b9", 'right': "\ue0bb" },
   \ 'tabline_separator': { 'left': "\ue0bc", 'right': "\ue0be" },
@@ -289,7 +296,8 @@ let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeIgnore=['\.o$', '.ccls-cache']
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:NERDTreeIndicatorMapCustom = {
   \ "Modified"  : "✹",
   \ "Staged"    : "✚",
@@ -315,7 +323,7 @@ let g:NERDDefaultAlign = 'left'
 autocmd VimEnter * RainbowParentheses
 
 " Vista
-autocmd BufEnter * if winnr("$") == 1 && vista#sidebar#IsVisible() | execute "normal! :q!\<CR>" | endif
+autocmd BufEnter * if winnr("$") == 1 && vista#sidebar#IsOpen() | execute "normal! :q!\<CR>" | endif
 
 " signify
 let g:signify_line_highlight = 0
@@ -332,12 +340,6 @@ let g:indentLine_enabled = '1'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_leadingSpaceChar = '▸'
 " let g:indentLine_leadingSpaceEnabled = '1'
-
-" Lazygit
-function! OpenLazyGit()
-  call OpenTerm('lazygit')
-  startinsert
-endfunction
 
 "Startify
 let g:startify_change_to_dir = 1

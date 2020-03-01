@@ -4,6 +4,7 @@ emacs/.emacs.d/snippets
 emacs/.emacs.d/transient
 emacs/.emacs.d/smex-items
 emacs/.emacs.d/projectile-bookmarks.eld
+emacs/.emacs.d/.#projectile-bookmarks.eld
 emacs/.emacs.d/.last-package-update-day
 emacs/.emacs.d/auto-save-list
 emacs/.emacs.d/ido.last
