@@ -1,4 +1,5 @@
 # emacs
+emacs/.emacs.d/custom.el
 emacs/.emacs.d/elpa
 emacs/.emacs.d/snippets
 emacs/.emacs.d/transient

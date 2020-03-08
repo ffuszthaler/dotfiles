@@ -5,7 +5,7 @@ super + Return
 
 # Program launcher (rofi -show run)
 # rofi -show run
-# dmenu_run -fn 'Cascadia Code:pixelsize=13' -nb '#000000' -nf '#FFB01B' -sb '#FFB01B' -sf '#000000'
+# dmenu_run -fn 'Cascadia Code:pixelsize=13' -nb '#000000' -nf '#AAAAAA' -sb '#AAAAAA' -sf '#000000'
 super + d
   rofi -show run
 
@@ -23,7 +23,7 @@ super + F5
 super + F6
   st -e alsamixer
 super + F7
-  arandr
+  ~/scripts/displayselect
 super + F8
   st -e calcurse
 super + F9

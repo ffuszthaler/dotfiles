@@ -126,7 +126,7 @@ set termguicolors
 set scrolloff=10
 set colorcolumn=80
 set cursorline
-set cursorcolumn
+" set cursorcolumn
 set updatetime=100
 
 " Clear SignColumn for signify and else
