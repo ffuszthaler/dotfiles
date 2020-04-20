@@ -61,27 +61,23 @@
 ;; Nyan-Mode
 (use-package nyan-mode
   :ensure t
-  :config
-  (nyan-mode)
-  (nyan-start-animation)
-  (nyan-toggle-wavy-trail))
+  :init
+  (setq nyan-animate-nyancat t
+        nyan-wavy-trail t)
+  (nyan-mode))
 
 ;; Centaur-Tabs
-(use-package centaur-tabs :ensure t
-  ;;:disabled ;; To disable a certain package
-  :demand
-  :init (setq centaur-tabs-set-bar 'over)
+(use-package centaur-tabs
+  :ensure t
   :config
-  (centaur-tabs-mode)
-  (centaur-tabs-headline-match)
   (setq centaur-tabs-set-modified-marker t
         centaur-tabs-modified-marker "●"
         centaur-tabs-cycle-scope 'tabs
+        centaur-tabs-set-bar 'over
         centaur-tabs-height 30
         centaur-tabs-set-icons t)
-  :bind
-  ("C-S-<tab>" . centaur-tabs-backward)
-  ("C-<tab>" . centaur-tabs-forward))
+  (centaur-tabs-headline-match)
+  (centaur-tabs-mode t))
 
 ;; All The Icons
 (use-package all-the-icons
@@ -90,6 +86,7 @@
 
 ;; NeoTree
 (use-package neotree
+  :disabled
   :ensure t
   :init
   (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
@@ -102,13 +99,79 @@
               (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
   :bind ("<f8>" . neotree-toggle))
 
+;; Treemacs
+(use-package treemacs
+  :ensure t
+  :defer t
+  :config
+  (progn
+    (setq treemacs-collapse-dirs                 (if treemacs-python-executable 3 0)
+          treemacs-deferred-git-apply-delay      0.5
+          treemacs-directory-name-transformer    #'identity
+          treemacs-display-in-side-window        t
+          treemacs-eldoc-display                 t
+          treemacs-file-event-delay              5000
+          treemacs-file-extension-regex          treemacs-last-period-regex-value
+          treemacs-file-follow-delay             0.2
+          treemacs-file-name-transformer         #'identity
+          treemacs-follow-after-init             t
+          treemacs-git-command-pipe              ""
+          treemacs-goto-tag-strategy             'refetch-index
+          treemacs-indentation                   2
+          treemacs-indentation-string            " "
+          treemacs-is-never-other-window         nil
+          treemacs-max-git-entries               5000
+          treemacs-missing-project-action        'ask
+          treemacs-move-forward-on-expand        nil
+          treemacs-no-png-images                 nil
+          treemacs-no-delete-other-windows       t
+          treemacs-project-follow-cleanup        nil
+          treemacs-persist-file                  (expand-file-name ".cache/treemacs-persist" user-emacs-directory)
+          treemacs-position                      'left
+          treemacs-recenter-distance             0.1
+          treemacs-recenter-after-file-follow    nil
+          treemacs-recenter-after-tag-follow     nil
+          treemacs-recenter-after-project-jump   'always
+          treemacs-recenter-after-project-expand 'on-distance
+          treemacs-show-cursor                   nil
+          treemacs-show-hidden-files             t
+          treemacs-silent-filewatch              nil
+          treemacs-silent-refresh                nil
+          treemacs-sorting                       'alphabetic-asc
+          treemacs-space-between-root-nodes      t
+          treemacs-tag-follow-cleanup            t
+          treemacs-tag-follow-delay              1.5
+          treemacs-user-mode-line-format         nil
+          treemacs-width                         35)
+
+    (treemacs-follow-mode t)
+    (treemacs-filewatch-mode t)
+    (treemacs-fringe-indicator-mode t)
+    (pcase (cons (not (null (executable-find "git")))
+                 (not (null treemacs-python-executable)))
+      (`(t . t)
+       (treemacs-git-mode 'deferred))
+      (`(t . _)
+       (treemacs-git-mode 'simple))))
+  :bind
+  (:map global-map
+        ("C-x t T"   . treemacs-add-project-to-workspace)
+        ("C-x t Z"   . treemacs-remove-project-from-workspace)
+        ("C-x t t"   . treemacs)))
+
+(use-package treemacs-evil
+  :after treemacs evil
+  :ensure t)
+
+(use-package treemacs-projectile
+  :after treemacs projectile
+  :ensure t)
+
 ;; Projectile
 (use-package projectile
   :ensure t
-  :bind (:map projectile-mode-map
-              ("C-c p" . 'projectile-command-map))
-
   :config
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
   (projectile-mode +1))
 
 ;; Syntax checking
@@ -116,13 +179,6 @@
   :ensure t
   :init
   (global-flycheck-mode t))
-
-;; Git
-(use-package magit
-  :ensure t
-  :init
-  (progn
-    (bind-key "C-x g" 'magit-status)))
 
 ;; Snippets
 (use-package yasnippet
