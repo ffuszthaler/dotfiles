@@ -10,8 +10,8 @@ alias ls='ls --color=auto'
 PS1='\[\e[1m\]\033[32m\]\W \033[37m\]\$\[\e[0m\] '
 
 # Aliases
-# alias v='nvim'
-alias v='VIMRUNTIME=~/code/neovim/runtime ~/code/neovim/build/bin/nvim'
+alias v='nvim'
+# alias v='VIMRUNTIME=~/code/neovim/runtime ~/code/neovim/build/bin/nvim'
 alias vi='vim'
 alias et='emacs -nw'
 alias es='emacs --daemon=dev'
