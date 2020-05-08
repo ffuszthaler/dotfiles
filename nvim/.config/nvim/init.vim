@@ -75,7 +75,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'haishanh/night-owl.vim'
 Plug 'conweller/endarkened.vim'
-
 Plug 'tomasiser/vim-code-dark'
 Plug 'tyrannicaltoucan/vim-deep-space'
 Plug 'whatyouhide/vim-gotham'
@@ -106,7 +105,7 @@ syntax on
 filetype plugin indent on
 " set number
 set laststatus=2
-set showtabline=2
+" set showtabline=2
 set autoindent
 set hlsearch
 set ruler
@@ -120,7 +119,7 @@ set autoread
 set list
 set splitbelow splitright
 set background=dark
-colorscheme plain
+colorscheme codedark
 set t_Co=256
 set termguicolors
 set scrolloff=10
@@ -209,7 +208,7 @@ endfunction
   " 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
   " 'subseparator': { 'left': '|', 'right': '|' },
 let g:lightline = {
-  \ 'colorscheme': 'simpleblack',
+  \ 'colorscheme': 'codedark',
   \ 'separator': { 'left': "\ue0b8", 'right': "\ue0ba" },
   \ 'subseparator': { 'left': "\ue0b9", 'right': "\ue0bb" },
   \ 'tabline_separator': { 'left': "\ue0bc", 'right': "\ue0be" },
@@ -296,8 +295,7 @@ let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeIgnore=['\.o$', '.ccls-cache']
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeIndicatorMapCustom = {
   \ "Modified"  : "✹",
   \ "Staged"    : "✚",
@@ -334,12 +332,12 @@ let g:signify_sign_delete_first_line = '‾'
 let g:signify_sign_change = '!'
 
 " indentLine
-let g:indentLine_enabled = '1'
+let g:indentLine_enabled = 1
 " Different line types: | ¦ ┆ │
 " let g:indentLine_char = '│'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_leadingSpaceChar = '▸'
-" let g:indentLine_leadingSpaceEnabled = '1'
+" let g:indentLine_leadingSpaceEnabled = 1
 
 "Startify
 let g:startify_change_to_dir = 1
