@@ -47,7 +47,7 @@ syntax on
 filetype plugin indent on
 " set number
 set laststatus=2
-set showtabline=2
+" set showtabline=2
 set autoindent
 set hlsearch
 set ruler
@@ -61,7 +61,7 @@ set autoread
 set list
 set splitbelow splitright
 set background=dark
-colorscheme codedark
+" colorscheme codedark
 set t_Co=256
 set termguicolors
 set scrolloff=10
