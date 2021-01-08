@@ -38,7 +38,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'w0rp/ale'
 
 " Color Themes
-Plug 'tomasiser/vim-code-dark'
+Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
 """ GENERAL
@@ -61,7 +61,7 @@ set autoread
 set list
 set splitbelow splitright
 set background=dark
-" colorscheme codedark
+colorscheme ayu
 set t_Co=256
 set termguicolors
 set scrolloff=10
@@ -100,7 +100,7 @@ function! FileformatIcon()
 endfunction
 
 let g:lightline = {
-  \ 'colorscheme': 'codedark',
+  \ 'colorscheme': 'ayu',
   \ 'separator': { 'left': "\ue0b8", 'right': "\ue0ba" },
   \ 'subseparator': { 'left': "\ue0b9", 'right': "\ue0bb" },
   \ 'tabline_separator': { 'left': "\ue0bc", 'right': "\ue0be" },
