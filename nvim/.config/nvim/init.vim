@@ -23,7 +23,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Statusline & Icons
-Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'edkolev/tmuxline.vim'
 Plug 'itchyny/lightline.vim'
@@ -38,7 +37,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'w0rp/ale'
 
 " Color Themes
-Plug 'ayu-theme/ayu-vim'
+Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 """ GENERAL
@@ -61,7 +60,7 @@ set autoread
 set list
 set splitbelow splitright
 set background=dark
-colorscheme ayu
+colorscheme codedark
 set t_Co=256
 set termguicolors
 set scrolloff=10
@@ -83,28 +82,14 @@ let g:coc_global_extensions = [
   \ 'coc-rls',
   \ 'coc-python',
   \]
-let g:coc_status_warning_sign = "\uf071 "
-let g:coc_status_error_sign = "\uf188 "
 
 " Lightline
-function! FileIcon()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-
-function! FiletypeIcon()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-
-function! FileformatIcon()
-  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-endfunction
-
 let g:lightline = {
-  \ 'colorscheme': 'ayu',
-  \ 'separator': { 'left': "\ue0b8", 'right': "\ue0ba" },
-  \ 'subseparator': { 'left': "\ue0b9", 'right': "\ue0bb" },
-  \ 'tabline_separator': { 'left': "\ue0bc", 'right': "\ue0be" },
-  \ 'tabline_subseparator': { 'left': "\ue0bd", 'right': "\ue0bf" },
+  \ 'colorscheme': 'codedark',
+  \ 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
+  \ 'subseparator': { 'left': '|', 'right': '|' },
+  \ 'tabline_separator': { 'left': '▓▒░', 'right': '░▒▓' },
+  \ 'tabline_subseparator': { 'left': '|', 'right': '|' },
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
@@ -115,10 +100,6 @@ let g:lightline = {
   \ },
   \ 'component_function': {
   \   'gitbranch': 'fugitive#head',
-  \   'fileicon': 'FileIcon',
-  \   'filetype': 'FiletypeIcon',
-  \   'fileformat': 'FileformatIcon',
-  \   'cocstatus': 'coc#status',
   \ },
   \ 'component_expand': {
   \   'linter_checking': 'lightline#ale#checking',
@@ -140,32 +121,7 @@ let g:lightline = {
   \   'active': [ 'filename', 'modified' ],
   \   'inactive': [ 'filename', 'modified' ],
   \ },
-  \ 'mode_map': {
-  \   'n'      : 'N',
-  \   'no'     : 'N·Operator Pending',
-  \   'v'      : 'V',
-  \   'V'      : 'V·Line',
-  \   "\<C-V>" : 'V·Block',
-  \   's'      : 'Select',
-  \   'S'      : 'S·Line',
-  \   "\<C-S>" : 'S·Block',
-  \   'i'      : "\uf0e7",
-  \   'R'      : 'R',
-  \   'Rv'     : 'V·Replace',
-  \   'c'      : 'C',
-  \   'cv'     : 'Vim Ex',
-  \   'ce'     : 'Ex',
-  \   'r'      : 'Prompt',
-  \   'rm'     : 'More',
-  \   'r?'     : 'Confirm',
-  \   '!'      : 'Shell',
-  \   't'      : 'Terminal'
-  \ },
   \ }
-let g:lightline#ale#indicator_checking = "\uf110"
-let g:lightline#ale#indicator_warnings = "\uf071 "
-let g:lightline#ale#indicator_errors = "\uf05e "
-let g:lightline#ale#indicator_ok = "\uf00c"
 
 " ALE
 let g:ale_open_list = 1
@@ -173,8 +129,8 @@ augroup CloseLoclistWindowGroup
   autocmd!
   autocmd QuitPre * if empty(&buftype) | lclose | endif
 augroup END
-let g:ale_sign_error = "\uf05e"
-let g:ale_sign_warning = "\uf071"
+let g:ale_sign_error = '•'
+let g:ale_sign_warning = '•'
 let g:ale_fixers = {
   \ 'javascript': ['eslint'],
   \ 'cpp': ['clang-format'],
