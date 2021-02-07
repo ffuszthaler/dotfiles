@@ -10,10 +10,8 @@ Plug 'mhinz/vim-signify'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/goyo.vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'liuchengxu/vim-clap'
 Plug 'mhinz/vim-startify'
+Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
 " File Management
@@ -22,9 +20,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Statusline & Icons
+" Statusline
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'edkolev/tmuxline.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
 
@@ -76,8 +73,9 @@ highlight clear SignColumn
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-prettier',
-  \ 'coc-json',
   \ 'coc-eslint',
+  \ 'coc-tsserver',
+  \ 'coc-json',
   \ 'coc-css',
   \ 'coc-rls',
   \ 'coc-python',
@@ -156,13 +154,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ "Unknown"   : "?"
   \ }
 
-" Ultisnips
-let g:UltisnipsExpandTrigger = "<tab>"
-let g:UltisnipsEditSplit = "vertical"
-
-" The NERD Commenter
+" NERD Commenter
 let g:NERDSpaceDelims = 1
-let g:NERDDefaultAlign = 'left'
 
 " RainbowParentheses
 autocmd VimEnter * RainbowParentheses
@@ -199,25 +192,17 @@ nnoremap <leader>f :Files<CR>
 nnoremap <leader>y :Limelight!!<CR>
 nnoremap <leader>x :Goyo<CR>
 nnoremap <leader>c :GFiles?<CR>
-nnoremap <leader>v :Clap colors<CR>
-
-" List and switch buffer
-nnoremap <leader>l :ls<CR>:b<space>
+nnoremap <leader>v :Colors<CR>
 
 " Toggle line numbers
 nnoremap <silent> <C-l> :set number!<CR>
 
-" Toggle background
-map <silent> <leader>bg :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
-
-" Coc
+" coc.nvim
 nmap <silent> <leader>dd <Plug>(coc-definition)
 nmap <silent> <leader>dr <Plug>(coc-references)
-nmap <silent> <leader>dj <Plug>(coc-implementation)
+nmap <silent> <leader>di <Plug>(coc-implementation)
 nmap <silent> <leader>dh <Plug>(coc-doHover)
 
 " Fugitive
 nmap <silent> <leader>gs :Gstatus<CR>
-nmap <leader>ge :Gedit<CR>
-nmap <silent><leader>gr :Gread<CR>
-nmap <silent><leader>gb :Gblame<CR>
+nmap <silent> <leader>gd :Gdiffsplit<CR>
