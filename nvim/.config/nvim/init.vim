@@ -3,9 +3,6 @@
 """ PLUGINS
 call plug#begin('~/.local/share/nvim/plugged')
 " Miscellaneous
-Plug 'Yggdroot/indentLine'
-Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
@@ -17,9 +14,6 @@ Plug 'junegunn/limelight.vim'
 " File Management
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -39,9 +33,8 @@ call plug#end()
 set nocompatible
 syntax on
 filetype plugin indent on
-" set number
+set number
 set laststatus=2
-" set showtabline=2
 set autoindent
 set hlsearch
 set ruler
@@ -108,30 +101,8 @@ let g:lightline = {
   \ },
   \ }
 
-" NERDTree
-let g:NERDTreeQuitOnOpen = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeIgnore=['\.o$', '.ccls-cache']
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-  \ "Modified"  : "✹",
-  \ "Staged"    : "✚",
-  \ "Untracked" : "✭",
-  \ "Renamed"   : "➜",
-  \ "Unmerged"  : "═",
-  \ "Deleted"   : "✖",
-  \ "Dirty"     : "✗",
-  \ "Clean"     : "✔︎",
-  \ "Ignored"   : "☒",
-  \ "Unknown"   : "?"
-  \ }
-
 " NERD Commenter
 let g:NERDSpaceDelims = 1
-
-" RainbowParentheses
-autocmd VimEnter * RainbowParentheses
 
 "Startify
 let g:startify_change_to_dir = 1
@@ -156,10 +127,10 @@ nnoremap <leader>e :CocList<CR>
 nnoremap <leader>r :%s/\s\+$//e<CR>
 
 " 2nd Row
-nnoremap <leader>a :NERDTreeToggle<CR>
+nnoremap <leader>a :Files<CR>
 " nnoremap <leader>s
 " nnoremap <leader>d
-nnoremap <leader>f :Files<CR>
+" nnoremap <leader>f
 
 " 3rd Row
 nnoremap <leader>y :Limelight!!<CR>
@@ -170,12 +141,12 @@ nnoremap <leader>v :Colors<CR>
 " Toggle line numbers
 nnoremap <silent> <C-l> :set number!<CR>
 
+" Fugitive
+nmap <silent> <leader>gs :Gstatus<CR>
+nmap <silent> <leader>gd :Gdiffsplit<CR>
+
 " coc.nvim
 nmap <silent> <leader>dd <Plug>(coc-definition)
 nmap <silent> <leader>dr <Plug>(coc-references)
 nmap <silent> <leader>di <Plug>(coc-implementation)
 nmap <silent> <leader>dh <Plug>(coc-doHover)
-
-" Fugitive
-nmap <silent> <leader>gs :Gstatus<CR>
-nmap <silent> <leader>gd :Gdiffsplit<CR>
