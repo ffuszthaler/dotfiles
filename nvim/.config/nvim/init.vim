@@ -15,14 +15,11 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
 " File Management
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-" Statusline
-Plug 'itchyny/lightline.vim'
 
 " Completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -30,7 +27,9 @@ Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
-" Plug 'w0rp/ale'
+
+" Statusline
+Plug 'itchyny/lightline.vim'
 
 " Color Themes
 Plug 'tomasiser/vim-code-dark'
@@ -109,15 +108,6 @@ let g:lightline = {
   \ },
   \ }
 
-" ALE
-let g:ale_sign_error = '•'
-let g:ale_sign_warning = '•'
-let g:ale_fixers = {
-  \ 'javascript': ['eslint'],
-  \ 'cpp': ['clang-format'],
-  \ 'c': ['clang-format'],
-  \ }
-
 " NERDTree
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeMinimalUI = 1
@@ -167,8 +157,8 @@ nnoremap <leader>r :%s/\s\+$//e<CR>
 
 " 2nd Row
 nnoremap <leader>a :NERDTreeToggle<CR>
-nnoremap <leader>s :ALEDetail<CR>
-nnoremap <leader>d :ALEFix<CR>
+" nnoremap <leader>s
+" nnoremap <leader>d
 nnoremap <leader>f :Files<CR>
 
 " 3rd Row
