@@ -19,11 +19,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Statusline
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'itchyny/lightline.vim'
-Plug 'maximbaz/lightline-ale'
 
 " Completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -31,7 +30,7 @@ Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 
 " Color Themes
 Plug 'tomasiser/vim-code-dark'
@@ -91,25 +90,14 @@ let g:lightline = {
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-  \   'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
+  \   'right': [ [ 'cocstatus' ],
   \              [ 'lineinfo' ],
   \              [ 'percent' ],
   \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
   \ },
   \ 'component_function': {
   \   'gitbranch': 'fugitive#head',
-  \ },
-  \ 'component_expand': {
-  \   'linter_checking': 'lightline#ale#checking',
-  \   'linter_warnings': 'lightline#ale#warnings',
-  \   'linter_errors': 'lightline#ale#errors',
-  \   'linter_ok': 'lightline#ale#ok',
-  \ },
-  \ 'component_type': {
-  \   'linter_checking': 'left',
-  \   'linter_warnings': 'warning',
-  \   'linter_errors': 'error',
-  \   'linter_ok': 'left',
+  \   'cocstatus': 'coc#status'
   \ },
   \ 'tabline': {
   \   'left': [ [ 'tabs' ] ],
@@ -117,16 +105,11 @@ let g:lightline = {
   \ },
   \ 'tab': {
   \   'active': [ 'filename', 'modified' ],
-  \   'inactive': [ 'filename', 'modified' ],
+  \   'inactive': [ 'filename', 'modified' ]
   \ },
   \ }
 
 " ALE
-let g:ale_open_list = 1
-augroup CloseLoclistWindowGroup
-  autocmd!
-  autocmd QuitPre * if empty(&buftype) | lclose | endif
-augroup END
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
 let g:ale_fixers = {
