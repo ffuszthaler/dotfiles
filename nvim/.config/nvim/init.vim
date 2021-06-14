@@ -4,16 +4,18 @@
 call plug#begin('~/.local/share/nvim/plugged')
 " Miscellaneous
 Plug 'mhinz/vim-signify'
-Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " File Management
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -22,11 +24,11 @@ Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 
-" Statusline
+" UI
+Plug 'romgrk/barbar.nvim'
 Plug 'itchyny/lightline.vim'
-
-" Color Themes
 Plug 'tomasiser/vim-code-dark'
+Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 """ GENERAL
@@ -60,6 +62,9 @@ set updatetime=100
 highlight clear SignColumn
 
 """ PLUGIN SETTINGS
+" nvim-treesitter
+lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+
 " coc.nvim
 let g:coc_global_extensions = [
   \ 'coc-snippets',
@@ -127,7 +132,8 @@ nnoremap <leader>e :CocList<CR>
 nnoremap <leader>r :%s/\s\+$//e<CR>
 
 " 2nd Row
-nnoremap <leader>a :Files<CR>
+" nnoremap <leader>a :Files<CR>
+nnoremap <leader>a :NvimTreeToggle<CR>
 " nnoremap <leader>s
 " nnoremap <leader>d
 " nnoremap <leader>f
@@ -150,3 +156,9 @@ nmap <silent> <leader>dd <Plug>(coc-definition)
 nmap <silent> <leader>dr <Plug>(coc-references)
 nmap <silent> <leader>di <Plug>(coc-implementation)
 nmap <silent> <leader>dh <Plug>(coc-doHover)
+
+" telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr> 
