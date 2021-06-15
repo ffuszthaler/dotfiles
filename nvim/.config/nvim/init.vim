@@ -18,7 +18,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 " Completion
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
+
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim'
@@ -65,17 +67,41 @@ highlight clear SignColumn
 " nvim-treesitter
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
-" coc.nvim
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-prettier',
-  \ 'coc-eslint',
-  \ 'coc-tsserver',
-  \ 'coc-json',
-  \ 'coc-css',
-  \ 'coc-rls',
-  \ 'coc-python',
-  \]
+" nvim-lspconfig
+lua << EOF
+vim.o.completeopt = "menuone,noselect"
+
+require'compe'.setup {
+  enabled = true;
+  autocomplete = true;
+  debug = false;
+  min_length = 1;
+  preselect = 'enable';
+  throttle_time = 80;
+  source_timeout = 200;
+  incomplete_delay = 400;
+  max_abbr_width = 100;
+  max_kind_width = 100;
+  max_menu_width = 100;
+  documentation = true;
+
+  source = {
+    path = true;
+    buffer = true;
+    calc = true;
+    vsnip = true;
+    nvim_lsp = true;
+    nvim_lua = true;
+    spell = true;
+    tags = true;
+    snippets_nvim = true;
+    treesitter = true;
+  };
+}
+
+require'lspconfig'.ccls.setup{}
+require'lspconfig'.tsserver.setup{}
+EOF
 
 " Lightline
 let g:lightline = {
@@ -87,8 +113,7 @@ let g:lightline = {
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-  \   'right': [ [ 'cocstatus' ],
-  \              [ 'lineinfo' ],
+  \   'right': [ [ 'lineinfo' ],
   \              [ 'percent' ],
   \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
   \ },
@@ -125,37 +150,19 @@ let g:startify_custom_header = [
   \ ]
 
 """ KEYBOARD MAPPINGS
-" 1st Row
-nnoremap <leader>q :Buffers<CR>
-nnoremap <leader>w :w !sudo tee %<CR>
-nnoremap <leader>e :CocList<CR>
-nnoremap <leader>r :%s/\s\+$//e<CR>
-
-" 2nd Row
-" nnoremap <leader>a :Files<CR>
+" Random
 nnoremap <leader>a :NvimTreeToggle<CR>
-" nnoremap <leader>s
-" nnoremap <leader>d
-" nnoremap <leader>f
-
-" 3rd Row
 nnoremap <leader>y :Limelight!!<CR>
 nnoremap <leader>x :Goyo<CR>
-nnoremap <leader>c :GFiles?<CR>
-nnoremap <leader>v :Colors<CR>
-
-" Toggle line numbers
-nnoremap <silent> <C-l> :set number!<CR>
-
-" Fugitive
-nmap <silent> <leader>gs :Gstatus<CR>
+nmap <silent> <leader>gs :Git<CR>
 nmap <silent> <leader>gd :Gdiffsplit<CR>
 
-" coc.nvim
-nmap <silent> <leader>dd <Plug>(coc-definition)
-nmap <silent> <leader>dr <Plug>(coc-references)
-nmap <silent> <leader>di <Plug>(coc-implementation)
-nmap <silent> <leader>dh <Plug>(coc-doHover)
+" nvim-lspconfig
+nmap <silent> <leader>dd <cmd>lua vim.lsp.buf.definition()<CR>
+nmap <silent> <leader>dr <cmd>lua vim.lsp.buf.references()<CR>
+nmap <silent> <leader>di <cmd>lua vim.lsp.buf.implementation()<CR>
+nmap <silent> <leader>dh <cmd>lua vim.lsp.buf.hover()<CR>
+nmap <silent> <leader>dl <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
 
 " telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
