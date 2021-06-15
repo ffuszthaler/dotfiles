@@ -17,6 +17,7 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " Completion
 Plug 'neovim/nvim-lspconfig'
+Plug 'glepnir/lspsaga.nvim'
 Plug 'hrsh7th/nvim-compe'
 Plug 'folke/trouble.nvim'
 Plug 'sirver/ultisnips'
@@ -29,6 +30,7 @@ Plug 'romgrk/barbar.nvim'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'tomasiser/vim-code-dark'
+Plug 'ray-x/aurora'
 Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
@@ -36,7 +38,7 @@ call plug#end()
 set nocompatible
 syntax on
 filetype plugin indent on
-set number
+set number relativenumber
 set laststatus=2
 set autoindent
 set hlsearch
@@ -51,7 +53,7 @@ set autoread
 set list
 set splitbelow splitright
 set background=dark
-colorscheme codedark
+colorscheme aurora
 set t_Co=256
 set termguicolors
 set scrolloff=10
@@ -65,6 +67,9 @@ highlight clear SignColumn
 """ PLUGIN SETTINGS
 " nvim-treesitter
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+
+" nvim-tree.lua
+let g:nvim_tree_auto_close = 1
 
 " nvim-lspconfig
 lua << EOF
@@ -100,6 +105,12 @@ require'compe'.setup {
 
 require'lspconfig'.ccls.setup{}
 require'lspconfig'.tsserver.setup{}
+EOF
+
+" lspsaga.nvim
+lua << EOF
+local saga = require 'lspsaga'
+saga.init_lsp_saga()
 EOF
 
 " galaxyline.nvim
@@ -301,11 +312,20 @@ gls.right[7] = {
 }
 
 gls.right[8] = {
+  ScrollBar = {
+    provider = "ScrollBar",
+    separator = " ",
+    condition = checkwidth,
+    highlight = {colors.blue, colors.purple}
+  }
+}
+
+--[[gls.right[8] = {
   RainbowBlue = {
     provider = function() return ' ▊' end,
     highlight = {colors.blue,colors.bg}
   },
-}
+}]]--
 
 gls.short_line_left[1] = {
   BufferType = {
@@ -338,9 +358,18 @@ let g:NERDSpaceDelims = 1
 """ KEYBOARD MAPPINGS
 " Random
 nnoremap <leader>a :NvimTreeToggle<CR>
+
+nnoremap <leader>s :TroubleToggle<CR>
+
+" lspsaga.nvim
+nnoremap <leader>q :Lspsaga show_line_diagnostics<CR>
+nnoremap <leader>e :Lspsaga code_action<CR>
+nnoremap <leader>t :Lspsaga diagnostic_jump_next<CR>
+nnoremap <leader>z :Lspsaga diagnostic_jump_prev<CR>
+
 nnoremap <leader>y :Limelight!!<CR>
 nnoremap <leader>x :Goyo<CR>
-nnoremap <leader>c :TroubleToggle<CR>
+
 nmap <silent> <leader>gs :Git<CR>
 nmap <silent> <leader>gd :Gdiffsplit<CR>
 
@@ -353,6 +382,4 @@ nmap <silent> <leader>dl <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
 
 " telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
