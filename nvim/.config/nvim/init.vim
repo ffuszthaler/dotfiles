@@ -4,11 +4,10 @@
 call plug#begin('~/.local/share/nvim/plugged')
 " Miscellaneous
 Plug 'mhinz/vim-signify'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " File Management
 Plug 'kyazdani42/nvim-tree.lua'
@@ -23,11 +22,12 @@ Plug 'folke/trouble.nvim'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim'
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 
 " UI
 Plug 'romgrk/barbar.nvim'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'tomasiser/vim-code-dark'
 Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
@@ -287,7 +287,7 @@ gls.right[6] = {
   DiffModified = {
     provider = 'DiffModified',
     condition = condition.hide_in_width,
-    icon= "  ",
+    icon= "   ",
     highlight = {colors.orange,colors.bg},
   }
 }
@@ -295,7 +295,7 @@ gls.right[7] = {
   DiffRemove = {
     provider = 'DiffRemove',
     condition = condition.hide_in_width,
-    icon= "  ",
+    icon= "   ",
     highlight = {colors.red,colors.bg},
   }
 }
